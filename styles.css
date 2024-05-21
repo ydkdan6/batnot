@@ -1,0 +1,11 @@
+
+  /* Mobile styles */
+  @media (max-width: 767px) {
+
+    #header {
+        height: 2.8rem;
+    }
+}
+  /* Tablet and up styles */
+ 
+  
