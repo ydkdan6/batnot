@@ -12,7 +12,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const message = document.getElementById('comments').value;
     
     // Construct the mailto link
-    const mailtoLink = `mailto:danielgodwin713@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(
+    const mailtoLink = `mailto:donaldnequette479@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nPhone Number: ${phone}\nCompany: ${company}\nIndustry: ${industry}\nCountry: ${dropdown}\n\nMessage:\n${message}`
     )}`;
     
