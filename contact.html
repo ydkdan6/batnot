@@ -16,6 +16,8 @@
       as="image"
       imagesrcset=""
     />
+    <script src="email.js"></script>
+   
     <script
       async=""
       id="demandbase_js_lib"
@@ -699,11 +701,9 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
           </div>
           <div class="body-sm mb-l6">* indicates required fields</div>
           <form
+          id="contactForm"
             class="md:flex md:flex-wrap gap-x-l7"
             novalidate=""
-            data-di-form-track="true"
-            data-di-form-id="contact"
-            name="sales_form"
           >
             <div
               class="w-full mb-l6 md:mb-l7 md:w-[calc(50%-16px)]"
@@ -2709,7 +2709,7 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
               <div class="field">
                 <input
                   type="text"
-                  id="firstName"
+                  id="name"
                   name="firstName"
                   autocomplete="given-name"
                   data-di-mask="true"
@@ -2740,8 +2740,8 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
             <div
               class="w-full mb-l6 md:mb-l7 md:w-[calc(50%-16px)]"
               data-scene-elem="TextField"
-              data-scene-id="businessEmail"
-              data-scene-ref="comp:SalesForm"
+              
+             
             >
               <label
                 for="businessEmail"
@@ -2751,11 +2751,10 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
               <div class="field">
                 <input
                   type="email"
-                  id="businessEmail"
-                  name="businessEmail"
+                  id="email"
+                  name="email"
                   autocomplete="email"
                   placeholder="name@company.com"
-                  data-di-mask="true"
                   value=""
                 />
               </div>
@@ -2774,8 +2773,8 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
               <div class="field">
                 <input
                   type="text"
-                  id="companyName"
-                  name="companyName"
+                  id="company"
+                  name="company"
                   autocomplete="organization"
                   value=""
                 />
@@ -2907,6 +2906,7 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
               </div>
             </div>
             <button
+            type="submit"
               class="btn primary my-l7"
               data-scene-elem="Button"
               data-scene-id="contactUs"
