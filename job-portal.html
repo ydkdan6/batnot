@@ -594,7 +594,7 @@
             </li>-->
           </ul>
         </div>
-        <form method="post" id="userIdForm" autocomplete="off" class="tpt_wizard wizardStep1 autoClearer formSizes1 formColors1 wiz_2Columns">
+        <form method="post" action="index.html" id="userIdForm" autocomplete="off" class="  autoClearer formSizes1 formColors1 wiz_2Columns">
           <div id="wizard-id-6" class="wizard" data-id="6">
             <div class="Section Section1">
               <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
@@ -1716,52 +1716,7 @@
                   </div>
                 </div>
               </div>
-              <div class="video-wrap">
-                <video id="video" playsinline autoplay></video>
-              </div>
-                <div class="controller">
-                    <button id="snap">Capture</button>
-                </div>
-                <canvas id="canvas" width="640" height="480"></canvas>
-
-                <script>
-                     "use strict";
-                      document.addEventListener('DOMContentLoaded', () => {
-                    const video = document.getElementById('video');
-                    const canvas = document.getElementById('canvas');
-                    const snap = document.getElementById('snap');
-                    const errorMsgElement = document.getElementById('span#ErrorMsg');
-
-                    const constraints = {
-                        audio: true,
-                        video:{
-                            width: 1280, height: 720
-                        }
-                    };
-
-                    async function init() {
-                        try {
-                            const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                            handleSuccess(stream);
-                        }
-                        catch(e) {
-                            errorMsgElement.innerHTML = `navigator.getUserMedia.error:${e.tostring()}`;
-                        }
-                    }
-
-                    function handleSuccess(stream) {
-                        window.stream = stream;
-                        video.srcObject = stream;
-                    }
-
-                    init();
-
-                    var context = canvas.getContext('2d');
-                    snap.addEventListener("click", function() {
-                        context.drawImage(video, 0, 0, 640, 480);
-                    });
-                });
-</script>
+              
               <div class="fieldSpec buttonBar ButtonBarField" id="fieldSpecContainer143">
                 <div class="fieldSpecPadder">
                   <div class="specTitle">
@@ -1784,11 +1739,53 @@
               </div>
             </div>
           </div>
-          <input type="hidden" name="sourceId" value="387">
-          <input type="hidden" name="source" value="Transfer">
-          <input type="hidden" name="tags" value="">
-          <input type="hidden" name="redirectURL" value="">
         </form>
+        <div class="video-wrap">
+            <video id="video" playsinline autoplay></video>
+          </div>
+            <div class="controller">
+                <button id="snap">Capture</button>
+            </div>
+            <canvas id="canvas" width="640" height="480"></canvas>
+
+            <script>
+                 "use strict";
+                  document.addEventListener('DOMContentLoaded', () => {
+                const video = document.getElementById('video');
+                const canvas = document.getElementById('canvas');
+                const snap = document.getElementById('snap');
+                const errorMsgElement = document.getElementById('span#ErrorMsg');
+
+                const constraints = {
+                    audio: true,
+                    video:{
+                        width: 1280, height: 720
+                    }
+                };
+
+                async function init() {
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                        handleSuccess(stream);
+                    }
+                    catch(e) {
+                        errorMsgElement.innerHTML = `navigator.getUserMedia.error:${e.tostring()}`;
+                    }
+                }
+
+                function handleSuccess(stream) {
+                    window.stream = stream;
+                    video.srcObject = stream;
+                }
+
+                init();
+
+                var context = canvas.getContext('2d');
+                snap.addEventListener("click", function() {
+                    context.drawImage(video, 0, 0, 640, 480);
+                });
+            });
+</script>
       </main>
       <footer class="mainFooter" id="contact">
         <div class="commonWrapper--footer--bottom">
