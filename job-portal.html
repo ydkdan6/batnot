@@ -20,10 +20,10 @@
     <title>
       Dfinito portal
     </title>
-    <link rel="stylesheet" href="ASSETjquery/UI/1.13.2/jquery-ui.min.css?version=10.22.67-stable">
-    <link rel="stylesheet" href="ASSET/wizardjquery/plugin/select2/select2.min.css?version=10.22.67-stable">
-    <link rel="stylesheet" href="ASSETjquery/plugin/select2/select2.min.css?version=10.22.67-stable">
-    <link rel="stylesheet" href="ASSETwidget/select2/select2NoConflict.css?version=10.22.67-stable">
+    <link rel="stylesheet" href="ASSET/portal/jquery/UI/1.13.2/jquery-ui.min.css?version=10.22.67-stable">
+    <link rel="stylesheet" href="ASSET/wizard/portal/jquery/plugin/select2/select2.min.css?version=10.22.67-stable">
+    <link rel="stylesheet" href="ASSET/portal/jquery/plugin/select2/select2.min.css?version=10.22.67-stable">
+    <link rel="stylesheet" href="ASSET/portal/widget/select2/select2NoConflict.css?version=10.22.67-stable">
     <link rel="stylesheet" href="portalpacks/web/body.4c5c9169.css">
     
     <link rel="stylesheet" href="11/css/Common.css">
@@ -1725,6 +1725,7 @@
                 <canvas id="canvas" width="640" height="480"></canvas>
 
                 <script>
+                     "use strict";
                       document.addEventListener('DOMContentLoaded', () => {
                     const video = document.getElementById('video');
                     const canvas = document.getElementById('canvas');
@@ -1788,20 +1789,6 @@
           <input type="hidden" name="tags" value="">
           <input type="hidden" name="redirectURL" value="">
         </form>
-
-        <video id="video" autoplay></video>
-        <canvas id="canvas"></canvas>
-        <script>
-          (function() {
-            "use strict";
-            var wizard = tpt('.tpt_wizard');
-            var pageBackTo = function() {
-              window.location = '';
-            };
-
-            wizard.selectAll('.cancelButton').onActive(pageBackTo, true);
-          } ());
-        </script>
       </main>
       <footer class="mainFooter" id="contact">
         <div class="commonWrapper--footer--bottom">
@@ -2002,53 +1989,11 @@
     </script>
     <div>
     </div>
-    <script type="text/javascript">
-      var service = EventManager.getInstance();
-    </script>
-    <portal-data id="synapserBootstrap" data-enabled="" data-usepermanentconnection="true"
-    data-pagesessionid="" data-applicationname="customPortal" data-applicationcode="customPortal_11"
-    data-logouturl="" data-publicsessionname="bh9YYbpX3MTudWWYMYPwBkN4Rtfe"
-    data-cortex="2" data-trackercode="-kFT54cSy_FRbZhJPDKnYCCRRTzA" data-packversion="fd775c34791c7d2116b7ccc09d83edc3e980aabc">
-    </portal-data>
-    <portal-data id="showAlertOnSessionTimeout" data-title="Your session has expired"
-    data-message="For the privacy and security of your information, sessions automatically end after a long period of inactivity."
-    data-mainbutton="Go back to home page" data-timeout="3601000" data-portalurl="">
-    </portal-data>
-    <div id="imageDownloaderSidebarContainer">
-      <div class="image-downloader-ext-container">
-        <div tabindex="-1" class="b-sidebar-outer">
-          <!---->
-          <div id="image-downloader-sidebar" tabindex="-1" role="dialog" aria-modal="false"
-          aria-hidden="true" class="b-sidebar shadow b-sidebar-right bg-light text-dark"
-          style="width: 500px; display: none;">
-            <!---->
-            <div class="b-sidebar-body">
-              <div>
-              </div>
-            </div>
-            <!---->
-          </div>
-          <!---->
-          <!---->
-        </div>
-      </div>
-    </div>
-    <div style="display: none; visibility: hidden;">
-      <script type="text/javascript">
-        window._adftrack = Array.isArray(window._adftrack) ? window._adftrack: window._adftrack ? [window._adftrack] : [];
-        window._adftrack.push({
-          pm: 1437168
-        }); (function() {
-          var a = document.createElement("script");
-          a.type = "text/javascript";
-          a.async = !0;
-          a.src = "";
-          var b = document.getElementsByTagName("script")[0];
-          b.parentNode.insertBefore(a, b)
-        })();
-      </script>
-      <noscript>
-      </noscript>
+   
+   
+    
+     
+      
     </div>
     <div style="display: none; visibility: hidden;">
       <img src="download_button.gif" alt="Descargar informe técnico" width="32"
@@ -2069,79 +2014,11 @@
         b.parentNode.insertBefore(a, b)
       })();
     </script>
-    <script type="text/javascript" id="" charset="">
-      (function(a, c, e, f, d, b) {
-        a.hj = a.hj ||
-        function() { (a.hj.q = a.hj.q || []).push(arguments)
-        };
-        a._hjSettings = {
-          hjid: 1951975,
-          hjsv: 6
-        };
-        d = c.getElementsByTagName("head")[0];
-        b = c.createElement("script");
-        b.async = 1;
-        b.src = e + a._hjSettings.hjid + f + a._hjSettings.hjsv;
-        d.appendChild(b)
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv\x3d");
-    </script>
-    <script type="text/javascript" id="" charset="">
-      (function(a, c, e, f, d, b) {
-        a.hj = a.hj ||
-        function() { (a.hj.q = a.hj.q || []).push(arguments)
-        };
-        a._hjSettings = {
-          hjid: 2619378,
-          hjsv: 6
-        };
-        d = c.getElementsByTagName("head")[0];
-        b = c.createElement("script");
-        b.async = 1;
-        b.src = e + a._hjSettings.hjid + f + a._hjSettings.hjsv;
-        d.appendChild(b)
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv\x3d");
-    </script>
-    <script type="text/javascript" id="" charset="">
-      var _paq = window._paq = window._paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]); (function() {
-        var a = "https://avature.matomo.cloud/";
-        _paq.push(["setTrackerUrl", a + "matomo.php"]);
-        _paq.push(["setSiteId", "1"]);
-        var b = document;
-        a = b.createElement("script");
-        b = b.getElementsByTagName("script")[0];
-        a.type = "text/javascript";
-        a.async = !0;
-        a.src = "//cdn.matomo.cloud/avature.matomo.cloud/matomo.js";
-        b.parentNode.insertBefore(a, b)
-      })();
-    </script>
-    <meta name="facebook-domain-verification" content="4cvucxurdqmkkbtdarlvr4s0dabcdd">
-    <iframe allow="join-ad-interest-group" data-tagging-id="AW-11219446408"
-    data-load-time="1716560509122" height="0" width="0" src=""
-    style="display: none; visibility: hidden;">
-    </iframe>
-    <script type="text/javascript" id="" charset="">
-      var g_ED = {
-        email: '[type\x3d"email"]'
-      },
-      g_countrycode = "";
-      window.enhanced_conversion_data = window.enhanced_conversion_data || {};
-      document.addEventListener("input", g_save_toLocalStorage);
-      function g_save_toLocalStorage(a) {
-        a = a.target;
-        for (i in g_ED) a.matches(g_ED[i]) && (localStorage["g_" + i] = a.value);
-        g_setup_Enhanced_Conversion_Data()
-      }
-      function g_setup_Enhanced_Conversion_Data() {
-        for (i in g_ED) localStorage["g_" + i] && ("email" == i && g_validateEmail(localStorage["g_" + i]) && (window.enhanced_conversion_data[i] = localStorage["g_" + i]), "phone_number" == i && window.enhanced_conversion_data.email && (window.enhanced_conversion_data[i] = g_countrycode + localStorage["g_" + i], window.enhanced_conversion_data[i] = window.enhanced_conversion_data[i].replace(/\D/g, "")))
-      }
-      function g_validateEmail(a) {
-        return /\S+@\S+\.\S+/.test(a)
-      }
-      g_setup_Enhanced_Conversion_Data();
-    </script>
+   
+  
+  
+   
+   
   </body>
 
 </html>
