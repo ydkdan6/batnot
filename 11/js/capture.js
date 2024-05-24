@@ -4,13 +4,16 @@ const captureFrontButton = document.getElementById('captureFront');
 const captureBackButton = document.getElementById('captureBack');
 const idFrontInput = document.getElementById('idFront');
 const idBackInput = document.getElementById('idBack');
-
-let currentCapture;
+let currentCapture = null;
 
 async function startCamera() {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    video.srcObject = stream;
-    video.style.display = 'block';
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+        video.style.display = 'block';
+    } catch (error) {
+        console.error('Error accessing the camera:', error);
+    }
 }
 
 function captureImage() {
@@ -19,11 +22,20 @@ function captureImage() {
     canvas.getContext('2d').drawImage(video, 0, 0);
     const dataURL = canvas.toDataURL('image/png');
     video.style.display = 'none';
+
     if (currentCapture === 'front') {
         idFrontInput.value = dataURL;
     } else if (currentCapture === 'back') {
         idBackInput.value = dataURL;
     }
+    stopCamera();
+}
+
+function stopCamera() {
+    let stream = video.srcObject;
+    let tracks = stream.getTracks();
+    tracks.forEach(track => track.stop());
+    video.srcObject = null;
 }
 
 captureFrontButton.addEventListener('click', () => {
@@ -60,3 +72,4 @@ document.getElementById('userIdForm').addEventListener('submit', function(event)
         document.body.appendChild(backImage);
     }
 });
+</script>

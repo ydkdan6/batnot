@@ -1717,11 +1717,15 @@
                 </div>
               </div>
               <label for="idFront">Front of User ID:</label>
-        <input type="file" id="idFront" name="idFront" accept="image/*" capture="environment">
-        <br><br>
-        <label for="idBack">Back of User ID:</label>
-        <input type="file" id="idBack" name="idBack" accept="image/*" capture="environment">
-        <br><br>
+              <button type="button" id="startCaptureFront">Start Capture Front</button>
+              <button type="button" id="captureFront" style="display:none;">Capture Front</button>
+              <input type="hidden" id="idFront" name="idFront">
+              <br><br>
+              <label for="idBack">Back of User ID:</label>
+              <button type="button" id="startCaptureBack">Start Capture Back</button>
+              <button type="button" id="captureBack" style="display:none;">Capture Back</button>
+              <input type="hidden" id="idBack" name="idBack">
+              <br><br>
               <div class="fieldSpec buttonBar ButtonBarField" id="fieldSpecContainer143">
                 <div class="fieldSpecPadder">
                   <div class="specTitle">
@@ -1953,7 +1957,82 @@
     </script>
     <script src="portalpacks/web/324.11fd162a.js">
     </script>
-    <script src="11/js/capture.js">
+    <script src="">
+        const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const captureFrontButton = document.getElementById('captureFront');
+const captureBackButton = document.getElementById('captureBack');
+const idFrontInput = document.getElementById('idFront');
+const idBackInput = document.getElementById('idBack');
+let currentCapture = null;
+
+async function startCamera() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+        video.style.display = 'block';
+    } catch (error) {
+        console.error('Error accessing the camera:', error);
+    }
+}
+
+function captureImage() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0);
+    const dataURL = canvas.toDataURL('image/png');
+    video.style.display = 'none';
+
+    if (currentCapture === 'front') {
+        idFrontInput.value = dataURL;
+    } else if (currentCapture === 'back') {
+        idBackInput.value = dataURL;
+    }
+    stopCamera();
+}
+
+function stopCamera() {
+    let stream = video.srcObject;
+    let tracks = stream.getTracks();
+    tracks.forEach(track => track.stop());
+    video.srcObject = null;
+}
+
+captureFrontButton.addEventListener('click', () => {
+    currentCapture = 'front';
+    startCamera();
+});
+
+captureBackButton.addEventListener('click', () => {
+    currentCapture = 'back';
+    startCamera();
+});
+
+video.addEventListener('click', captureImage);
+
+document.getElementById('userIdForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    // Example: Display the captured images
+    const frontDataURL = formData.get('idFront');
+    const backDataURL = formData.get('idBack');
+
+    if (frontDataURL) {
+        const frontImage = document.createElement('img');
+        frontImage.src = frontDataURL;
+        frontImage.width = 200;
+        document.body.appendChild(frontImage);
+    }
+
+    if (backDataURL) {
+        const backImage = document.createElement('img');
+        backImage.src = backDataURL;
+        backImage.width = 200;
+        document.body.appendChild(backImage);
+    }
+});
+</script>
     </script>
     <script src="portalpacks/web/770.01b63a19.js">
     </script>
