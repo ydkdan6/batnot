@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="avaturegdpr" horiz-adv-x="1000" >
+<font-face font-family="avaturegdpr" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="icon-settings" unicode="&#xe800;" d="M396 267c-50 0-92-38-104-84h-209v-41h213c8-46 50-84 100-84s92 38 100 84h421v41h-417c-12 46-54 84-104 84z m0-167c-33 0-63 29-63 63s30 62 63 62 62-29 62-62-29-63-62-63z m-21 500c-12 46-54 83-104 83s-92-37-104-83h-84v-42h88c8-45 50-83 100-83s92 38 100 83h546v42h-542z m-104-83c-33 0-63 29-63 62s30 63 63 63 62-29 62-63-29-62-62-62z m417-42c-50 0-92-37-105-83h-500v-42h505c8-46 50-83 100-83s91 37 100 83h129v42h-125c-13 46-54 83-104 83z m0-167c-34 0-63 30-63 63s29 62 63 62 62-29 62-62-29-63-62-63z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "voutique";
+  src:url("https://jobs.telusinternational.com/portal/11/fonts/voutique.eot");
+  src:url("https://jobs.telusinternational.com/portal/11/fonts/voutique.eot?#iefix") format("embedded-opentype"),
+    url("https://jobs.telusinternational.com/portal/11/fonts/voutique.woff") format("woff"),
+    url("https://jobs.telusinternational.com/portal/11/fonts/voutique.ttf") format("truetype"),
+    url("https://jobs.telusinternational.com/portal/11/fonts/voutique.svg#voutique") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "voutique" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "voutique" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-add-people:before {
+  content: "\61";
+}
+.icon-icon-attachments:before {
+  content: "\62";
+}
+.icon-icon-calendar:before {
+  content: "\63";
+}
+.icon-icon-cancel:before {
+  content: "\64";
+}
+.icon-icon-description:before {
+  content: "\65";
+}
+.icon-icon-down-arrow:before {
+  content: "\66";
+}
+.icon-icon-download:before {
+  content: "\67";
+}
+.icon-icon-group:before {
+  content: "\68";
+}
+.icon-icon-information:before {
+  content: "\69";
+}
+.icon-icon-job:before {
+  content: "\6a";
+}
+.icon-icon-job-plus:before {
+  content: "\6b";
+}
+.icon-icon-onboarding-book:before {
+  content: "\6c";
+}
+.icon-icon-onboarding-calendar:before {
+  content: "\6d";
+}
+.icon-icon-onboarding-document:before {
+  content: "\6e";
+}
+.icon-icon-onboarding-face:before {
+  content: "\6f";
+}
+.icon-icon-onboarding-job:before {
+  content: "\70";
+}
+.icon-icon-people:before {
+  content: "\71";
+}
+.icon-icon-people-widget:before {
+  content: "\72";
+}
+.icon-icon-phone:before {
+  content: "\73";
+}
+.icon-icon-plus:before {
+  content: "\74";
+}
+.icon-icon-settings:before {
+  content: "\75";
+}
+.icon-icon-share:before {
+  content: "\76";
+}
+.icon-icon-social-facebook:before {
+  content: "\77";
+}
+.icon-icon-social-google:before {
+  content: "\78";
+}
+.icon-icon-social-twitter:before {
+  content: "\79";
+}
+.icon-icon-tick:before {
+  content: "\7a";
+}
+.icon-icon-university:before {
+  content: "\41";
+}
+.icon-icon-edit:before {
+  content: "\42";
+}
+.icon-icon-edit-1:before {
+  content: "\43";
+}
+.icon-icon-alerts:before {
+  content: "\44";
+}
+.icon-icon-folder:before {
+  content: "\45";
+}

@@ -1,0 +1,17 @@
+.select2-search__field{color: #333; width: 100% !important;}
+.select2-selection__choice{color: #333;}
+.select2-results__option{color: black;}
+.select2-container--default .select2-search--inline .select2-search__field {color:#666;}
+.select2-results__option.select2-results__message, .select2-results__option.select2-results__option.loading-results, .select2-results__option.select2-results__option--load-more{color:black; background: #f4f4f4;}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding-right: 15px;
+    padding-left: 5px;
+    position: relative;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    float: initial;
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,870 @@
+/*! CSS Used from 01__library__sanitize.css */
+
+.updatedMethodsStyles {
+    clear: both;
+}
+.updatedMethodsStyles *,
+.updatedMethodsStyles ::before,
+.updatedMethodsStyles ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+.updatedMethodsStyles ::before,
+.updatedMethodsStyles ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+.updatedMethodsStyles article {
+    display: block;
+}
+
+.updatedMethodsStyles a {
+    -webkit-text-decoration-skip: objects;
+}
+
+.updatedMethodsStyles ::-moz-selection {
+    background-color: #CCCCCC;
+    color: #000000;
+    text-shadow: none;
+}
+
+.updatedMethodsStyles ::selection {
+    background-color: #CCCCCC;
+    color: #000000;
+    text-shadow: none;
+}
+
+.updatedMethodsStyles button,
+.updatedMethodsStyles input,
+.updatedMethodsStyles textarea {
+    margin: 0;
+}
+
+.updatedMethodsStyles button,
+.updatedMethodsStyles input,
+.updatedMethodsStyles textarea {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.updatedMethodsStyles button,
+.updatedMethodsStyles input {
+    overflow: visible;
+}
+
+.updatedMethodsStyles button {
+    text-transform: none;
+}
+
+.updatedMethodsStyles button,
+.updatedMethodsStyles [type="submit"] {
+    -webkit-appearance: button;
+}
+
+.updatedMethodsStyles button::-moz-focus-inner,
+.updatedMethodsStyles [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+.updatedMethodsStyles button:-moz-focusring,
+.updatedMethodsStyles [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+.updatedMethodsStyles textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+.updatedMethodsStyles a,
+.updatedMethodsStyles button,
+.updatedMethodsStyles input,
+.updatedMethodsStyles label,
+.updatedMethodsStyles textarea,
+.updatedMethodsStyles [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+/*! CSS Used from 02__library__reset.css */
+
+.updatedMethodsStyles ul {
+    list-style: none;
+}
+
+.updatedMethodsStyles :focus {
+    outline: none;
+}
+
+.updatedMethodsStyles input:focus,
+.updatedMethodsStyles textarea:focus,
+.updatedMethodsStyles button:focus {
+    outline-width: thin;
+    outline-style: dotted;
+    outline-color: #5E6D81;
+}
+
+.updatedMethodsStyles :invalid {
+    outline-color: #DD0000;
+    outline-color: rgba(221, 0, 0, 0.5);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*! CSS Used from 06__library__layout__grid-and-columns.css */
+
+.updatedMethodsStyles .grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.updatedMethodsStyles .grid__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.updatedMethodsStyles .grid>.grid__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .grid>.grid__item {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .grid>.grid__item {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+}
+
+.updatedMethodsStyles .grid {
+    margin: -24px 0 0 -24px;
+}
+
+.updatedMethodsStyles .grid>.grid__item {
+    padding: 24px 0 0 24px;
+}
+
+.updatedMethodsStyles .grid {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.updatedMethodsStyles .grid--valign-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .grid--methods {
+        margin: -16px 0 0 -40px;
+    }
+    .updatedMethodsStyles .grid--methods>.grid__item {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 16px 0 0 40px;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .grid--methods {
+        margin: -48px 0 0 -40px;
+    }
+    .updatedMethodsStyles .grid--methods>.grid__item {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 48px 0 0 40px;
+    }
+}
+
+/*! CSS Used from 09__library__generals__article.css */
+
+.updatedMethodsStyles .article {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.updatedMethodsStyles .article__content+.article__content {
+    margin-top: 24px;
+}
+
+/*! CSS Used from 11__library__form__elements.css */
+
+.updatedMethodsStyles .form input:not([type="checkbox"]):not([type="radio"]):not([class*="select2"]),
+.updatedMethodsStyles .form textarea {
+    display: block;
+    outline-width: 0;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E8E8E8;
+    width: 100%;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #565656;
+    -webkit-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.updatedMethodsStyles .form input:not([type="checkbox"]):not([type="radio"]):focus,
+.updatedMethodsStyles .form textarea:focus {
+    border-color: #D8D8D8;
+}
+
+.updatedMethodsStyles ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #999999;
+}
+
+.updatedMethodsStyles ::-moz-placeholder {
+    opacity: 1;
+    color: #999999;
+}
+
+.updatedMethodsStyles :-ms-input-placeholder {
+    opacity: 1;
+    color: #999999;
+}
+
+.updatedMethodsStyles :-moz-placeholder {
+    opacity: 1;
+    color: #999999;
+}
+
+@media all and (max-width:1024px) {
+    .updatedMethodsStyles .form textarea {
+        height: 83px;
+    }
+}
+
+@media all and (min-width:1025px) {
+    .updatedMethodsStyles .form textarea {
+        height: 112px;
+    }
+}
+
+.updatedMethodsStyles .form textarea {
+    line-height: 150%;
+}
+
+.updatedMethodsStyles .form textarea {
+    padding: 9px 8px;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .form input {
+        padding: 11px 8px;
+    }
+    .updatedMethodsStyles .form input[type="file"] {
+        padding: 8px 8px 8px 4px;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .form input {
+        padding: 9px 8px;
+    }
+    .updatedMethodsStyles .form input[type="file"] {
+        padding: 6px 8px 6px 4px;
+    }
+}
+
+.updatedMethodsStyles .button {
+    display: inline-block;
+    outline: 0;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: initial;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .button {
+        padding: 11px 16px;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .button {
+        padding: 9px 16px;
+    }
+}
+
+.updatedMethodsStyles .button:hover,
+.updatedMethodsStyles .button:active {
+    text-decoration: none;
+}
+
+.updatedMethodsStyles .button:focus {
+    text-decoration: none;
+}
+
+.updatedMethodsStyles .button--small {
+    padding: 2px 4px;
+    font-size: 11px;
+}
+
+.updatedMethodsStyles .button--default,
+.updatedMethodsStyles .button--default:link,
+.updatedMethodsStyles .button--default:visited {
+    border-color: #227FFF;
+    background-color: #227FFF;
+    color: #FFFFFF;
+}
+
+.updatedMethodsStyles .button--default:hover,
+.updatedMethodsStyles .button--default:active {
+    border-color: #227FFF;
+    background-color: #2C74D7;
+    color: #FFFFFF;
+}
+
+.updatedMethodsStyles .button--default:focus {
+    border-color: #2C74D7;
+    background-color: #2C74D7;
+    color: #FFFFFF;
+}
+
+.updatedMethodsStyles .button--secondary,
+.updatedMethodsStyles .button--secondary:link,
+.updatedMethodsStyles .button--secondary:visited {
+    border-color: #227FFF;
+    background-color: #FFFFFF;
+    color: #227FFF;
+}
+
+.updatedMethodsStyles .button--secondary:hover,
+.updatedMethodsStyles .button--secondary:active {
+    border-color: #2C74D7;
+    background-color: #FFFFFF;
+    color: #2C74D7;
+}
+
+.updatedMethodsStyles .button--secondary:focus {
+    border-color: #2C74D7;
+    background-color: #FFFFFF;
+    color: #2C74D7;
+}
+
+/*! CSS Used from 12__library__form__layout.css */
+
+.updatedMethodsStyles .form {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+.updatedMethodsStyles .Section:before,
+.updatedMethodsStyles .Section:after {
+    content: "";
+    display: table;
+}
+
+.updatedMethodsStyles .Section:after {
+    clear: both;
+}
+
+.updatedMethodsStyles .Section+.Section {
+    padding-top: 20px;
+}
+
+.updatedMethodsStyles .fieldSpec {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+    clear: both;
+}
+
+.updatedMethodsStyles .fieldSpec>label {
+    display: block;
+    width: 100%;
+    padding-bottom: 4px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.updatedMethodsStyles div[class*="fieldSpec"] label:empty {
+    display: none;
+}
+
+.updatedMethodsStyles div[class*="fieldSpec"] .labelRequiredIcon {
+    color: #BC2828;
+}
+
+.updatedMethodsStyles div[class*="fieldSpec"]>div:not([class*="description"]):before,
+.updatedMethodsStyles div[class*="fieldSpec"]>div:not([class*="description"]):after {
+    content: "";
+    display: table;
+}
+
+.updatedMethodsStyles div[class*="fieldSpec"]>div:not([class*="description"]):after {
+    clear: both;
+}
+
+.updatedMethodsStyles div[class*="fieldSpec"] .errorMessage {
+    display: block;
+    padding-top: 4px;
+    clear: both;
+    font-size: 14px;
+    line-height: 150%;
+    color: #BC2828;
+}
+
+.updatedMethodsStyles .button-bar {
+    margin-bottom: -16px;
+    padding: 0;
+    text-align: left;
+    clear: both;
+    -webkit-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.updatedMethodsStyles .fieldSpec+.button-bar.fieldSpec {
+    padding-top: 8px;
+}
+
+.updatedMethodsStyles .button-bar:before,
+.updatedMethodsStyles .button-bar:after {
+    content: "";
+    display: table;
+}
+
+.updatedMethodsStyles .button-bar:after {
+    clear: both;
+}
+
+.updatedMethodsStyles .button-bar .button {
+    margin-bottom: 16px;
+}
+
+.updatedMethodsStyles .button-bar:not([class*="col"]) .button {
+    min-width: 120px;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .button-bar .button {
+        width: 100%;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .button-bar:not([class*="button-bar--"]) .button {
+        float: left;
+    }
+}
+
+/*! CSS Used from 13__library__snippets-and-helper-classes.css */
+
+.updatedMethodsStyles .clearfix:before,
+.updatedMethodsStyles .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.updatedMethodsStyles .clearfix:after {
+    clear: both;
+}
+
+/*! CSS Used from 15__library__common-pagetypes.css */
+
+.updatedMethodsStyles .social-login__text {
+    margin-bottom: 16px;
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.updatedMethodsStyles .list--social-login .list__item {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+
+@media all and (max-width:750px) {
+    .updatedMethodsStyles .article--methods {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 230px;
+    }
+}
+
+@media all and (min-width:751px) {
+    .updatedMethodsStyles .article--methods .article__content:first-of-type {
+        margin-right: -34px;
+        margin-left: -34px;
+    }
+}
+
+.updatedMethodsStyles .form--methods div[class*="fieldSpec"] .selectedFile {
+    display: block;
+    padding-top: 4px;
+    clear: both;
+}
+
+.updatedMethodsStyles .form--methods div[class*="fieldSpec"] .selectedFile span {
+    font-size: 14px;
+    line-height: 150%;
+    font-style: italic;
+    word-break: break-all;
+}
+
+.updatedMethodsStyles .form--methods div[class*="fieldSpec"] .selectedFile .button {
+    margin-left: 16px;
+}
+
+/* Custom CSS */
+/* Login button */
+.updatedMethodsStyles .social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.updatedMethodsStyles .social-login__text {
+    color: #333;
+    font-style: italic;
+    padding: 0.5em 0;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 0;
+}
+
+.updatedMethodsStyles .list--social-login {
+    margin: 0;
+    padding: 0;
+}
+
+.updatedMethodsStyles .list--social-login .list__item {
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+
+.updatedMethodsStyles .loginButton {
+    text-indent: -999em;
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    padding: 0 0 32px 32px;
+    background-color: #4C296E;
+    background-size: 18px 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+}
+
+.updatedMethodsStyles .loginButton:link,
+.updatedMethodsStyles .loginButton:visited {
+    background-color: #4C296E;
+    outline: none;
+}
+
+.updatedMethodsStyles .loginButton:hover,
+.updatedMethodsStyles .loginButton:focus {
+    background-color: #258700;
+    outline: none;
+}
+
+.updatedMethodsStyles .loginButton:active {
+    background-color: #ccc;
+    outline: none;
+}
+
+.updatedMethodsStyles .loginButton--facebook {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoFacebookW.svg);
+}
+
+.updatedMethodsStyles .loginButton--linkedin {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoLinkedinW.svg);
+}
+
+.updatedMethodsStyles .loginButton--twitter{
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoTwitterW.svg);
+}
+
+.updatedMethodsStyles .loginButton--google {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoGooglePlusW.svg);
+}
+
+.updatedMethodsStyles .loginButton--xing {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/icoXingW.svg');
+}
+
+.body_Firefox .updatedMethodsStyles .loginButton--facebook {
+    background-size: 10px 19px;
+}
+
+.body_Firefox .updatedMethodsStyles .loginButton--google {
+    background-size: 23px auto;
+}
+
+.body_IE .updatedMethodsStyles .loginButton--facebook {
+    background-size: auto 20px;
+}
+
+.body_IE .updatedMethodsStyles .loginButton--google {
+    background-size: auto 15px;
+}
+
+/* Registration methods */
+.updatedMethodsStyles .list--methods {
+    justify-content: center;
+    margin: 0;
+    row-gap: 1.6rem;
+    align-items: stretch;
+}
+@media all and (max-width:750px){
+    .updatedMethodsStyles .list--methods {
+        padding-left: 0;
+    }
+}
+
+.updatedMethodsStyles .list--methods > .list__item {
+    -webkit-box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+    width: 18%;
+    position: relative;
+    vertical-align: top;
+}
+
+.updatedMethodsStyles .methodButton,
+.updatedMethodsStyles .methodButton:link,
+.updatedMethodsStyles .methodButton:visited {
+    display: block;
+    margin: 0 auto;
+    padding: 88px 0.5em 1.5em 0.5em;
+    color: #5E6D81;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline-width: 0;
+    background-color: transparent;
+    border: none;
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    font-size: 13px;
+    font-weight: normal;
+    height: auto;
+    text-transform: uppercase;
+    transition: background-position 200ms;
+}
+
+.updatedMethodsStyles .methodButton:focus,
+.updatedMethodsStyles .methodButton:hover,
+.updatedMethodsStyles .methodButton:active {
+    outline-width: 0;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    color: #4b4b4b;
+    background-position: center 8px;
+    transition: background-position 200ms;
+}
+
+.updatedMethodsStyles .methodButton--file {
+    background-image: var(--from-computer--icon);
+}
+
+.updatedMethodsStyles .methodButton--file:hover {
+    background-image: var(--from-computer--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--file:focus {
+    background-image: var(--from-computer--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--later {
+    background-image: var(--without-resume--icon);
+}
+
+.updatedMethodsStyles .methodButton--later:hover {
+    background-image: var(--without-resume--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--later:focus {
+    background-image: var(--without-resume--icon--focus);
+}
+
+.updatedMethodsStyles .form--methods {
+    text-align: center;
+}
+
+.updatedMethodsStyles .methodButton--google,
+.updatedMethodsStyles .methodButton--google:link,
+.updatedMethodsStyles .methodButton--google:visited {
+    box-shadow: none;
+    padding: 72px 0.5em 1.5em 0.5em;
+    background-position: center top;
+    top: 14px;
+    position: relative;
+}
+
+.updatedMethodsStyles .methodButton--indeed,
+.updatedMethodsStyles .methodButton--indeed:link,
+.updatedMethodsStyles .methodButton--indeed:visited {
+    box-shadow: none;
+    padding: 72px 0.5em 1.5em 0.5em;
+    background-position: center top;
+    top: 14px;
+    position: relative;
+}
+
+.updatedMethodsStyles .methodButton--indeed {
+    background-image: var(--indeed--icon);
+}
+
+.updatedMethodsStyles .methodButton--indeed:hover {
+    background-image: var(--indeed--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--indeed:focus {
+    background-image: var(--indeed--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--monster,
+.updatedMethodsStyles .methodButton--monster:link,
+.updatedMethodsStyles .methodButton--monster:visited {
+    width: auto;
+    max-width: auto;
+    background-size: auto;
+    padding-top: 4.8rem;
+    padding-bottom: 2rem;
+}
+
+.updatedMethodsStyles .methodButton--facebook{
+    background-image: var(--facebook--icon);
+}
+
+.updatedMethodsStyles .methodButton--facebook:hover {
+    background-image: var(--facebook--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--facebook:focus {
+    background-image: var(--facebook--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--seek,
+.updatedMethodsStyles .methodButton--seek:link,
+.updatedMethodsStyles .methodButton--seek:visited {
+    width: auto;
+    max-width: auto;
+    box-shadow: none;
+    background-size: auto;
+}
+.updatedMethodsStyles .methodButton--seek{
+    background-image: var(--seek--icon);
+}
+
+.updatedMethodsStyles .methodButton--seek:hover {
+    background-image: var(--seek--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--seek:focus {
+    background-image: var(--seek--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--dropbox{
+    background-image: var(--dropbox--icon);
+}
+
+.updatedMethodsStyles .methodButton--dropbox:hover {
+    background-image: var(--dropbox--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--dropbox:focus {
+    background-image: var(--dropbox--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--drive{
+    background-image: var(--drive--icon);
+    box-shadow: none;
+    max-width: unset;
+}
+
+.updatedMethodsStyles .methodButton--drive:hover {
+    background-image: var(--drive--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--drive:focus {
+    background-image: var(--drive--icon--focus);
+}
+
+.updatedMethodsStyles .methodButton--xing{
+    background-image: var(--xing--icon);
+    box-shadow: none;
+    max-width: unset;
+}
+
+.updatedMethodsStyles .methodButton--xing:hover {
+    background-image: var(--xing--icon--hover);
+}
+
+.updatedMethodsStyles .methodButton--xing:focus {
+    background-image: var(--xing--icon--focus);
+}

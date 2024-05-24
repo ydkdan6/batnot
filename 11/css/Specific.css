@@ -1,0 +1,5197 @@
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url("https://jobs.telusinternational.com/portal/11/fonts/HelveticaNeueLTStd-Bd.otf") format("opentype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url("https://jobs.telusinternational.com/portal/11/fonts/HelveticaNeueLTStd-Roman.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url("https://jobs.telusinternational.com/portal/11/fonts/HelveticaNeueLTStd-Lt.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url("https://jobs.telusinternational.com/portal/11/fonts/HelveticaNeueLTStd-Th.otf") format("opentype");
+    font-weight: 300;
+}
+
+.mainWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -webkit-transition: -webkit-transform 200ms ease-out 0s;
+    -ms-transition: transform 200ms ease-out 0s;
+    transition: transform 200ms ease-out 0s;
+}
+
+body.body__careers {
+    zoom: 1;
+    width: 100%;
+    color: #565656;
+    font-size: 16px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+}
+
+:invalid {
+    outline-color: #DD0000;
+    outline-color: rgba(221, 0, 0, 0.5);
+    box-shadow: none;
+}
+
+:focus {
+    outline-color: transparent;
+}
+
+::selection {
+    color: #000000;
+    text-shadow: none;
+    background-color: #B3D4FC;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline-color: #5E6D81;
+}
+
+a,
+button {
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #4C296E;
+    font-weight: 500;
+}
+
+a:hover,
+a:focus {
+    color: #258700;
+    text-decoration: none;
+}
+
+a:active {
+    color: #258700;
+}
+
+iframe {
+    width: 100%;
+}
+
+.mainDetails .bPad1 h2 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+/* Custom Helper Classes */
+
+.tColor1 {
+    color: #6594ba;
+}
+
+.tColor2 {
+    color: #4EC6A2;
+}
+
+.topLine {
+    padding-top: 1em;
+    margin-top: 1em;
+    border-top: 1px solid #b8c1d0;
+}
+
+@media all and (max-width: 600px) {
+    body.body__careers {
+        font-size: 14px;
+    }
+
+    body.body__careers.homePage .mainWrapper {
+        padding-bottom: 130px;
+    }
+}
+
+/* STRUCTURE */
+
+.commonWrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.greySection {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+}
+
+.pageTitle {
+    color: #4d4d4d;
+    padding: 0;
+    margin: 0 0 0.2em 0;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: normal;
+    font-weight: 300;
+    padding: 30px 0 40px;
+}
+
+.pageTitleAM {
+    font-size: 28px;
+    padding-top: 0;
+}
+
+.pageTitle.pageTitleSuper {
+    font-size: 36px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.pageSubtitle {
+    padding-bottom: 20px;
+}
+
+.pageTitle.pageTitleAlt1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.pageTitle.pageTitleSpaced {
+    margin-bottom: 1em;
+}
+
+.pageTitleLeft {
+    float: left;
+}
+
+.pageTitleNav {
+    float: right;
+    padding: 0;
+    margin: 3em 0 0.4em 0;
+    font-size: 1em;
+    line-height: 250%;
+    font-weight: normal;
+    font-weight: 300;
+}
+
+.pageTitleNav.pageTitleNavAlt1 {
+    margin: 2.25em 0 0.75em 0;
+    line-height: 187.5%;
+}
+
+.pageTitleNavLink,
+.pageTitleNavLink:link,
+.pageTitleNavLink:visited {
+    color: #4EC6A2;
+}
+
+.pageTitleNavLinkPlus {
+    padding-left: 2em;
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/circlePlus.svg');
+    background-repeat: no-repeat;
+    background-position: 0.5em center;
+    background-size: contain;
+}
+
+.pageTitleNavleft {
+    float: left;
+    margin-left: 1em;
+}
+
+.pageCaption {
+    padding: 0;
+    margin: 0 0 2em 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.pageCaptionAM {
+    padding: 0;
+    margin: -1.5em 0 3em 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.pageDescription {
+    margin: 0.5em 0 1em 0;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.sectionTitle {
+    clear: both;
+    color: #4C296E;
+    padding: 0;
+    font-size: 44px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.sectionSummary {
+    clear: both;
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: normal;
+    font-weight: 400;
+    color: #5E6D81;
+    background-color: #F5F5F5;
+    background-image: url('../images/about-icon.html');
+    background-repeat: no-repeat;
+    background-position: 0.75em center;
+    padding: 0.75em 0.75em 0.75em 2.5em;
+    margin-bottom: 1em;
+}
+
+.localTitle {
+    color: #5E6D81;
+    padding: 0;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.125em;
+    line-height: 1.5;
+    font-weight: normal;
+    border-bottom: 1px solid #BFBFBF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.looseText {
+    line-height: 1.5;
+    margin: 1em auto;
+}
+
+.bannerPadding {
+    padding: 50px 0;
+}
+
+.bannerPadTop {
+    padding-top: 80px;
+}
+
+.buttonBar {
+    clear: both;
+    float: none;
+    margin: 2em 0 0.5em 0;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.buttonBar:after {
+    clear: both;
+}
+
+.buttonBar:before,
+.buttonBar:after {
+    content: " ";
+    display: table;
+}
+
+.buttonBar>a,
+.buttonBar>button {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.buttonBar.buttonBarReverse {
+    direction: rtl;
+}
+
+.buttonBar.buttonBarRight {
+    text-align: right;
+}
+
+.buttonBar.buttonBarLeft {
+    text-align: left;
+}
+
+.buttonBar.buttonBarRight>a,
+.buttonBar.buttonBarRight>button {
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+.buttonBar.buttonBarLeft>a,
+.buttonBar.buttonBarLeft>button {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.buttonBar.buttonBarInheritMargin>a,
+.buttonBar.buttonBarInheritMargin>button {
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.fullWidthButton,
+.buttonBar .fullWidthButton {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.longButton {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+@media all and (max-width: 480px) {
+
+    .buttonBar>a,
+    .buttonBar>button,
+    .buttonBar.buttonBarRight>a,
+    .buttonBar.buttonBarRight>button,
+    .buttonBar.buttonBarLeft>a,
+    .buttonBar.buttonBarLeft>button {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0.5em;
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .buttonBar.buttonBarInheritMargin>a,
+    .buttonBar.buttonBarInheritMargin>button {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-bottom: 0;
+        display: inline-block;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        width: auto;
+    }
+}
+
+/* Search agents in wizard */
+
+.searchAgentsInWizardBox {
+    clear: both;
+    text-align: left;
+    padding: 1em 0;
+    border-top: 1px solid #E2E2E2;
+    margin-top: 2em;
+}
+
+.tpt_searchAgentHiddenFields {
+    display: none;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tpt_searchAgentHiddenFields.open {
+    display: block;
+}
+
+.halfContainer.tpt_searchAgentHiddenFields {
+    width: auto;
+}
+
+.searchAgentText {
+    display: block;
+    padding-top: 0.5em;
+}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.secCol {
+    width: 330px;
+    float: right;
+}
+
+.midSizeContainer .mainCol {
+    width: calc(100% - 150px);
+    vertical-align: bottom;
+}
+
+.midSizeContainer .secCol {
+    width: 140px;
+    float: right;
+    vertical-align: bottom;
+    padding-top: 0;
+}
+
+.midSizeContainer .mainCol .fieldBox {
+    display: inline-block;
+    width: 48%;
+    margin-right: 1%;
+}
+
+.fieldBox3ColumnsInlineButtonContainer {
+    display: block;
+    padding-top: 0;
+}
+
+/* Login and Reset Password */
+
+.loginPage {
+    background-image: var(--login--background--image);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    padding-bottom: 21%;
+}
+
+.loginPage .commonWrapper {
+    max-width: 500px;
+}
+
+.accountBox {
+    padding: 5px 0;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.accountBox .choosePasswordForm fieldset {
+    display: inline-block;
+}
+
+.accountBox .looseText {
+    line-height: 1.5;
+    margin: 0 auto 1em;
+}
+
+.accountBox fieldset.noWidth {
+    width: 50%;
+}
+
+.accountBox .buttonBar {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.accountBox .secCol {
+    box-sizing: border-box;
+}
+
+.accountBox .secCol p {
+    display: inline-block;
+    width: calc(100% - 140px);
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+.accountBox .fieldBox {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+}
+
+.accountBox fieldset.noWidth .fieldBox {
+    width: 97%;
+}
+
+.accountBox .sectionTitle {
+    margin-top: 0;
+    padding-top: 0
+}
+
+.accountBoxFooter {
+    line-height: 1.5;
+    margin: 1em auto;
+}
+
+.accountBox .secCol {
+    float: right;
+    width: 25%;
+    margin-top: -37px;
+}
+
+.accountBox .mainCol {
+    width: 90%;
+}
+
+.firstTimeApplicants .accountBox .secCol p {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 1em;
+}
+
+.accountBox fieldset {
+    display: inline-block;
+    width: 100%;
+    margin-right: 0;
+}
+
+.accountBox .fieldBox:last-child {
+    margin-right: 0;
+    width: 255px;
+}
+
+.tpt_loginHiddenFields {
+    display: none;
+    padding-top: 22px;
+    padding-bottom: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tpt_loginHiddenFields.open {
+    display: block;
+}
+
+.buttonBarSocial {
+    padding-bottom: .5em;
+    float: left;
+}
+
+.midSizeContainer {
+    width: 75%;
+}
+
+.socialLoginBox {
+    margin: 2em 0 1em;
+}
+
+.socialLoginBox p {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+    padding: 0.5em 0;
+    float: left;
+    margin-right: 1em;
+}
+
+.firstTimeApplicants .mainWrapper {
+    padding-bottom: 185px;
+}
+
+.firstTimeApplicants .greySection {
+    padding: 25px 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+}
+
+.firstTimeApplicants .greySection .socialLoginBox {
+    display: inline-block;
+    margin: 0;
+}
+
+.firstTimeApplicants .greySection .buttonBarSocial {
+    padding-bottom: 0;
+}
+
+@media all and (max-width: 800px) {
+    .accountBox {
+        width: auto;
+    }
+}
+
+.alertForm h3 {
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Account page redefinitions */
+.accountPage {
+    background-color: #252525;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.accountPage .mainHeader,
+.accountPage .mainFooter {
+    display: none;
+}
+
+.accountPage .mainContent {
+    background-color: transparent;
+    background-image: none;
+    padding: 0;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.accountPage .accountBox {
+    background-color: #FFFFFF;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.accountPage .sectionTitle {
+    color: #FFFFFF;
+    background-color: #4EC6A2;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+    line-height: 150%;
+}
+
+.accountPage .commonLoginBox {
+    padding: 1em;
+}
+
+.accountPage .accountBoxFooter {
+    margin: 0;
+    padding: 1em;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+.accountPage .accountBoxFooter>.navigationBackLinks {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    border-top-width: 0;
+}
+
+/* HEADER */
+.mainHeader {
+    top: 0;
+    width: 100%;
+    color: #343935;
+    margin: 0 auto;
+    z-index: auto;
+    background-color: #FFFFFF;
+}
+
+.headContent {
+    transition: 2s ease height 200ms;
+    background-color: #ffffff;
+}
+
+.headerBanner {
+    left: 0;
+    right: 0;
+    transition: height 200ms;
+}
+
+.stickyChild.sticked {
+    height: 86px;
+}
+
+/* H: skip to content link */
+.skipToContentLink,
+.skipToContentLink:link,
+.skipToContentLink:visited {
+    display: block;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    top: -4em;
+    left: 50%;
+    line-height: 2;
+    width: 300px;
+    overflow: hidden;
+    padding: 0.25em;
+    margin: 0 0 0 -150px;
+    border-radius: 0 0 0.5em 0.5em;
+    color: #FFFFFF;
+    background-color: #5E6D81;
+    text-align: center;
+    transition-property: top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.skipToContentLink:focus {
+    top: 0;
+    color: #FFFFFF;
+    outline-width: 0;
+}
+
+.skipToContentLink:hover,
+.skipToContentLink:active {
+    background-color: #8297B3;
+}
+
+/* H: main title */
+.mainTitleContainer {
+    position: relative;
+}
+
+.mainTitle {
+    height: 57px;
+    width: 193px;
+    font-weight: normal;
+    font-weight: 300;
+    top: 14px;
+    position: absolute;
+}
+
+.mainTitle img {
+    width: 270px;
+    transition: width 300ms;
+}
+
+.mainTitle>a {
+    display: block;
+}
+
+/* Main banner */
+.headerBanner {
+    background-color: #FFFFFF;
+    color: #4C296E;
+}
+
+/* All Jobs */
+
+.headerBannerAllJobs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.headerBannerAllJobs .headerBannerSearch {
+    padding-top: 50px;
+    width: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.headerBannerAllJobs .headerBannerTitle {
+    padding-top: 85px;
+    font-size: 36px;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.headerBannerAllJobs .headerBannerImg {
+    text-align: left;
+}
+
+.headerBannerAllJobs .headerBannerImg img {
+    width: 370px;
+}
+
+/* HOME */
+.headerBannerHome {
+    color: #ffffff;
+    background-size: cover;
+    background-image: var(--home--banner--image);
+    background-repeat: no-repeat;
+    background-position: center -35px;
+}
+
+.headerBannerHome .headerBannerSearch {
+    width: 100%;
+    padding: 120px 0px;
+}
+
+.headerBannerHome .sectionTitle {
+    color: #ffffff;
+    width: 55%;
+    font-weight: bold;
+}
+
+.headerBannerHome .sectionSubtitle {
+    width: 55%;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.homeTitle {
+    color: #343935;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.homeMap {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.homeRoles {
+    padding: 15px 0px 0px 0px;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+}
+
+.homeRoles .homeTitle {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.homeRolesImg {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.homeRolesImg img {
+    width: 100%;
+}
+
+.homeRolesText {
+    font-size: 14px;
+    width: 47%;
+    display: inline-block;
+    margin-left: 36px;
+    padding-top: 20px;
+}
+
+.homeRolesSubtext {
+    color: #4C296E;
+    margin: 10px 0;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.homeRolesBox {
+    padding: 15px 0px;
+    display: flex;
+}
+
+.homeRolesBox img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.homeRolesImg-Mobile {
+    display: none;
+}
+
+@media all and (max-width: 640px) {
+    .headerBannerHome {
+        background-position: 15% 0px;
+    }
+
+    .headerBannerHome .headerBannerSearch {
+        padding: 55px 0;
+        width: 100%;
+    }
+
+    .headerBannerHome .sectionTitle {
+        width: 100%;
+    }
+
+    .headerBannerHome .sectionTitle {
+        font-size: 28px;
+    }
+
+    .headerBannerHome .sectionSubtitle {
+        font-size: 14px;
+    }
+
+    .homeTitle {
+        font-weight: 400;
+        font-size: 26px;
+    }
+
+    .homeRolesImg {
+        width: 100%;
+    }
+
+    .homeRolesImg-Web {
+        display: none;
+    }
+
+    .homeRolesImg-Mobile {
+        display: block;
+    }
+
+    .homeRolesText {
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .homeRolesBox {
+        margin-bottom: 5px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: self-start;
+        text-align: left;
+    }
+
+    .homeRolesText {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .homeRolesBox img {
+        width: 17%;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    .homeRolesSubtext {
+        font-size: 24px;
+    }
+
+    .headerBannerText,
+    .headerBannerAllJobs {
+        margin: 25px 0px;
+    }
+
+}
+
+/* Start location boxes with images and hover */
+.locationBoxWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.locationBox {
+    position: relative;
+    width: 314px;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+}
+
+.locationBox img {
+    width: 100%;
+    height: auto;
+}
+
+.locationBox .locationTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    height: 97%;
+    display: table;
+    bottom: 0;
+}
+
+.locationBox .locationTitle a {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.locationBox .locationTitle:hover {
+    background-color: rgba(76, 41, 110, 0.8);
+}
+
+.content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background-color: rgba(76, 41, 110, 0.8);
+    position: absolute;
+    height: 97%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    font-size: 34px;
+}
+
+.fadeIn-top {
+    top: 20%;
+}
+
+/* End location boxes with images and hover */
+
+.inactiveBtn {
+    background-color: transparent;
+}
+
+.activeBtn {
+    background-color: rgba(76, 41, 110, 0.8);
+}
+
+.locationTitle a {
+    color: #ffffff;
+}
+
+.smallerPadding {
+    padding: 30% 0;
+}
+
+.homeJoinUs {
+    width: 100%;
+    color: #565656;
+    padding: 40px 0px;
+    font-size: inherit;
+    text-align: left;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+.homeJoinUs > div {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.homeJoinUs > div:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+.homeJoinUs > div:last-child {
+    text-align: right;
+}
+
+.homeJoinUs .saveButton {
+    height: 43px;
+    font-weight: bold;
+}
+
+.homeJoinUs span {
+    font-weight: 600;
+}
+
+.homeJoinUsContainer {
+    color: #FFFFFF;
+    margin-top: 60px;
+    background-size: cover;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media all and (max-width: 600px) {
+    .homeJoinUs {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .homeJoinUs > div:first-child {
+        width: 100%;
+    }
+
+    .homeJoinUs > div:last-child {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Locations */
+
+.countryTitleWrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    height: 350px;
+}
+
+.countryTitleWrapper.countryBanner--xl {
+    height: 480px;
+}
+
+.countryBannerTurkey {
+    background-image: var(--turkey--banner--image);
+    background-position: 50% 15%;
+}
+
+.countryBannerLatvia {
+    background-image: var(--latvia--banner--image);
+    background-position: 50% 40%;
+}
+
+.countryBannerGermany {
+    background-image: var(--germany--banner--image);
+    background-position: 50% 55%;
+}
+
+.countryBannerAustria {
+    background-image: var(--austria--banner--image);
+    background-position: 50% 55%;
+}
+
+.countryBannerSpain {
+    background-image: var(--spain--banner--image);
+    background-position: 50% 50%;
+}
+
+.countryBannerCanada {
+    background-image: var(--canada--banner--image);
+    background-position: 50% 40%;
+}
+
+.countryBannerSalvador {
+    background-image: var(--el-salvador--banner--image);
+    background-position: 50% 65%;
+}
+
+.countryBannerPhilippines {
+    background-image: var(--philippines--banner--image);
+    background-position: 50% 40%;
+}
+
+.countryBannerBulgaria {
+    background-image: var(--bulgaria--banner--image);
+    background-position: 50% 5%;
+}
+
+.countryBannerBosnia {
+    background-image: var(--bosnia--banner--image);
+    background-position: 50% 25%;
+}
+
+.countryBannerRomania {
+    background-image: var(--romania--banner--image);
+    background-position: 50% 25%;
+}
+
+.countryBannerUSA {
+    background-image: var(--usa--banner--image);
+    background-position: 50% 60%;
+}
+
+.countryBannerGuatemala {
+    background-image: var(--guatemala--banner--image);
+    background-position: 50% 50%;
+}
+
+.countryBannerChina {
+    background-image: var(--china--banner--image);
+    background-position: 50% 27%;
+}
+
+.countryBannerIndia {
+    background-image: var(--india--banner--image);
+    background-position: 50% 28%;
+}
+
+.countryBannerIreland {
+    background-image: var(--ireland--banner--image);
+    background-position: center center;
+}
+
+.countryBannerUK {
+    background-image: var(--uk--banner--image);
+    background-position: 60% 45%;
+}
+
+.countryBannerAiCommunity {
+    background-image: var(--ai--banner--image);
+    background-position: 60% 45%;
+}
+
+.countryBannerCostaRica {
+    background-image: var(--costa-rica--banner--image);
+    background-position: 50% 40%;
+}
+
+.countryBannerFinland {
+    background-image: var(--finland--banner--image);
+}
+
+.countryBannerDenmark {
+    background-image: var(--denmark--banner--image);
+    background-position: 50% 20%;
+}
+
+.countryBannerJapan {
+    background-image: var(--japan--banner--image);
+    background-position: 50% 30%;
+}
+
+.countryBannerSouthKorea {
+    background-image: var(--south-korea--banner--image);
+}
+
+.countryBannerFrance {
+    background-image: var(--france--banner--image);
+}
+
+.countryBannerPoland {
+    background-image: var(--poland--banner--image);
+    background-position: 50% 30%;
+}
+
+.countryBannerMexico {
+    background-image: var(--mexico--banner--image);
+}
+
+.countryBannerUkraine {
+    background-image: var(--ukraine--banner--image);
+    background-position: 50% 47%;
+}
+
+.countryBannerColombia {
+    background-image: var(--colombia--banner--image);
+    background-position: 50% 30%;
+}
+
+.countryBannerSlovakia {
+    background-image: var(--slovakia--banner--image);
+    background-position: 50% 43%;
+}
+
+.countryBannerSwitzerland {
+    background-image: var(--switzerland--banner--image);
+    background-position: 50% 60%;
+}
+
+.countryBannerCzechRep {
+    background-image: var(--czech-rep--banner--image);
+    background-position: 50% 36%;
+}
+
+.countryBannerDominicanRep {
+    background-image: var(--dominican-rep--banner--image);
+    background-position: 50% 74%;
+}
+
+.countryBannerSingapore {
+    background-image: var(--singapore--banner--image);
+    background-position: 50% 78%;
+}
+
+.countryBannerMorocco {
+    background-image: var(--morocco--banner--image);
+    background-position: 50% 15%;
+}
+
+.countryBannerSouthAfrica {
+    background-image: var(--south-africa--banner--image);
+    background-position: 50% 15%;
+}
+
+.countryBannerWorkFromHome {
+    background-image: var(--work-from-home--banner--image);
+    background-position: 50% 46%;
+}
+
+.countryTitle {
+    font-size: 50px;
+    font-weight: 500;
+    padding: 50px 0px 0px 0px;
+}
+
+.countryTitle span {
+    font-weight: 300;
+    display: inline-block;
+    font-size: 38px;
+    margin-left: 25px;
+}
+
+.headerBannerLocations {
+    padding: 35px 0 30px 0px;
+}
+
+.searchFormLocation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.searchFormLocation .mainCol {
+    width: 100%;
+}
+
+.searchFormLocation .mainCol .searchBox {
+    width: 50%;
+    padding-bottom: 8px;
+}
+
+.headerBannerLocations .headerBannerTitle {
+    padding-top: 0;
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 15px;
+}
+
+.listApplyButton {
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+}
+
+.listApplyButton:hover {
+    -webkit-transform: translateX(8px);
+    -moz-transform: translateX(8px);
+    -ms-transform: translateX(8px);
+    -o-transform: translateX(8px);
+    transform: translateX(8px);
+}
+
+#accordion {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.accordion-toggle {
+    border-top: 1px solid #eee;
+    padding: 10px 40px 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-toggle span {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    width: 16px;
+    height: 16px;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.accordion-content {
+    display: none;
+    padding: 5px 0 15px;
+}
+
+.accordion-content p {
+    margin: 0 0 10px;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-content p.steps {
+    font-style: italic;
+}
+
+.learn {
+    display: block;
+    color: #000;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    width: 120px;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+
+@media all and (max-width: 600px) {
+    .countryTitle {
+        padding: 40px 0px 0px;
+        font-size: 40px;
+    }
+
+    .countryTitle span {
+        display: block;
+        margin-left: 0;
+        font-size: 30px;
+    }
+
+    .searchFormLocation {
+        display: block;
+    }
+
+    .searchFormLocation .mainCol .searchBox {
+        width: 100%;
+    }
+
+    .headerBannerLocations {
+        padding: 20px 0;
+    }
+}
+
+/* CONTENT */
+.mainContent {
+    width: 100%;
+    color: #565656;
+    margin: 0 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    background-color: #ffffff;
+}
+
+.mainContent.sticked .sidebar {
+    position: relative;
+}
+
+/* FOOTER */
+.mainFooter {
+    width: 100%;
+    color: #FFF;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+    min-height: 100px;
+    flex-shrink: 0;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #343935;
+}
+
+.mainFooter a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mainFooterTitle {
+    margin-bottom: 0.75em;
+    font-weight: normal;
+    font-weight: 300;
+}
+
+.listPagination {
+    text-align: center;
+}
+
+.jobPaginationLegend {
+    display: block;
+    padding-top: 10px;
+}
+
+.footerContactUs {
+    text-align: right;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+/* NAVIGATION */
+/* N: trigger */
+.tpt_menuLeftSlideAllTrigger {
+    display: none;
+}
+
+/* N: navigation elements */
+.navigationMenu,
+.navigationList,
+.navigationItem {
+    display: block;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* N: navigation static */
+.navigationStatic {
+    text-align: right;
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: flex-end;
+    clear: both;
+    -webkit-transition: height 200ms;
+    -o-transition: height 200ms;
+    transition: height 200ms;
+}
+
+.navigationStatic>.navigationList {
+    text-align: right;
+}
+
+.navigationStatic .navigationItem {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.navigationItem a:link,
+.navigationItem a:visited {
+    color: #343935;
+    font-weight: 400;
+    padding: 7px 0.5em 27px 0.5em;
+}
+
+.secondaryMenu .navigationItem a:link,
+.secondaryMenu .navigationItem a:visited {
+    padding: 7px 0 27px;
+}
+
+.navigationItem .secondaryMenu__regionTitle a:link {
+    font-weight: bold;
+    padding: 0;
+}
+
+.navigationStatic .navigationItem a:hover {
+    text-decoration: none;
+    color: #258700;
+}
+
+.navigationStatic .navigationItem a:active {
+    text-decoration: none;
+    color: #258700;
+}
+
+/* N: navigation portal sections */
+.navigationSectionsContainer {
+    background-color: #F7F7F7;
+    height: 25px;
+    border-bottom: 1px solid #dedede;
+}
+
+.navigationSections {
+    color: #565656;
+    font-size: 0.9em;
+}
+
+.navigationSections>.navigationList {
+    text-align: right;
+}
+
+.navigationSections .navigationItem {
+    display: inline-block;
+    margin-left: 1em;
+    padding: 5px 0;
+}
+
+.navigationItem.active a {
+    color: #258700;
+}
+
+.navigationLanguage,
+.navigationDynamic {
+    float: right;
+    display: block;
+    position: relative;
+    padding: 0 .7em;
+}
+
+.navigationLanguage:before {
+    content: '.';
+    background-color: #4EC6A2;
+    font-size: 5px;
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    color: #4EC6A2;
+    border-radius: 50%;
+}
+
+.menuProfilePic {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menuProfilePic img {
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.userName {
+    vertical-align: middle;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    padding: 10px 0;
+}
+
+.userName:after {
+    content: '\25bc';
+    margin-left: 5px;
+    font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+}
+
+.userItem a:hover .userName {
+    color: #258700;
+}
+
+.userItem a:hover .userName:after {
+    color: #333;
+}
+
+.userItem.secondaryMenu {
+    display: none;
+    width: 114%;
+    left: -32px;
+    top: 40px;
+    position: absolute;
+}
+
+.submenuOn .secondaryMenu {
+    display: none;
+    min-width: 180px;
+    left: -16px;
+    top: 50px;
+    position: absolute;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    -webkit-box-shadow: -2px 17px 32px -9px rgba(0, 0, 0, .25);
+    -moz-box-shadow: -2px 17px 32px -9px rgba(0, 0, 0, .25);
+    box-shadow: -2px 17px 32px -9px rgba(0, 0, 0, .25);
+}
+
+.submenuOn .secondaryMenu--locations {
+    min-width: unset;
+    left: 0;
+    right: 0;
+    top: 69px;
+    border-radius: 0;
+    padding: 45px 0;
+    border-top: solid 1px #ccc;
+}
+
+.submenuOn a.submenuLink {
+    display: block;
+    padding: 7px 0.5em 27px 0.5em;
+}
+
+.submenuOn--locations .submenuLink {
+    border: solid 1px #ffffff;
+}
+
+.submenuOn--locations:hover .submenuLink {
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #cccccc;
+    border-left-color: #cccccc;
+    border-right-color: #ccc;
+    border-bottom-color: #ffffff;
+    z-index: 101;
+    position: relative;
+}
+
+.userItem:hover .secondaryMenu {
+    display: block;
+}
+
+.submenuOn {
+    position: relative;
+}
+
+.submenuOn--locations {
+    position: unset;
+}
+
+.submenuOn:hover .secondaryMenu {
+    display: block;
+}
+
+.submenuOn:hover .secondaryMenu__innerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secondaryMenu__title {
+    flex: 1 0 100%;
+    margin-bottom: 40px;
+    font-size: 21px;
+    font-weight: lighter;
+}
+
+.secondaryMenu__regionList {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+}
+
+.secondaryMenu__regionTitle {
+    border-bottom: solid 1px #258700;
+    margin-right: 35px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.secondaryMenu li.navigationItem {
+    display: block !important;
+    width: 100%;
+    margin-left: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 5px;
+    font-size: 14px;
+}
+
+.submenuOn--locations li.navigationItem {
+    border-bottom: 0;
+}
+
+.submenuOn .secondaryMenu li.navigationItem {
+    padding: 10px 20px;
+}
+
+.submenuOn .secondaryMenu .secondaryMenu__regionList li.navigationItem {
+    padding: 10px 0;
+}
+
+.secondaryMenu li.navigationItem:last-child {
+    border-bottom: none;
+}
+
+.secondaryMenu li.navigationItem:hover {
+    font-weight: bold;
+    font-weight: 500;
+}
+
+.secondaryMenu li.navigationItem.active a {
+    border-bottom: none;
+}
+
+.subMenu li.navigationItem {
+    display: block !important;
+    margin-left: 0;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.subMenu li.navigationItem:last-child {
+    border-bottom: none;
+}
+
+.subMenu li.navigationItem:hover {
+    font-weight: bold;
+    font-weight: 500;
+}
+
+.subMenu li.navigationItem.active a {
+    border-bottom: none;
+    font-weight: 500;
+}
+
+.navigationItem.nonUserItem {
+    position: relative;
+}
+
+/* N: footer back links */
+.navigationBackLinks {
+    clear: both;
+    text-align: left;
+    padding: 30px 0;
+}
+
+.navigationBackLinksList,
+.navigationBackLinksListItem {
+    display: inline-block;
+    width: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 1em 0 0;
+    font-weight: 400;
+}
+
+.mainWrapper .menuCloser a {
+    display: none;
+}
+
+/* Talent Footer */
+.talentFooter {
+    background-image: url(../images/bgFooterTalent.html);
+    background-position: right;
+    height: 390px;
+    margin-bottom: 1em;
+    margin-top: -1em;
+    position: relative;
+}
+
+.talentFooter .imgCont {
+    background-image: url(../images/fgFooterTalent.html);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 390px;
+    width: 602px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.talentFooter .txtCont {
+    position: relative;
+    max-width: 760px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 390px;
+}
+
+.talentFooter .txtCont div {
+    color: #fff;
+    margin-left: 300px;
+}
+
+.talentFooter .txtCont h1 {
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.talentFooter .txtCont p {
+    font-size: 16px;
+    padding: .75em 0;
+}
+
+.talentButton {
+    background-color: #f75589;
+    border-color: #f75589;
+    color: #fff !important;
+}
+
+.talentButton:hover {
+    border-color: #ea447a;
+    background-color: #ff74a0;
+}
+
+.icon24 {
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    padding: 0 0 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 20px;
+    margin: 0px 2px;
+}
+
+.searchForm .mainCol {
+    margin-top: 1em;
+}
+
+.searchForm .btnCol {
+    display: inline-block;
+    width: 257px;
+}
+.searchForm .btnCol button.clearButton,
+.searchForm .btnCol a.genericButton {
+    color: #A7CF99 !important;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.searchForm .btnCol .searchBox {
+    width: 100%;
+    text-align: left;
+}
+
+.searchForm .sectionTitle {
+    font-size: 50px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+
+.searchBox {
+    width: 37%;
+}
+
+.searchForm1Col .searchBox {
+    width: 50%;
+    padding-bottom: 8px;
+}
+
+.mainCol .Section.Section1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.mainCol .fieldSpec.fieldBox {
+    height: 43px;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 769px){
+    .mainCol .Section.Section1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+     .mainCol .Section.Section1 .searchBox .fieldSpecPadder{
+         width: 100%;
+     }
+
+    .mainCol .fieldSpec.btnCol button {
+        width: 100%;
+    }
+}
+
+/* DETAIL */
+.detailContainer {
+    position: relative;
+}
+
+.sideBarWrapper {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+.sidebar {
+    width: 100%;
+    padding-top: 1.2em;
+    max-width: 250px;
+}
+
+.sidebar.fixed,
+sidebar.absoluted {
+    padding-top: 4em;
+}
+
+.mainDetails {
+    width: 70%;
+    margin-right: 2%;
+    padding-right: 2%;
+    float: left;
+}
+
+.rowPad {
+    padding: 2em 0;
+}
+
+.mainDetails .row {
+    margin-top: 45px;
+}
+
+.mainDetails .detailData.row {
+    margin-top: 0;
+    padding-top: 45px;
+    border-top: none;
+}
+
+.mainDetails .detailData.row.first {
+    padding-top: 10px
+}
+
+.profileDetail .row {
+    margin-top: 2em;
+}
+
+.profileDetail .subrow {
+    margin-top: 2em;
+    padding-top: 20px;
+}
+
+.mainDetails h3,
+.profileDetail h3 {
+    color: #4C296E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profilePage .row {
+    width: 65%;
+    border-top: 1px solid #ccc;
+    padding-top: 35px;
+    margin-top: 50px;
+}
+
+.profilePage h3 {
+    font-weight: 400;
+    float: left;
+    padding-top: 5px;
+}
+
+.profileButton {
+    float: right;
+    width: 150px;
+    height: 35px;
+    padding: 0;
+    padding-top: 8px;
+}
+
+.userAttachtment.row {
+    border: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.userAttachtment h3 {
+    float: none;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.detailData .fieldSet {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+.detailDescription iframe {
+    max-width: 540px;
+    margin: 2em 0;
+}
+
+.sidebar .tpt_socialShareContainer {
+    display: block;
+    margin: 0 0 1em
+}
+
+.sidebar .tpt_socialShareButton {
+    display: none;
+}
+
+.sidebar .tpt_socialShareBar {
+    display: block !important;
+    position: relative;
+    opacity: 1;
+    bottom: inherit;
+    right: inherit;
+    -webkit-transform: scale(1) translateX(0) rotateX(0deg) rotateY(0deg);
+    -ms-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0) rotateX(0deg) rotateY(0deg);
+    transition-property: opacity, transform, bottom;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    border: none;
+    padding: 10px 0px;
+}
+
+.sidebar .tpt_socialShareIcon:hover,
+.sidebar .tpt_socialShareIcon:focus,
+.sidebar .tpt_socialShareIcon:active {
+    border-radius: 50%;
+    outline: none;
+}
+
+input.visibility--visually-hidden,
+.visibility--visually-hidden {
+    opacity: 0;
+}
+
+.sidebar .smallTxt {
+    color: #999;
+    font-style: italic;
+    font-size: .9em;
+}
+
+.sidebar .saveButton {
+    width: 100%;
+}
+
+.listPageDetail {
+    margin: 10px 0 0 0;
+    padding: 10px 0 0;
+    list-style-type: none;
+    border-top: 1px solid #b8c1d0;
+}
+
+.listPageDetailItem {
+    padding: 5px 5px 20px;
+}
+
+.listPageDetailItem a .listPageDetailItemTitle {
+    font-size: 15px;
+    color: #000;
+}
+
+.listPageDetailItem a:hover .listPageDetailItemTitle {
+    color: #26C59A;
+}
+
+.listPageDetailItem p {
+    font-size: 13px;
+    color: #565656;
+}
+
+.profilePic {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profilePic img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.userTitle h2 {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.icon32 {
+    background-color: #4C296E;
+    border-radius: 50%;
+    background-size: 18px 18px;
+    background-position: center;
+    margin-right: 5px;
+}
+
+.icon32:hover {
+    background-color: #258700;
+}
+
+.icon32:active {
+    background-color: #ccc;
+}
+
+.iconFacebook {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoFacebookW.svg);
+}
+
+.iconLinkedin {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoLinkedinW.svg);
+}
+
+.iconTwitter {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoTwitterW.svg);
+}
+
+.iconGoogleplus {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/icoGooglePlusW.svg);
+}
+
+.iconEmail32 {
+    background-image: var(--email--share--icon);
+}
+
+.body_Firefox .iconFacebook {
+    background-size: 10px 19px;
+}
+
+.body_Firefox .iconGoogleplus {
+    background-size: 23px auto;
+}
+
+.body_IE .iconFacebook {
+    background-size: auto 20px;
+}
+
+.body_IE .iconGoogleplus {
+    background-size: auto 15px;
+}
+
+.sidebar .row {
+    margin: 0 0px 30px;
+}
+
+.sidebar .icon {
+    background-repeat: no-repeat;
+    padding: 3px 0;
+}
+
+.sidebar .navigationBackLinks {
+    margin-top: 0;
+    font-weight: 400;
+    padding: 10px 5px;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px;
+}
+
+.icon:before {
+    font-family: "voutique";
+    color: #231F20;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.iconBasicInfo:before {
+    content: 'e';
+}
+
+.iconDescription:before {
+    content: 'n';
+}
+
+.iconMorePositions:before {
+    content: 'j'
+}
+
+.iconAppliedPositions:before {
+    content: 'k'
+}
+
+.iconAttachments:before {
+    content: 'b'
+}
+
+.iconAccountManagement:before {
+    content: 'i';
+}
+
+.iconWork:before {
+    content: 'j';
+}
+
+.iconEducation:before {
+    content: 'A';
+}
+
+.iconJobAlerts:before {
+    content: 'D'
+}
+
+.iconLocation {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/iconLocation.svg);
+}
+
+.iconSchedule {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/iconSchedule.svg);
+}
+
+.iconArea {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/iconUsers.svg);
+}
+
+.iconReq {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/iconTag.svg);
+}
+
+.iconDate {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/iconCalendar.svg);
+}
+
+.listContainer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.listContainer .listItem {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin: 0 1% 1em 0;
+}
+
+.listItemTitle {
+    font-weight: 500;
+    font-size: 15px
+}
+
+.listItemSubtitle {
+    font-weight: 300;
+    color: #666;
+}
+
+.extraTopMargin {
+    margin-top: 5em;
+}
+
+.sectionTitle.icon {
+    padding: 0 0 0 30px;
+    background-size: 22px;
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+}
+
+.sectionTitle.iconAppliedPositions {
+    margin-top: 0
+}
+
+.extraDetails .fieldSetLabel {
+    display: block;
+}
+
+.noborder {
+    border: none !important;
+}
+
+p.filePreviewBar {
+    text-align: right !important;
+}
+
+.filePreviewBar a {
+    font-size: .9em;
+}
+
+.filePreviewBar a:after {
+    content: '×';
+    display: inline-block;
+    background-color: #4EC6A2;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 16px
+}
+
+.tpt_uploadFile {
+    margin: 0 !important
+}
+
+input[type="file"]#tpt_resumeFile {
+    height: auto !important;
+}
+
+.fieldSpec.fileUploadBar.FileField button {
+    border: 1px solid #999;
+    background-color: transparent;
+    font-size: .8em;
+    border-radius: 3px;
+    margin: 0 10px;
+    color: #333;
+}
+
+/* wizards */
+
+.fieldSpec.buttonBar {
+    width: 100%;
+    padding-bottom: 0;
+    min-height: inherit;
+}
+
+.fieldSpec.wide {
+    width: 100% !important;
+    min-height: inherit;
+}
+
+.fieldSpec.AcceptCheckboxField {
+    position: relative;
+}
+
+.fieldSpec.AcceptCheckboxField input {
+    position: absolute;
+    top: 4px;
+}
+
+.fieldSpec.AcceptCheckboxField .labelText {
+    padding-left: 20px;
+}
+
+.fieldSpec.MultipleDatasetEntryFormField .fieldSpecPadder {
+    padding: 0;
+}
+
+.labelText {
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.fieldSpec.MultipleDatasetEntryFormField .labelText {
+    padding: 0 10px;
+    margin-top: 2em;
+}
+
+.alertLink {
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 5px;
+    color: #6594ba;
+}
+
+.alreadyApplied {
+    color: #565656;
+    background-color: #efefef;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 12px 20px;
+    display: inline-block;
+    background-image: url(../images/aaPattern.html);
+}
+
+.noMargin {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sectionTitle.topLine {
+    border-top: 1px solid #ccc;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+}
+
+.purpleFlowerBody {
+    background-image: url(../images/Flower2.jpg);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: right 76%;
+}
+
+.successDetail {
+    color: #4C286E;
+    width: 53%;
+}
+
+.successDetail .jobTitle {
+    color: #4C286E;
+}
+
+.successText p {
+    padding-right: 20px;
+    line-height: 1.5;
+}
+
+.successSubtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.mobileShow {
+    display: none;
+}
+
+.wizardStep7 .fieldSpec {
+    width: 100%;
+}
+
+/* Register, details, alert*/
+
+.headerBannerRegisterWrapper {
+    background-image: var(--register--banner--image);
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.headerBannerRegister {
+    margin-top: 10px;
+    max-width: 750px;
+    padding-top: 0px 10px;
+    min-height: 355px;
+}
+
+.headerBannerRegister .headerBannerText p {
+    font-size: 16px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.headerBannerText .headerBannerTextTitle {
+    width: 70%;
+}
+
+.registerForm {
+    margin: 0 auto;
+}
+
+.registerForm .buttonBar {
+    text-align: left;
+}
+
+.headerBannerJobDetal .headerBannerText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.createAlertForm .buttonBar {
+    text-align: left;
+    margin-left: -0.5em;
+}
+
+.datasetdescription,
+.datasetlabelText {
+    display: inline-block;
+}
+
+.datasetlabelText {
+    margin-right: 10px;
+}
+
+.datasetdescription {
+    font-size: 12px;
+}
+
+.headerBannerImg {
+    width: 30%;
+}
+
+.headerBannerImg img {
+    width: 100%;
+    height: auto;
+}
+
+.separatorTitle {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.jobTitle {
+    color: #333;
+    font-size: 40px;
+    font-weight: 300;
+    padding-top: 80px;
+}
+
+.alertForm {
+    margin: 0;
+    width: 50%;
+}
+
+.alertForm .fieldBox {
+    padding-bottom: .7em;
+}
+
+.errorPage {
+    padding: 80px 0;
+}
+
+.errorMessage {
+    display: block;
+}
+
+div[id^="multipleDatasetEntry"] .errorMessage {
+    padding: 0 10px;
+}
+
+.flowerWrapper {
+    height: auto;
+    background-size: auto;
+    background-image: var(--detail--background--image);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.flowerBack {
+    height: 100vh;
+    background-size: 400px;
+    background-image: url('../images/flower_1.png');
+    background-repeat: no-repeat;
+    background-position: 100% 105%;
+}
+
+.flowerBack .flowerWrapper {
+    height: auto;
+    background-image: none;
+}
+
+/* Mobile Redefinitions */
+@media all and (max-width: 1350px) {
+    .talentFooter .imgCont {
+        width: 45%;
+    }
+
+    .talentFooter .txtCont div {
+        padding: 0 20px 0 0;
+        margin-left: 40%;
+    }
+
+    .listSingleColumnItemTitle,
+    .listSingleColumnItemMiscData {
+        max-width: 600px;
+    }
+
+    .listSingleColumnItem {
+        padding: 25px 0px;
+    }
+
+    .headerBannerTitle span {
+        padding-left: 10px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .headerBannerText .headerBannerTextTitle {
+        width: 60%;
+    }
+
+    .tpt_loginHiddenFields {
+        width: 90%;
+    }
+
+    .firstTimeApplicants .accountBox .fieldBox {
+        width: 48%;
+    }
+}
+
+@media all and (max-width: 940px) {
+    .sidebar {
+        width: 230px;
+    }
+
+    .icon32 {
+        margin-right: 0;
+    }
+
+    .mainDetails {
+        width: calc(100% - 275px);
+    }
+
+    .searchBox {
+        width: 50%;
+        margin: 0px;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .tpt_loginHiddenFields {
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .stick .mainTitle img,
+    .mainHeader .mainTitle img {
+        width: 230px;
+    }
+
+    .stick .mainTitle,
+    .mainHeader .mainTitle {
+        top: inherit;
+        width: inherit;
+        margin-left: 10px;
+    }
+
+    .mainTitleContainer {
+        text-align: left !important;
+    }
+
+    .headerBanner.stick {
+        top: 74px;
+    }
+
+    /* Styling */
+    .mainTitleContainer {
+        background-color: #FFFFFF;
+    }
+
+    .mainTitleContainer,
+    .mainTitle {
+        text-align: center;
+        position: static;
+        padding: .2em 0
+    }
+
+    .mainTitle {
+        display: inline-block;
+    }
+
+    /* Mobile Menu */
+    .navigationMenuContainer,
+    .navigationMenu,
+    .navigationList {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        list-style-type: none;
+        text-align: left;
+        text-transform: none;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        background-image: none;
+        font-size: 1em;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .navigationList>.navigationItem {
+        display: block;
+        float: none;
+        text-align: left;
+        text-transform: none;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        border-bottom: 1px solid #f5f6f7;
+        order: 1;
+    }
+
+    .navigationList>.navigationItem:last-child {
+        background-color: #f5f6f7;
+        order: 2;
+    }
+
+    .navigationList>.navigationItem a,
+    .navigationList>.navigationItem a:link,
+    .navigationList>.navigationItem a:visited {
+        display: block;
+        padding: 24px 12px;
+        color: #4C296E;
+    }
+
+    .navigationList>.navigationItem a:hover,
+    .navigationList>.navigationItem a:focus,
+    .navigationList>.navigationItem a:active {
+        background-color: #fff;
+        border: none;
+    }
+
+    /* MM: Trigger elements */
+
+    .tpt_menuLeftSlideAllTrigger {
+        display: inline-block;
+        position: absolute;
+        height: 63px;
+        line-height: 70px;
+        top: 0;
+        left: 0;
+        padding: 0 .5em 0 2.5em;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-image: url('https://jobs.telusinternational.com/portal/11/images/dotsMenu.svg');
+        background-position: 0.5em center;
+        background-size: 2em 2em;
+    }
+
+    .tpt_menuLeftSlideAllTrigger:hover,
+    .tpt_menuLeftSlideAllTrigger:focus,
+    .tpt_menuLeftSlideAllTrigger:active {
+        background-color: #F0F0F0;
+        outline-width: 0;
+    }
+
+    .tpt_menuLeftSlideAllTrigger.open {
+        outline-width: 0;
+    }
+
+    /* MM: Menu elements */
+
+    .tpt_menuLeftSlideAll {
+        position: absolute;
+        display: block;
+        z-index: 100000;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        color: #4C296E;
+        background-color: #FFFFFF;
+        box-shadow: inset -5px 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigationLanguage {
+        text-align: left !important;
+        border-bottom: 1px solid #666;
+    }
+
+    .navigationLanguage li.navigationItem {
+        display: inline-block;
+        width: 32%;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .navigationLanguage:before {
+        display: none;
+    }
+
+    .navigationDynamic {
+        border-bottom: 0px solid #333333;
+        background: #0e0e0e;
+    }
+
+    /* MM: Notified elements */
+
+    html.tpt_menuLeftSlideAllNotificationOpen,
+    html.tpt_menuLeftSlideAllNotificationOpen>body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100%;
+        min-height: 100%;
+        background-color: #252525;
+    }
+
+    .mainWrapper {
+        -webkit-transition: -webkit-transform 200ms ease-out 0s;
+        -ms-transition: transform 200ms ease-out 0s;
+        transition: transform 200ms ease-out 0s;
+        padding-bottom: 120px;
+    }
+
+    .tpt_menuLeftSlideAllNotificationOpen .mainWrapper {
+        -webkit-transform: translate(250px, 0);
+        -ms-transform: translate(250px, 0);
+        transform: translate(250px, 0);
+        -webkit-transform: translate3d(250px, 0, 0);
+        transform: translate3d(250px, 0, 0);
+    }
+
+    .tpt_menuLeftSlideAllNotificationOpen .mainWrapper .menuCloser a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 999999999999;
+        height: 100%;
+    }
+
+    .fallbackMenu.tpt_menuLeftSlideAllNotificationOpen .mainWrapper {
+        position: relative;
+        left: 250px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    /* MM: Trigger elements */
+    .tpt_menuLeftSlideTrigger {
+        display: inline-block;
+        position: absolute;
+        height: 80px;
+        line-height: 80px;
+        top: 0;
+        left: 0;
+        padding: 0 0.5em 0 3em;
+        cursor: pointer;
+        background-size: 2em 2em;
+        background-position: 0.5em center;
+        background-repeat: no-repeat;
+        background-image: url('https://jobs.telusinternational.com/portal/11/images/menu_c2.svg');
+        -webkit-transition: -webkit-transform 200ms ease-out 0s;
+        -ms-transition: transform 200ms ease-out 0s;
+        transition: transform 200ms ease-out 0s;
+    }
+
+    .tpt_menuLeftSlideTrigger:hover,
+    .tpt_menuLeftSlideTrigger:focus,
+    .tpt_menuLeftSlideTrigger:active {
+        background-color: #F0F0F0;
+        outline-width: 0;
+        background-image: url('https://jobs.telusinternational.com/portal/11/images/menu.svg');
+    }
+
+    .tpt_menuLeftSlideTrigger.open {
+        outline-width: 0;
+        background-image: url('https://jobs.telusinternational.com/portal/11/images/menu.svg');
+        -webkit-transform: translate(250px, 0);
+        -ms-transform: translate(250px, 0);
+        transform: translate(250px, 0);
+        -webkit-transform: translate3d(250px, 0, 0);
+        transform: translate3d(250px, 0, 0);
+    }
+
+    .fallbackMenu .tpt_menuLeftSlideTrigger.open {
+        left: 250px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    /* MM: Menu elements */
+
+    .tpt_menuLeftSlide {
+        position: absolute;
+        display: block;
+        z-index: 100000;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        color: #FFFFFF;
+        background-color: #252525;
+        box-shadow: inset -5px 0 10px #000000;
+        -webkit-transition: -webkit-transform 200ms ease-out 0s;
+        -ms-transition: transform 200ms ease-out 0s;
+        transition: transform 200ms ease-out 0s;
+    }
+
+    .tpt_menuLeftSlide.open {
+        -webkit-transform: translate(250px, 0);
+        -ms-transform: translate(250px, 0);
+        transform: translate(250px, 0);
+        -webkit-transform: translate3d(250px, 0, 0);
+        transform: translate3d(250px, 0, 0);
+    }
+
+    .navigationItem.active a {
+        color: #258700 !important;
+        border-bottom: none;
+        font-weight: normal;
+    }
+
+    .userItem {
+        position: relative;
+        padding: 0;
+    }
+
+    .userItem a {
+        background-color: transparent !important;
+    }
+
+    .userItem:hover {
+        background-color: transparent;
+        box-shadow: none;
+        height: inherit;
+        top: inherit;
+    }
+
+    .contactCreatedItem.userItem:hover {
+        height: inherit;
+        top: inherit;
+    }
+
+    .userItem a {
+        padding-bottom: 5px !important;
+    }
+
+    .userItem a:hover .userName {
+        color: #fff;
+    }
+
+    .userItem a:hover .userName:after {
+        color: #fff;
+    }
+
+    .submenuOn .secondaryMenu {
+        position: static;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        box-shadow: none;
+        display: block;
+        border-radius: 0;
+    }
+
+    .userItem .secondaryMenu {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .submenuOn .secondaryMenu li.navigationItem {
+        display: block !important;
+        width: 100%;
+        margin-left: 0;
+        border-bottom: 0;
+        padding: 0 15px;
+    }
+
+    .secondaryMenu li.navigationItem a {
+        padding: 12px !important;
+    }
+
+    .secondaryMenu li.navigationItem a:hover {
+        color: #258700 !important;
+    }
+
+    .secondaryMenu li.navigationItem:hover {
+        font-weight: normal;
+    }
+
+    .submenuOn .secondaryMenu li.navigationItem,
+    .submenuOn .secondaryMenu .secondaryMenu__regionList li.navigationItem {
+        padding: 0px 15px;
+        border: 0;
+    }
+
+    .submenuOn .secondaryMenu--locations {
+        padding: 0;
+        border: 0;
+    }
+
+    .secondaryMenu__innerWrapper {
+        padding: 0;
+    }
+
+    .secondaryMenu__title {
+        margin: 0;
+        padding: 14px 0 10px 27px;
+    }
+
+    .secondaryMenu__regionTitle {
+        margin-bottom: 0;
+        margin-top: 15px;
+        margin-left: 27px;
+    }
+
+    .mobile-highlight {
+        background-color: #f5f6f7;
+    }
+
+    .userName:after {
+        display: none;
+    }
+
+    .fallbackMenu .tpt_menuLeftSlide.open {
+        left: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    .tableList td:before {
+        content: attr(data-label);
+        font-weight: normal;
+        margin-right: 5px;
+    }
+
+    .tableList td.tableTitle:before,
+    .tableList td.noLabel:before {
+        margin-right: 0;
+    }
+
+    .tableList thead {
+        display: none;
+    }
+
+    .tableList tbody td {
+        display: block;
+        border-bottom: none;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .tableList tbody tr {
+        display: block;
+        padding: .5em;
+    }
+
+    .tableList.tableListAlternateRows tr:first-child {
+        padding-top: 0;
+    }
+
+    .tableTitle {
+        font-weight: bold;
+        font-weight: 500;
+    }
+
+    .searchForm .mainCol {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .searchForm .btnCol {
+        display: block;
+        width: 100%;
+    }
+
+    .mainDetails iframe {
+        width: 100%;
+    }
+
+    .navigationLanguage li.navigationItem a {
+        padding: 14px 10px !important;
+        font-size: 12px;
+    }
+
+    .navigationLanguage .navigationItem.active a {
+        color: #4EC6A2;
+        font-weight: 400;
+    }
+
+    .formColors2 input,
+    .formColors2 textarea,
+    .formColors2 select {
+        box-shadow: none;
+        margin-bottom: 10px;
+    }
+
+    .midSizeContainer {
+        width: 100%;
+    }
+
+    .homeAboutText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .homeAboutImg {
+        display: none;
+    }
+
+    .locationBox {
+        width: 44%;
+    }
+
+    .profileButton {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tableListAlternateRows {
+        margin-bottom: 25px;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .wiz_2Columns .fieldSpec,
+    .wiz_2Columns div[id^=datasetFieldContainer] {
+        width: 100%;
+        display: block;
+    }
+
+    .pageTitle {
+        margin: 0 0 0.5em 0;
+        font-size: 1.75em;
+        line-height: 1.5;
+        float: none;
+    }
+
+    .pageTitleNav {
+        float: none;
+        margin: 0 0 0.4em 0;
+    }
+
+    .loginBox {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    #resumePaste {
+        resize: vertical;
+    }
+
+    .talentFooter .imgCont {
+        display: none;
+    }
+
+    .talentFooter .txtCont div {
+        padding: 0 20px;
+        margin-left: 0;
+    }
+
+    .talentFooter {
+        background-image: none;
+        background: rgba(46, 206, 177, 1);
+        background: -moz-linear-gradient(-45deg, rgba(46, 206, 177, 1) 0%, rgba(88, 182, 229, 1) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(46, 206, 177, 1)), color-stop(100%, rgba(88, 182, 229, 1)));
+        background: -webkit-linear-gradient(-45deg, rgba(46, 206, 177, 1) 0%, rgba(88, 182, 229, 1) 100%);
+        background: -o-linear-gradient(-45deg, rgba(46, 206, 177, 1) 0%, rgba(88, 182, 229, 1) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(46, 206, 177, 1) 0%, rgba(88, 182, 229, 1) 100%);
+        background: linear-gradient(135deg, rgba(46, 206, 177, 1) 0%, rgba(88, 182, 229, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2eceb1', endColorstr='#58b6e5', GradientType=1);
+    }
+
+    .accountBox .mainCol {
+        width: 100%;
+        margin-right: 2%;
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .accountBox .mainCol,
+    .accountBox .secCol {
+        display: block;
+        width: 100% !important;
+    }
+
+    .firstTimeApplicants .accountBox .secCol {
+        margin: 0 0 2em 0;
+    }
+
+    .firstTimeApplicants .accountBox fieldset {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .firstTimeApplicants .accountBox .mainCol {
+        margin: 2em 0;
+        padding: 2em 0 1em;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tpt_loginHiddenFields {
+        width: 80%;
+    }
+
+    .fieldBox3ColumnsInline .fieldBox {
+        width: 100% !important;
+        margin-right: 0;
+        display: block;
+    }
+
+    .fieldBox3ColumnsInline .fieldBox:last-child {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .midSizeContainer .secCol {
+        width: 100%;
+        float: none;
+        vertical-align: bottom;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .midSizeContainer .mainCol .fieldBox {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin: 1em 0 1.5em;
+    }
+
+    .extraTopMargin {
+        margin-top: 1em;
+    }
+
+    .midSizeContainer .mainCol {
+        width: 100%;
+    }
+
+    .tpt_wizard,
+    .profileDetail {
+        width: 100%;
+        margin: auto;
+    }
+
+    .detailContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .sideBarWrapper,
+    .sidebar {
+        width: 100% !important;
+        position: relative !important;
+        top: inherit !important;
+        padding: 0 !important;
+        max-width: 100%;
+    }
+
+    .sideBarWrapper {
+        height: inherit !important;
+        order: 2;
+    }
+
+    .extraDetails .fieldSetLabel {
+        display: inline-block;
+    }
+
+    .mobileShow {
+        display: block;
+        margin-top: 2em;
+    }
+
+    .mainDetails {
+        width: 100%;
+        border-right: none;
+        min-height: auto;
+        order: 1;
+    }
+
+    .listTitleContainer {
+        width: 100%;
+        float: none;
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    .listButtonBar {
+        float: none;
+        clear: both;
+        margin-top: 8px;
+        margin-left: -8px;
+        padding-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .listSingleColumnItemDescription {
+        display: none;
+    }
+
+    .btnFixed {
+        position: fixed;
+        bottom: -30px;
+        padding: 20px 10px;
+        background-color: #fff;
+        z-index: 999999;
+        left: 0;
+        right: 0;
+        box-shadow: 0px -3px 14px -3px rgba(0, 0, 0, 0.15);
+
+    }
+
+    .footerContactUs {
+        text-align: center;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .searchBox {
+        float: none;
+        width: auto;
+    }
+
+    .profilePictureContainer {
+        float: none;
+        padding: 0.5em 0 1em 0;
+    }
+
+    .profilePicture {
+        margin: 0;
+    }
+
+    .profilePictureLink {
+        display: none;
+    }
+
+    .listContainer .listItem {
+        display: block;
+        width: 100%;
+        vertical-align: top;
+        margin: 0 0 1em 0;
+    }
+
+    .headerBannerTitle {
+        background-image: none;
+    }
+
+    .headerBannerAllJobs .headerBannerImg {
+        display: none;
+    }
+
+    .headerBannerAllJobs .headerBannerSearch {
+        padding-top: 35px;
+        width: 100%;
+    }
+
+    .searchForm1Col .searchBox {
+        width: 100%;
+    }
+
+    .mainHeader .headerBannerTitle {
+        font-size: 28px;
+        background-image: none !important;
+        transition: height 200ms;
+    }
+
+    .headerBannerAllJobs .headerBannerTitle {
+        padding-top: 35px;
+    }
+
+    .mainHeader .headerBannerTitle br {
+        display: none;
+    }
+
+    .tpt_wizard {
+        width: 100%;
+    }
+
+    .accountBox .buttonBar {
+        display: block;
+        margin-top: 1em;
+    }
+
+    .accountBox fieldset,
+    .accountBox fieldset.noWidth {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .listSingleColumnItem {
+        padding: 1.5em 2em;
+    }
+
+    .extraBg .mainContent {
+        background-color: #fff;
+        padding: 25px 0px 0px 0px;
+    }
+
+    .listSingleColumnItem {
+        box-shadow: none;
+        padding: 16px;
+        border: none;
+        border-bottom: 1px solid #b8c1d0;
+        border-radius: 0;
+    }
+
+    .searchForm .btnCol .searchBox {
+        text-align: left;
+    }
+
+    .searchButtonBox .saveButton,
+    .searchForm .btnCol a.genericButton {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+    .listSingleColumnItemTitle {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        padding-bottom: 10px;
+    }
+
+    .tpt_socialShareBar {
+        right: -20px;
+        border-radius: 5px;
+        left: inherit;
+    }
+
+    .listControls {
+        background-color: #F7F7F7;
+        padding: 15px 0 25px;
+        margin: 0;
+    }
+
+    .listControlsBottom .listPagination {
+        text-align: center;
+    }
+
+    .listPagination {
+        text-align: center;
+    }
+
+    .listButtonBar a {
+        font-weight: 400 !important;
+    }
+
+    .listSingleColumnItemMiscDataItem {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .talentFooter .txtCont div h1 {
+        font-size: 29px;
+        font-weight: 400;
+        padding-bottom: 15px;
+    }
+
+    .talentFooter .txtCont p {
+        font-size: 15px;
+    }
+
+    .jobDetailDetailsApplyButton {
+        width: 100%;
+    }
+
+    .jobPaginationLegend {
+        float: none;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .detailData .fieldSet {
+        display: block;
+        width: 100%;
+        margin-bottom: .5em;
+    }
+
+    .uploadResumeField {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .searchBoxFieldContainer {
+        width: 100%;
+    }
+
+    .titleSearch {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .titleSearch span {
+        display: block;
+        font-size: 14px;
+        margin-bottom: -10px;
+        color: #4EC6A2;
+    }
+
+    .searchForm fieldset {
+        display: block;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    .headerBannerHome .sectionSubtitle {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .searchForm .sectionTitle {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .locationBox {
+        width: 85%;
+    }
+
+    .homeJoinUs {
+        width: 100%;
+        padding: 40px 10px;
+    }
+
+    .homeJoinUs .saveButton {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .homeJoinUsContainer {
+        margin-top: 30px;
+    }
+
+    .flowerBack,
+    .headerBannerRegisterWrapper,
+    .flowerWrapper {
+        background-image: none;
+    }
+
+    .profilePage .row {
+        width: 100%;
+    }
+
+    .headerBannerJobDetal .headerBannerText {
+        display: block;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .stick {
+        position: inherit;
+    }
+
+    .accountBox .secCol p {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .registrationSteps .registrationStepItem {
+        display: none;
+    }
+
+    .registrationSteps .regStepCurrent {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .registrationSteps {
+        margin: -20px 0 20px;
+    }
+
+    .wiz_2Columns .fieldSpecPadder,
+    .wiz_2Columns .Separator,
+    .wiz_2Columns .datasetfieldSpecPadder,
+    .fieldSpec.MultipleDatasetEntryFormField .labelText,
+    .removeDatasetRow,
+    .removeDatasetRow:link,
+    a[id^="addRowFor"],
+    a[id^="addRowFor"]:link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .pageTitleAM {
+        padding-top: 0 !important;
+        line-height: 1 !important;
+    }
+
+    .fieldSpec.buttonBar button {
+        margin: 8px 0;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .accountBox {
+        padding: 0;
+    }
+
+    .firstTimeApplicants .accountBox .sectionTitle {
+        font-size: 2em;
+    }
+
+    .profilePic {
+        display: none;
+    }
+
+    .userTitle h2 {
+        margin-left: 0;
+    }
+
+    .buttonBar>a.lineButton {
+        width: 50% !important;
+        min-width: 150px;
+    }
+
+    .socialLoginBox .buttonBar>a {
+        width: 24px;
+        display: inline-block;
+    }
+
+    .accountBox .fieldBox {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tpt_socialShareBar {
+        right: 0;
+        border-radius: 5px;
+        left: inherit;
+    }
+}
+
+@media all and (max-height: 768px) {
+    .flowerBack {
+        background-size: 290px;
+    }
+}
+
+/* SECTION MAP AND COUNTRIES HOME DESKTOP */
+
+.dropdown-countries {
+    display: none;
+}
+
+#info-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: arial;
+    color: #000;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+#info-box div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4B286D
+}
+
+.mapActive {
+    fill: #70558a !important;
+    -webkit-transition: fill ease-in-out .4s;
+    -o-transition: fill ease-in-out .4s;
+    transition: fill ease-in-out .4s;
+}
+
+.mapActive:hover {
+    fill: #4B286D !important;
+    cursor: pointer;
+}
+
+.detailAppear {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: .4s;
+    animation-name: fadeIn;
+    animation-duration: .4s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* SECTION MAP AND COUNTRIES HOME MOBILE */
+
+@media all and (max-width: 640px) {
+    .dropdown-countries {
+        display: block;
+        padding: 0px 40px;
+    }
+
+    .map {
+        display: none;
+    }
+}
+
+/* GDPR ACCORDEON */
+
+.accordion {
+    cursor: pointer;
+    margin: 15px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+    border-bottom: 1px solid #4C296E;
+}
+
+.active-arrow,
+.accordion:hover {
+    color: #258700;
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    width: 20px;
+    color: #777;
+    float: right;
+    content: url('https://jobs.telusinternational.com/portal/11/images/Down.svg');
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.active-arrow:after {
+    content: url('https://jobs.telusinternational.com/portal/11/images/Up.svg');
+}
+
+.accordion-link {
+    display: block;
+    text-align: left;
+}
+
+/* SELECT 2 */
+
+.select2-container .select2-selection--single {
+    height: 43px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 48px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    background-image: url("https://jobs.telusinternational.com/portal/11/images/DownGrey.svg");
+    height: 11px;
+    width: 14px;
+    margin-top: 17px;
+}
+
+.select2-selection.select2-selection--multiple::after {
+    background-image: url("https://jobs.telusinternational.com/portal/11/images/DownGrey.svg");
+    content: "";
+    height: 11px;
+    width: 14px;
+    margin-top: 4px;
+    position: absolute;
+}
+
+.formSizes1 select {
+    padding-top: 9px;
+    appearance: none;
+    background-image: url("https://jobs.telusinternational.com/portal/11/images/DownGrey.svg");
+    background-size: 11px;
+    background-position-x: 98.5%;
+    background-position-y: 57%;
+}
+
+.select2-container--default .select2-selection--multiple{
+    padding: 0em 1em;
+    padding-top: 13px;
+    line-height: normal;
+    min-height: 43px;
+}
+.select2-container--default .select2-selection--multiple .select2-search__field {
+    height: auto;
+}
+
+.select2-selection.select2-selection--single.select2Container5876 {
+    width: 50%;
+}
+
+.headerBannerSearchChina .select2-container--default .select2-selection--multiple{
+    height: auto;
+    padding: 0em 1em;
+    padding-top: 16px;
+}
+
+.headerBannerSearchChina .select2-container--default .select2-selection--multiple .select2-search__field {
+    height: auto;
+}
+
+/* JOB DETAIL VIEW:
+   ========================================================================== */
+
+.view__detail .fieldSetLabel {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.fieldSetLabel {
+    font-weight: 500;
+}
+
+.view__detail .fieldSetLabel:after {
+    content: ":";
+    margin-left: -2px;
+}
+
+.view__detail .fieldSetValue {
+    display: inline-block;
+}
+
+.tableField thead {
+    background-color: #4C296E;
+    color: #fff;
+}
+
+.tableField th {
+    font-weight: 500;
+    padding: 3px 5px 0px 5px;
+    border: 1px solid white;
+}
+
+.tableField td {
+    font-weight: 500;
+    padding: 4px 5px 0px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.view__detail-bottom .fieldSet {
+    margin: 0.75em 0;
+}
+
+a.listApplyButton img {
+    width: 50px;
+    clear: both;
+    height: auto;
+    opacity: 0.5;
+    display: block;
+}
+a.listApplyButton img:hover {
+    opacity: 1;
+}
+.tpt_socialShareContainer .icon32,.tpt_socialShareDetailContainer .icon32{
+    padding: 0 0 28px 28px;
+    border-radius: 0;
+    -webkit-background-size: auto 28px;
+    background-size: auto 28px;
+}
+.tpt_socialShareContainer .iconFacebook, .tpt_socialShareDetailContainer .iconFacebook {
+    background: var(--facebook--share--icon) no-repeat center center;
+}
+.tpt_socialShareContainer .iconTwitter, .tpt_socialShareDetailContainer .iconTwitter{
+    background: var(--twitter--share--icon) no-repeat center center;
+}
+.tpt_socialShareContainer .iconLinkedin, .tpt_socialShareDetailContainer .iconLinkedin{
+    padding-left: 37px;
+    background: var(--linkedin--share--icon) no-repeat center center;
+}
+.tpt_socialShareContainer .iconXing, .tpt_socialShareDetailContainer .iconXing{
+    background: var(--xing--share--icon) no-repeat center center;
+}
+.tpt_socialShareContainer .iconWhatsapp, .tpt_socialShareDetailContainer .iconWhatsapp{
+    background: var(--whatsapp--share--icon) no-repeat center center;
+    background-size: auto 28px;
+}
+.tpt_socialShareContainer .iconCopyToClipboard, .tpt_socialShareDetailContainer .iconCopyToClipboard{
+    background: var(--copy--share--icon); no-repeat center center;
+    background-size: auto 28px;
+    cursor: pointer;
+}
+.flowerWrapper{
+        background-size: 30% auto;
+}
+
+.pipelineDetailPage .view__detail-bottom .fieldSetLabel{
+    color: #4C296E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pipelineDetailPage .view__detail-bottom th{
+    color: #4C296E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media all and (max-width: 940px){
+    .flowerWrapper{
+        background-size: 275px auto;
+    }
+}
+@media all and (max-width: 700px){
+    .flowerWrapper{
+        background: none;
+    }
+}
+@media all and (max-width: 800px){
+    .select2-selection.select2-selection--multiple {
+        padding-top: 7px;
+        line-height: 2;
+        height: 44px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        margin-left: -3px;
+        margin-top: 11px;
+    }
+
+    .select2-selection.select2-selection--multiple::after {
+        margin-left: -3px;
+        margin-top: 11px;
+    }
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #a1a1a1 !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #b8c1d0 !important;
+    border-radius: 5px !important;
+}
+
+::-webkit-input-placeholder {
+    color:#a1a1a1;
+    font-family: inherit;
+}
+
+::-moz-placeholder {
+    color:#a1a1a1;
+    font-family: inherit;
+}
+
+::-ms-placeholder {
+    color:#a1a1a1;
+    font-family: inherit;
+}
+
+::placeholder {
+    color:#a1a1a1;
+    font-family: inherit;
+}
+
+.commonWrapper--footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.footerContainer {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+
+    margin: 0 auto;
+    width: 100%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.commonWrapper--footer--bottom {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1024px;
+}
+.commonWrapper--footer--bottom p {
+    color: #a0a0a0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.commonWrapper--footer--bottom ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.commonWrapper--footer--bottom ul li {
+    color: #a0a0a0;
+    display: flex;
+    padding: 0px 10px;
+    font-size: 16px;
+    align-items: center;
+    border-right: 1px solid #a0a0a0;
+}
+.commonWrapper--footer--bottom ul li:last-child {
+    border: 0;
+    margin-left: auto;
+}
+.commonWrapper--footer--bottom ul li a {
+    color: #a0a0a0;
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: none;
+}
+.commonWrapper--footer--bottom ul li span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.commonWrapper--footer--bottom ul .footerBottom--li {
+    border: 0;
+    padding: 0 0 0 10px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.commonWrapper--footer--bottom ul .footerBottom--li a {
+    padding: 0 0 0 10px;
+    display: inline-block;
+    line-height: 1.5em;
+    padding-left: 4px;
+}
+
+.commonWrapper--footer--bottom ul .footerBottom--img {
+    border: 0;
+    margin-left: 1.5%;
+}
+
+.commonWrapper--footer--bottom ul .footerBottom--img img {
+    display: block;
+    max-width: 100%;
+}
+
+.commonWrapper--footer--bottom ul .footerBottom--social-media ul {
+    padding: 0;
+}
+.commonWrapper--footer--bottom ul .footerBottom--social-media ul li {
+    border: 0;
+}
+.commonWrapper--footer--bottom ul .footerBottom--social-media ul li a img {
+    display: block;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.paragraph {
+    text-align: left;
+    font-weight: 300;
+    line-height: 150%;
+    padding-bottom: 8px;
+}
+.homeMapText .paragraph {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.homeRoles--container {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.homeRoles--container > div {
+    width: 100%;
+    padding: 2em 0em;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.homeRoles--container > div > div {
+    flex: 1 1 auto;
+    max-width: 900px;
+}
+.homeRoles--container img {
+    display: block;
+    max-width: 100%;
+    max-height: 900px;
+}
+.homeRoles--container .paragraph {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.homeRoles--container .saveButton {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.homeRoles--business,
+.homeRoles--positions {
+    padding-right: 2em;
+}
+.homeRoles--solutions {
+    padding-left: 2em;
+}
+
+.homeRoles--solutions_left--text,
+.homeRoles--positions_right--text,
+.homeRoles--solutions_right--text {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.footerContainer.footerContainer--footerLogo {
+    display: none;
+}
+
+.headerBannerSearchChina input,
+.headerBannerSearchChina select {
+    height: 53px;
+    font-style: normal;
+    text-align: justify;
+    word-break: break-all;
+    text-justify: inter-ideographic;
+}
+
+@media all and (max-width: 1100px) {
+    .commonWrapper {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .mainFooter {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .commonWrapper--footer {
+        margin: 0 auto;
+        max-width: 768px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .footerContainer {
+        width: 100%;
+        margin: 0 auto;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .commonWrapper--footer--bottom ul {
+        padding-top: 10px;
+        flex-direction: column;
+    }
+    .commonWrapper--footer--bottom ul li {
+        padding: 0;
+        display: list-item;
+        border-right: none;
+    }
+    .commonWrapper--footer--bottom ul li:last-child {
+        margin: 0;
+        padding-top: 30px;
+    }
+    .commonWrapper--footer--bottom ul .footerBottom--li {
+        padding: 0;
+    }
+
+    .commonWrapper--footer--bottom ul .footerBottom--img {
+        margin: 0 auto;
+        padding-top: 1.5em;
+    }
+
+    .commonWrapper--footer--bottom ul .footerBottom--social-media {
+        padding-top: 0;
+        padding-bottom: 1em;
+    }
+    .commonWrapper--footer--bottom ul .footerBottom--social-media ul {
+        display: block;
+    }
+    .commonWrapper--footer--bottom ul .footerBottom--social-media ul li {
+        padding: 0em 0.5em;
+        display: inline-block;
+    }
+    .commonWrapper--footer--bottom ul .footerBottom--social-media ul li a {
+        display: block;
+    }
+
+    .homeMap {
+        padding: 50px 10px 50px 10px;
+    }
+
+    .homeRoles--container > div {
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+    }
+
+    .homeRoles--solutions_left,
+    .homeRoles--positions_right,
+    .homeRoles--solutions_right {
+        padding-top: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .homeRoles--container img {
+        display: none;
+    }
+
+    .homeRoles--container .paragraph {
+        font-size: 16px;
+    }
+}
+
+.map--USA,
+.map--China,
+.map--India,
+.map--Canada,
+.map--Ireland,
+.map--Romania,
+.map--Bulgaria,
+.map--Guatemala,
+.map--ElSalvador,
+.map--Philippines {
+    border-radius: 50%;
+    background-size: cover;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+.map--USA {
+    background-image: url('../images/countries/US/Header/bubbleUSA.jpg');
+}
+.map--China {
+    background-image: url('../images/countries/ChinaBubble.jpg');
+}
+.map--India {
+    background-image: url('../images/countries/IndiaBubble.jpg');
+}
+.map--Canada {
+    background-image: url('../images/countries/bubbleCanada.jpg');
+}
+.map--Ireland {
+    background-image: url('../images/countries/bubbleIreland.jpg');
+}
+.map--Romania {
+    background-image: url('../images/countries/Romania/Header/bubbleRomania.jpg');
+}
+.map--Bulgaria {
+    background-image: url('../images/countries/Bulgaria/Header/bubbleBulgaria.jpg');
+}
+.map--Guatemala {
+    background-image: url('../images/countries/Guatemala/Header/bubbleGuatemala.jpg');
+}
+.map--ElSalvador {
+    background-image: url('../images/countries/bubbleElSalvador.jpg');
+}
+.map--Philippines {
+    background-image: url('../images/countries/Philippines/Header/bubblePhilippines.jpg');
+}
+
+.homeInfo__container {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+.homeInfo__container > div {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 400px;
+}
+
+.homeInfo__container__InfoApply,
+.homeInfo__container__Assestment,
+.homeInfo__container__HiringManager,
+.homeInfo__container__HiringProcess,
+.homeInfo__container__TalentAcquisition {
+    transition: 0.3s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: 0.3s;
+    background-position: top center;
+}
+.homeInfo__container__InfoApply {
+    position: relative;
+    background-image: var(--home-info-apply--image);
+}
+.homeInfo__container__InfoApply a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.homeInfo__container__InfoApply:hover {
+    background-image: var(--home-info-apply--image--hover);
+}
+.homeInfo__container__Assestment {
+    background-image: var(--home-info-assestment--image);
+}
+.homeInfo__container__Assestment:hover {
+    background-image: var(--home-info-assestment--image--hover);
+}
+.homeInfo__container__HiringManager {
+    background-image: var(--home-info-hiring-manager--image);
+}
+.homeInfo__container__HiringManager:hover {
+    background-image: var(--home-info-hiring-manager--image--hover);
+}
+.homeInfo__container__HiringProcess {
+    background-image: var(--home-info-hiring-process--image);
+}
+.homeInfo__container__HiringProcess:hover {
+    background-image: var(--home-info-hiring-process--image--hover);
+}
+.homeInfo__container__TalentAcquisition {
+    background-image: var(--home-info-talent--image);
+}
+.homeInfo__container__TalentAcquisition:hover {
+    background-image: var(--home-info-talent--image--hover);
+}
+@media (max-width: 600px) {
+    .homeInfo__container {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/* SELECT2 FIXES
+   ========================================================================== */
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #a1a1a1 !important;
+    line-height: 1.5;
+    white-space: normal;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 18px !important;
+    padding-right: 0 !important;
+    font-family: 'HelveticaNeue', Arial, Helvetica, sans-serif;
+}
+span.select2-selection__clear {
+    display: none;
+}
+
+.gdpr--list {
+    margin: 0;
+}
+
+.paragraph--color {
+    color: #4C296E;
+    font-weight: 500;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding-left: 0px !important;
+}
+.select2-container .select2-search--inline .select2-search__field {
+    margin-top: 0px !important;
+}
+.select2-selection__placeholder {
+    font-family: 'HelveticaNeue', Arial, Helvetica, sans-serif;
+}
+.ui-widget input {
+    font-family: 'HelveticaNeue', Arial, Helvetica, sans-serif;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+    border-color: #b8c1d0 !important;
+}
+
+.gdprMorocco-underline {
+    border: none;
+    border-top: 1px solid #4C296E;
+    margin-top: 0px;
+}
+
+/* FORM GENERAL MODIFIERS
+   ========================================================================== */
+/* DEFAULT > The .fieldSpec element is visible and displaying a label.
+   --------------------------------------------------------------------------
+   .form__item--hidden > To hide a field entirely
+   --------------------------------------------------------------------------
+   .form__item--hidden-label > To hide a field's label
+   -------------------------------------------------------------------------- */
+.fieldSpec.form__item--hidden {
+    display: none;
+}
+
+.fieldSpec.form__item--hidden-label .labelText,
+.fieldSpec.form__item--hidden-label > label,
+.fieldSpec.form__item--hidden-label .formfieldSpec > label,
+.fieldSpec.form__item--hidden-label .datasetfieldSpec > label,
+.fieldSpec.form__item--hidden-label > fieldset > legend,
+.fieldSpec.form__item--hidden-label .formfieldSpec > fieldset > legend,
+.fieldSpec.form__item--hidden-label .datasetfieldSpec > fieldset > legend {
+    display: none
+}
+
+.fieldSpec.form__item--odd,
+.fieldSpec.form__item--even {
+    -webkit-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+@media all and (min-width:769px) {
+
+    /* Structure
+      -------------------------------------------------------------------------- */
+
+    /*
+     * 1. 50% width minus half the final gutter
+     */
+    .fieldSpec.form__item--odd,
+    .fieldSpec.form__item--even {
+        width: calc(50% - 10px); /* 1 */
+    }
+
+    /*
+     * 1. Setting the element as a left column item.
+     */
+    .fieldSpec.form__item--odd {
+        float: left; /* 1 */
+    }
+
+    /*
+     * 1. Setting the element as a right column item.
+     */
+    .fieldSpec.form__item--even {
+        float: right; /* 1 */
+    }
+
+    /* Behaviour
+       -------------------------------------------------------------------------- */
+
+    /*
+     * 1. Clearing all floats (two consecutive .form__item--odd elements will stack just fine).
+     */
+    .fieldSpec.form__item--odd {
+        clear: both; /* 1 */
+    }
+
+    /*
+     * 1. Clearing only the right float (in case we have two consecutive .form__item--even elements).
+     */
+    .fieldSpec.form__item--even {
+        clear: right; /* 1 */
+    }
+
+}
+/* STRUCTURE MODIFIERS (DEALING WITH COLUMNS WITH A MODIFIER IN THE .FORM PARENT)
+   ========================================================================== */
+
+/* DEFAULT > All .form--cols2 .fieldSpec fields are arranged in 2 columns, and we will
+   manage complex layouts including conditional fields, empty spots, combinations
+   with full width fields, combinations with very tall fields... with modifiers
+   applied to specific fields.
+   --------------------------------------------------------------------------
+   .form__item--clearer > To clear the floats
+   --------------------------------------------------------------------------
+   .form__item--full > To make a field full width
+   -------------------------------------------------------------------------- */
+
+@media all and (min-width:769px) {
+
+    /* Structure
+      -------------------------------------------------------------------------- */
+
+    .form--cols2 {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    /*
+     * 1. 50% width and floats
+     */
+    .form--cols2 .fieldSpec:not(.form__item--full) {
+        width: 50%; /* 1 */
+        float: left; /* 1 */
+    }
+
+    .form--cols2 .fieldSpec:not(.form__item--full).ButtonBarField {
+        width: 100%; /* 1 */
+        float: left; /* 1 */
+    }
+
+    /*
+     * 1. The gutter
+     */
+    .form--cols2 .fieldSpec .fieldSpecPadder {
+        padding-left: 10px; /* 1 */
+        padding-right: 10px; /* 1 */
+    }
+
+    /* Behaviour
+       -------------------------------------------------------------------------- */
+    .form--cols2 .fieldSpec:nth-of-type(even) {
+        clear: none;
+    }
+
+    /*
+     * 1. Clearing all floats
+     */
+    .form--cols2 .form__item--clearer,
+    .form--cols2 .form__item--full {
+        clear: both !important; /* 1 */
+    }
+
+}
+
+.searchForm input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #a1a1a1;
+  opacity: 1; /* Firefox */
+}
+.searchForm input.select2-search__field::placeholder {
+  line-height: 29px;
+  padding-left: 3px;
+}
+.searchForm input:-ms-input-placeholder,
+.searchForm .select2-selection__rendered .select2-selection__rendered input:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+  color: #a1a1a1;
+  font-size: 14px !important;
+}
+
+.searchForm input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #a1a1a1;
+}
+
+/*===LANGUAGE_SWITCHER STYLES=== */
+
+.autoClearer:before,
+.autoClearer:after {
+    content: " ";
+    display: table;
+}
+
+.autoClearer:after {
+    clear: both;
+}
+
+.portalLanguages__wrapping {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.navigationItem .portalLanguages__wrapping a {
+    display: block;
+    padding: 10px;
+    -webkit-transition: color, background-color 0.3s;
+    -moz-transition: color, background-color 0.3s;
+    -o-transition: color, background-color 0.3s;
+    transition: color, background-color 0.3s;
+    padding: 10px 15px,;
+}
+
+.portalLanguages__wrapping .portalLanguages__item {
+    border-bottom: 1px solid #ccc;
+}
+
+.portalLanguages__wrapping .portalLanguages__item:last-child {
+    border-bottom: none;
+}
+
+.portalLanguages__placeholder {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #909090;
+}
+
+.portalLanguages__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 0;
+    vertical-align: -2px;
+}
+
+.portalLanguages__wrapping:hover .portalLanguages__placeholder,
+.portalLanguages__wrapping--open .portalLanguages__placeholder {
+    border-radius: 8px 8px 0 0;
+    border-bottom-color: #FFFFFF;
+}
+
+.portalLanguages__placeholder:before {
+    content: "";
+    float: right;
+    margin: 6px 0 6px 10px;
+    border-top: 4px solid #000000;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+.portalLanguages {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -9999px;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+    border: none;
+    min-width: calc(100% + 5px);
+    padding: 56px 0 0 0;
+    overflow: hidden;
+    -webkit-box-shadow: 11px 17px 32px -9px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 11px 17px 32px -9px rgba(0, 0, 0, .25);
+    box-shadow: 11px 17px 32px -9px rgba(0, 0, 0, .25);
+}
+
+.portalLanguages__wrapping:hover .portalLanguages,
+.portalLanguages__wrapping--open .portalLanguages {
+    display: block;
+    right: 0;
+}
+
+.portalLanguages__link {
+    background-color: #FFFFFF;
+    color: #909090;
+}
+
+.portalLanguages__item:not(.portalLanguages__item--selected) .portalLanguages__link:hover {
+    color: #258700;
+}
+
+.portalLanguages__item--selected .portalLanguages__link {
+    color: #258700;
+    cursor: default;
+}
+
+/*IE FIX*/
+
+.body--IE .portalLanguages__placeholder::before {
+    margin-right: -10px;
+}
+.body--IE .portalLanguages__wrapping a {
+    padding-right: 15px;
+}
+
+@media all and (max-width: 800px) {
+    .portalLanguages__wrapping {
+        float: none;
+        display: block;
+    }
+
+    .portalLanguages {
+        display: block;
+        position: static;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .portalLanguages__placeholder {
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .portalLanguages__wrapping .portalLanguages__item {
+        border: 0;
+    }
+
+    .portalLanguages .portalLanguages__link {
+        padding: 12px 27px !important;
+    }
+}
+
+/* Cookie consent popup */
+.cookies-consent-customized .cookiesButtonAccept,
+.cookies-consent-customized .cookiesButtonReject,
+.cookies-consent-customized .cookiesButtonSettingsText {
+    color: #fff !important;
+}
+
+.cookies-consent-customized .avaicon-icon-settings:before {
+    color: #488801;
+}
+
+.cookies-consent-customized .cookies__settings__option__switch input {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+.cookies-consent-customized .cookiesButtonAccept,
+.cookies-consent-customized .cookiesButtonReject,
+.cookies-consent-customized .cookiesButtonSettingsText {
+    color: #fff !important;
+}
+.cookies-consent-customized .cookies__info h6 {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.cookies-consent-customized {
+    -webkit-box-shadow: 2px -17px 32px -9px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 2px -17px 32px -9px rgba(0, 0, 0, .25);
+    box-shadow: 2px -17px 32px -9px rgba(0, 0, 0, .25);
+}
+
+.cookie__info__link {
+    color: #488801 !important;
+}
+
+.cookie__info__link:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN */
+.form--login .Section__legend {
+    display: none;
+}
+
+.form--login .loginInput {
+    border-color: #E2E2E2;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0em 1em;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    border-width: 1px;
+    border-style: solid;
+    outline-width: 0;
+    height: 43px;
+}
+
+.form--login .fieldSpec {
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+/* Style for login form in Register pages */
+.register--login--form {
+    display: flex;
+    justify-content: center;
+}
+
+.register--login--form .fieldset {
+    display: flex;
+}
+
+.register--login--form .fieldset .fieldSpec.button-bar {
+    margin-top: 32px;
+}
+
+.register--login--form .form--login .fieldSpec {
+    margin: 0 5px 0 5px;
+}
+
+.register--login--form .comment {
+    margin-top: 8px;
+}
+
+/* chat-bot
+--------------------------------------------------------*/
+
+.bot-page .container {
+    width: 100%;
+}
+
+.bot-page.container .banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+.bot-page .chatbot-button {
+    width: 10%;
+    max-width: 100px;
+    max-height: 100px;
+    position: fixed;
+    bottom: 4px;
+    right: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.bot-page .chatbot-button img {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.bot-page .bot-display-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 260px;
+    box-shadow: rgb(222, 222, 222) 0px 0px 10px 0px;
+}
+
+.bot-page .form-content {
+    top: 30px;
+    right: 3%;
+    width: 90%;
+    height: 85%;
+    display: inline-block;
+    background: #fff;
+    border-radius: 20px;
+    position: fixed;
+    box-shadow: rgb(222, 222, 222) 0px 0px 10px 0px;
+}
+
+.bot-page .close {
+    position: relative;
+    top: 13px;
+    right: 14px;
+    border-radius: 20px;
+    background-color: #4d148c;
+    padding: 3px 10px 8px 10px;
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.bot-page .close:hover {
+    background-color: #fff;
+    color: #4d148c;
+}
+
+.minimise {
+    position: relative;
+    top: 13px;
+    right: 20px;
+    border-radius: 20px;
+    background-color: #4d148c;
+    padding: 3px 13px 8px 13px;
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.minimise:hover {
+    background-color: #fff;
+    color: #4d148c;
+}
+
+.bot-page .maximise {
+    position: relative;
+    top: 13px;
+    right: 14px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.bot-page .bot-header {
+    background: #F3F3F3;
+    text-align: left;
+    padding: 10px 22px;
+    color: #248700;
+    height: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bot-page #chatbot-container .bot-header {
+    background: #F3F3F3;
+    text-align: left;
+    padding: 10px 22px;
+    color: #248700;
+    height: 60px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
+.bot-page .bot-header>p {
+    color: #fff;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.bot-page .bot-header img {
+    width: auto;
+    max-height: 40px;
+}
+
+.bot-page #chatbot-box {
+    height: calc(100% + 20px);
+    width: 100%;
+}
+
+.bot-page .bot-container {
+    display: none;
+    width: 400px;
+    height: calc(100vh - 84px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: white;
+    border-left: 1px solid #a3a3a3;
+}
+
+.bot-page .chatbot {
+    width: 100% !important;
+    height: calc(100% - 60px);
+}
+
+.bot-page .chatbot-header-bot-bottom {
+    width: 400px;
+    right: 0px;
+    position: absolute;
+    display: none;
+    bottom: 0
+}
+
+@media all and (max-width: 768px) {
+    .bot-page .chatbot-button {
+        width: auto;
+    }
+
+    .bot-page #chatbot-container .bot-header {
+        padding-left: 4px;
+    }
+
+    .bot-page .close {
+        padding: 8px 11px 5px 11px;
+    }
+
+    .bot-page .minimise {
+        padding: 8px 13px 4px 13px;
+    }
+
+    .bot-page .bot-container {
+        max-width: 100%;
+    }
+
+}
+
+@media all and (max-width: 374px) {
+    .bot-page .bot-header img {
+        max-height: 32px;
+    }
+}
+
+/* JobPixel Widget
+--------------------------------------------------------*/
+
+.jp-widget-inline {
+    padding-bottom: 3rem;
+    z-index: 0;
+}
+
+.jp-widget-inline .swiper.jp-swiper.jp-widget-inline-swiper {
+    max-width: 65%;
+}
+@media all and (min-width: 1680px) {
+    .jp-widget-inline {
+        margin: 0 6rem;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .jp-widget-inline {
+        padding-bottom: 1rem;
+    }
+}

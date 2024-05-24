@@ -1,0 +1,2155 @@
+/* NORMALIZATION */
+* {
+    font: inherit;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+}
+
+html {
+    cursor: default;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body,
+form,
+iframe,
+fieldset,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+iframe,
+form,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary,
+main {
+    display: block;
+}
+
+img {
+    border: 0;
+}
+
+table,
+td,
+th {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    empty-cells: show;
+    text-align: left;
+}
+
+input,
+button,
+select,
+textarea {
+    font-size: 1em;
+    margin: 0;
+    border-radius: 5px;
+}
+
+input,
+select,
+textarea {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+option,
+select[multiple] {
+    background-color: #FFFFFF;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0 !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    vertical-align: middle;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+b,
+strong {
+    font-weight: bold;
+    font-weight: 500;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.tpt_pageBusy,
+.tpt_pageBusy input,
+.tpt_pageBusy button,
+.tpt_pageBusy a {
+    cursor: wait;
+}
+
+.autoResize {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.clearer,
+.autoClearer:after {
+    clear: both;
+}
+
+.autoClearer:before,
+.autoClearer:after {
+    content: " ";
+    display: table;
+}
+
+.dBlock {
+    display: block;
+}
+
+.dInline {
+    display: inline;
+}
+
+.dInblock {
+    display: inline-block;
+}
+
+.dNone {
+    display: none;
+}
+
+.taRight {
+    text-align: right;
+}
+
+.taCenter {
+    text-align: center;
+}
+
+.taLeft {
+    text-align: left;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.tBlack {
+    color: #000000;
+}
+
+.tWhite {
+    color: #FFFFFF;
+}
+
+.tGrey {
+    color: #808080;
+}
+
+.serif {
+    font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, Times, 'Times New Roman', serif;
+}
+
+.sansSerif {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+    font-weight: 500;
+}
+.semiBold {
+    font-weight: 400;
+}
+.italic {
+    font-style: italic;
+}
+.oblique {
+    font-style: oblique;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+}
+
+.tdNone {
+    text-decoration: none;
+}
+
+/* Padding */
+
+.pad0 {padding: 0;}
+.pad025 {padding: 0.25em;}
+.pad05 {padding: 0.5em;}
+.pad075 {padding: 0.75em;}
+.pad1 {padding: 1em;}
+.pad1_5 {padding: 1.5em;}
+.pad2 {padding: 2em;}
+.pad3 {padding: 3em;}
+.pad4 {padding: 4em;}
+.pad5 {padding: 5em;}
+
+.tPad025 {padding-top: 0.25em;}
+.rPad025 {padding-right: 0.25em;}
+.bPad025 {padding-bottom: 0.25em;}
+.lPad025 {padding-left: 0.25em;}
+
+.tPad05 {padding-top: 0.5em;}
+.rPad05 {padding-right: 0.5em;}
+.bPad05 {padding-bottom: 0.5em;}
+.lPad05 {padding-left: 0.5em;}
+
+.tPad075 {padding-top: 0.75em;}
+.rPad075 {padding-right: 0.75em;}
+.bPad075 {padding-bottom: 0.75em;}
+.lPad075 {padding-left: 0.75em;}
+
+.tPad1 {padding-top: 1em;}
+.rPad1 {padding-right: 1em;}
+.bPad1 {padding-bottom: 1em;}
+.lPad1 {padding-left: 1em;}
+
+.tPad1_5 {padding-top: 1.5em;}
+.rPad1_5 {padding-right: 1.5em;}
+.bPad1_5 {padding-bottom: 1.5em;}
+.lPad1_5 {padding-left: 1.5em;}
+
+.tPad2 {padding-top: 2em;}
+.rPad2 {padding-right: 2em;}
+.bPad2 {padding-bottom: 2em;}
+.lPad2 {padding-left: 2em;}
+
+.tPad3 {padding-top: 3em;}
+.rPad3 {padding-right: 3em;}
+.bPad3 {padding-bottom: 3em;}
+.lPad3 {padding-left: 3em;}
+
+.tPad5 {padding-top: 5em;}
+.rPad5 {padding-right: 5em;}
+.bPad5 {padding-bottom: 5em;}
+.lPad5 {padding-left: 5em;}
+
+.negBMargin20 {margin-bottom: -20px;}
+
+.pointer {
+    cursor: pointer;
+}
+
+.cleanList,
+.cleanList > li {
+    display: block;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.halfContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableList {
+    display: table;
+    width: 100%;
+    line-height: 1.5em;
+}
+
+.tableList th {
+    display: table-cell;
+    padding: 10px;
+    padding-top: 25px;
+    color: #333;
+    font-weight: 400;
+    border-bottom: 1px solid #4C296E;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+.tableList td {
+    display: table-cell;
+    padding: 5px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-bottom: 1px solid #dedede;
+}
+
+.tableList.tableListAlternateRows tr:nth-child(2n) td {
+    background-color: #dedede;
+}
+
+.tableListCellLimited {
+    max-width: 200px;
+}
+.tableList td.noLabel a {
+    display: inline-block;
+    margin: 5px 9px 5px -4px;
+}
+
+.genericButton,
+.saveButton,
+.submitButton,
+.nextButton,
+.gotoButton,
+.redirectUrlButton,
+.previousButton,
+.homeButton,
+.clearButton,
+.cancelButton,
+.lineButton,
+.form--login .button--primary {
+    display: inline-block;
+    font-size: 14px;
+    padding: .7em 1.3em .6em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    border-radius: 8px;
+    min-width: 120px;
+    height: 43px;
+    box-sizing: border-box;
+    line-height: 22px;
+}
+
+.saveButton,
+.saveButton:link,
+.saveButton:visited,
+.form--login .button--primary,
+.form--login .button--primary:link,
+.form--login .button--primary:visited,
+.submitButton,
+.submitButton:link,
+.submitButton:visited,
+.nextButton,
+.nextButton:link,
+.nextButton:visited,
+.gotoButton,
+.gotoButton:link,
+.gotoButton:visited,
+.redirectUrlButton,
+.redirectUrlButton:link,
+.redirectUrlButton:visited {
+    background-color: #258700;
+    color: #fff;
+    border-color: #258700;
+}
+
+.previousButton,
+.previousButton:link,
+.previousButton:visited,
+.homeButton,
+.homeButton:link,
+.homeButton:visited,
+.cancelButton,
+.cancelButton:link,
+.cancelButton:visited,
+.clearButton,
+.clearButton:link,
+.clearButton:visited,
+a.lineButton,
+a.lineButton:link,
+a.lineButton:visited {
+    background-color: transparent;
+    color: #258700!important;
+    border-color: #258700;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.saveButton:hover,
+.saveButton:focus,
+.form--login .button--primary:hover,
+.form--login .button--primary:focus,
+.nextButton:hover,
+.nextButton:focus,
+.gotoButton:hover,
+.gotoButton:focus,
+.redirectUrlButton:hover,
+.redirectUrlButton:focus{
+    opacity: 0.8;
+    text-decoration: none;
+}
+.saveButton:active,
+.form--login .button--primary:active,
+.nextButton:active,
+.gotoButton:active,
+.redirectUrlButton:active {
+    background-color: #258700;
+    border-color: #258700;
+    text-decoration: none;
+}
+
+.previousButton:hover,
+.previousButton:focus,
+.homeButton:hover,
+.homeButton:focus,
+.cancelButton:hover,
+.cancelButton:focus,
+a.lineButton:hover,
+a.lineButton:focus {
+    background-color: #258700;
+    color: #FFFFFF !important;
+    border-color: #258700;
+}
+a.lineButton:active,
+.previousButton:active,
+.homeButton:active,
+.cancelButton:active {
+    background-color: #258700;
+    color: #ffffff !important;
+    border-color: #258700;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.uploadedFile {
+    display: block;
+    padding-top: 2px;
+}
+
+.removeFile {
+    background-color: #E9E9E9;
+    color: #5E6D81;
+    border: 2px solid #E9E9E9;
+    cursor: pointer;
+    padding: 3px 4px;
+    text-decoration: none;
+    background-image: none;
+    border-width: 0;
+    border-radius: 2px;
+}
+
+.removeFile:hover,
+.removeFile:focus,
+.removeFile:active {
+    background-color: #FFFFFF;
+    color: #5E6D81;
+    border: 2px solid #5E6D81;
+    text-decoration: none;
+}
+
+.removeFile input {
+    display: inline !important;
+}
+
+.smallButton {
+    text-transform: none;
+    padding: .5em 1em .7em;
+    line-height: 1.5;
+    min-width: 0;
+    font-weight: normal;
+    font-size: .9em;
+    height: auto;
+}
+
+.icon14,
+.icon16,
+.icon32 {
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    padding: 0 0 14px 14px;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.icon16 {
+    padding: 0 0 16px 16px;
+}
+
+.icon32 {
+    padding: 0 0 32px 32px;
+}
+
+.iconRss14 {
+    background-image: url('../images/ico_rss_14.html');
+}
+
+.iconFacebook {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_facebook.svg');
+}
+.iconIndeed {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_indeed.svg');
+}
+.iconSeek {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_seek.svg');
+}
+
+.iconLinkedin {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_linkedin.svg');
+}
+
+.iconTwitter {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_twitter.svg');
+}
+
+.iconGoogleplus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_google-plus.svg');
+}
+
+.iconXing {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/icoXingW.svg');
+}
+
+.iconDropbox {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_dropbox.svg');
+}
+
+.iconGoogledrive {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_google-drive.svg');
+}
+
+.iconEmail16 {
+    background-image: url('../images/ico_email_16.html');
+}
+
+.iconEmail32 {
+    background-image: url('../images/ico_email_32.html');
+}
+
+.tpt_socialShareContainer {
+    display: inline-block;
+    position: relative;
+    padding: 6px 0;
+}
+.tpt_socialShareDetailContainer {
+    clear: both;
+    display: block;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+.tpt_socialShareDetailContainer p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+.tpt_socialShareDetailContainer .icon32 {
+    margin-left: 1px;
+    margin-right: 8px;
+}
+
+.pipelineDetailPage .tpt_socialShareContainer .tpt_socialShareButton,
+.pipelineDetailPage .tpt_socialShareContainer .tpt_socialShareButton:link,
+.pipelineDetailPage .tpt_socialShareContainer .tpt_socialShareButton:visited {
+    padding: 0.75em;
+    background-color: #FFFFFF;
+}
+.pipelineDetailPage .tpt_socialShareContainerActive > .tpt_socialShareButton:hover,
+.pipelineDetailPage .tpt_socialShareContainerActive > .tpt_socialShareButton:focus,
+.pipelineDetailPage .tpt_socialShareContainerActive > .tpt_socialShareButton:active {
+    background-color: #FFFFFF;
+}
+
+.tpt_socialShareButton {
+    padding: .5em;
+    text-transform: none;
+    min-width: auto;
+    font-size: 16px;
+    height: auto;
+}
+.tpt_socialShareButton:before {
+    content: 'v';
+    font-family: "voutique";
+    font-size: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 8px;
+}
+
+.tpt_socialShareButton,
+.tpt_socialShareButton:link,
+.tpt_socialShareButton:visited {
+    color: #828282;
+    box-shadow: none;
+    margin-left: 12px;
+    padding-top: 0.45em;
+    border-width: 1px;
+    border-color: transparent;
+    outline-width: 0;
+    padding-bottom: 0.45em;
+    text-decoration: none;
+    background-color: #F5F5F5;
+}
+.tpt_socialShareButton:hover,
+.tpt_socialShareButton:focus,
+.tpt_socialShareButton:active {
+    color: #4C296E;
+    border-color: #4C296E;
+    text-decoration: none;
+    background-color: #F5F5F5;
+}
+
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton,
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton:link,
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton:visited,
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton:hover,
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton:focus,
+li.listSingleColumnItem:nth-child(even) .tpt_socialShareButton:active {
+    background-color: #FFFFFF;
+}
+
+.tpt_socialShareIcon {
+    margin-right: 0.5em;
+}
+
+.tpt_socialShareIcon:last-child {
+    margin-right: 0;
+}
+
+.tpt_socialShareIcon:hover,
+.tpt_socialShareIcon:focus,
+.tpt_socialShareIcon:active {
+    outline: none;
+    border-radius: 50%;
+}
+
+.tpt_socialShareBar {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+    margin: 0 0 -2px 0;
+    padding: 0.5em 0.75em;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+    white-space: nowrap;
+    border-radius: 5px 5px 0 5px;
+}
+
+.tpt_socialShareContainerActive > .tpt_socialShareButton {
+    border-radius: 0 0 5px 5px;
+}
+.tpt_socialShareContainerActive > .tpt_socialShareButton:before {
+    content: 'd';
+    font-family: "voutique";
+    font-size: 1em;
+    margin-top: -3px;
+    margin-right: 8px;
+}
+
+.tpt_socialShareContainerActive > .tpt_socialShareButton:hover,
+.tpt_socialShareContainerActive > .tpt_socialShareButton:focus,
+.tpt_socialShareContainerActive > .tpt_socialShareButton:active {
+    background-color: #FAFAFA;
+}
+
+.tpt_socialShareContainerActive > .tpt_socialShareBar {
+    bottom: 100%;
+    display: inline-block;
+}
+
+.fieldSpec,
+.formfieldSpec,
+.datasetfieldSpec {
+    padding-bottom: 1em;
+}
+
+.fieldLabel,
+.formfieldLabel,
+.datasetfieldLabel,
+.fieldSpec > label,
+.formfieldSpec > label,
+.datasetfieldSpec > label,
+.fieldSpec > div:first-child,
+.formfieldSpec > div:first-child,
+.datasetfieldSpec > div:first-child {
+    line-height: 2;
+    display: block;
+    vertical-align: middle;
+}
+
+.fieldSpec iframe,
+.formfieldSpec iframe,
+.datasetfieldSpec iframe {
+    max-width: 100%;
+}
+
+.tpt_wizard input,
+.tpt_wizard select,
+.tpt_wizard textarea {
+    width: 100%;
+}
+
+.Separator,
+.fieldSpec.MultipleDatasetEntryFormField .labelText {
+    font-size: 24px;
+    font-weight: 400;
+}
+.Separator .SeparatorDescription {
+    font-size: 12px;
+    font-weight: 300;
+}
+.Separator span {
+    padding-bottom: 5px;
+    display: block;
+}
+
+.tpt_wizard .FormHeader {
+    margin: 1em 0;
+}
+
+.tpt_wizard textarea.ParagraphWithFormat {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    width: calc(100% - 2em - 2px);
+}
+
+.CheckBoxListFormField:before,
+.CheckBoxListFormField:after,
+.RadioButtonListFormField:before,
+.RadioButtonListFormField:after {
+    content: " ";
+    display: table;
+}
+
+.CheckBoxListFormField:after,
+.RadioButtonListFormField:after {
+    clear: both;
+}
+
+.CheckBoxListFormField label,
+.RadioButtonListFormField label {
+    display: block;
+    padding: 0.25em 0;
+    cursor: pointer;
+}
+
+.CheckBoxListFormField input,
+.RadioButtonListFormField input {
+    margin-right: 0.25em;
+    vertical-align: middle;
+}
+
+.CheckBoxListFormField input + label,
+.RadioButtonListFormField input + label {
+    display: inline-block;
+}
+
+.removeDatasetRow,
+.removeDatasetRow:link,
+a[id^="addRowFor"],
+a[id^="addRowFor"]:link {
+    display: block;
+    clear: both;
+    padding: .5em .75em;
+    vertical-align: middle;
+    font-size: 0.875em;
+    background-position: left center;
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    margin: 0.25em 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.removeDatasetRow {
+    margin: 0.5em 0 0.25em 0;
+}
+
+.removeDatasetRow:hover,
+.removeDatasetRow:focus,
+.removeDatasetRow:active {
+    color: #FF0000;
+}
+
+a[id^="addRowFor"]:hover,
+a[id^="addRowFor"]:focus,
+.removeDatasetRow:active {
+    color: #00c108;
+}
+
+.removeDatasetRow ~ div {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s, 0.5s;
+}
+
+.removeDatasetRow:hover ~ div,
+.removeDatasetRow:focus ~ div {
+    opacity: 0.6;
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s, 0.5s;
+}
+
+.FileField .dropbox-dropin-btn,
+.FileField .drivePickerButton {
+    vertical-align: top;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.FileField .drivePickerButton {
+    background-color: #F5F5F5;
+    background-image: url("https://jobs.telusinternational.com/portal/11/images/ico-google-drive-color.svg"), linear-gradient(to bottom, #FCFCFC 0%, #F5F5F5 100%);
+    background-size: 15px 15px, auto auto;
+    background-position: 5px 3px, left top;
+    background-repeat: no-repeat, repeat;
+    border-color: #EBEBEB #EBEBEB #D4D4D4 #EBEBEB;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    color: #636363;
+    display: inline-block;
+    font-family: 'Lucida Grande', 'Segoe UI', 'Tahoma', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    height: 22px;
+    padding: 2px 7px 4px 3px;
+    text-decoration: none;
+    text-indent: 22px;
+    cursor: pointer;
+    width: inherit;
+}
+
+.FileField .drivePickerButton:hover {
+    background-color: #FDFDFD;
+    background-image: url("https://jobs.telusinternational.com/portal/11/images/ico-google-drive-color.svg"), linear-gradient(to bottom, #FDFDFD 0%, #F5F5F5 100%);
+    border-color: #DEDEDE #DEDEDE #CACACA #DEDEDE;
+}
+
+.FileField .drivePickerButton:active {
+    border-color: #D1D1D1;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.jobTemplateWidgetContainer select {
+    margin-bottom: 1em;
+}
+
+#jobTemplateWidgetDescription {
+    display: block;
+    margin-top: 1em;
+    font-weight: normal;
+}
+
+.wiz_2Columns:after {
+    clear: both;
+}
+
+.wiz_2Columns:before,
+.wiz_2Columns:after {
+    content: " ";
+    display: table;
+}
+
+.wiz_2Columns .fieldSpec,
+.wiz_2Columns div[id^=datasetFieldContainer] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.wiz_2Columns .fieldSpecPadder,
+.wiz_2Columns .Separator,
+.wiz_2Columns .datasetfieldSpecPadder {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wiz_2Columns .fieldSpec.MultipleDatasetEntryFormField {
+    width: 100%;
+}
+
+.wiz_2Columns .Section,
+.wiz_2Columns .Separator {
+    clear: both;
+    float: none;
+    width: auto;
+}
+
+.wiz_2ColumnsAuto .fieldSpec:nth-child(2n + 1) {
+    clear: both;
+}
+
+.wiz_noDefaultSize {
+    min-height: 0;
+    padding-bottom: 0;
+}
+
+.wiz_fieldFullColumn.fieldSpec {
+    float: none;
+    clear: both;
+    width: auto;
+}
+
+.wiz_buttonBar.fieldSpec {
+    min-height: 0;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    clear: both;
+    float: none;
+    display: block;
+    margin: 0;
+    vertical-align: middle;
+    width: auto;
+    text-align: center;
+}
+
+.wiz_buttonBar.fieldSpec:after {
+    clear: both;
+}
+
+.wiz_buttonBar.fieldSpec:before,
+.wiz_buttonBar.fieldSpec:after {
+    content: " ";
+    display: table;
+}
+
+.wiz_buttonBar.fieldSpec button {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.wiz_buttonBar.wiz_buttonBarLeft.fieldSpec {
+    text-align: left;
+}
+
+.wiz_buttonBar.wiz_buttonBarRight.fieldSpec {
+    text-align: right;
+}
+
+.wiz_buttonBar.wiz_buttonBarRight.fieldSpec button {
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+.wiz_buttonBar.wiz_buttonBarLeft.fieldSpec button {
+    margin-left: 0;
+    margin-right: 1em;
+}
+
+.wiz_buttonBar.wiz_buttonBarInheritMargin.fieldSpec button {
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.wiz_buttonBarReverse.fieldSpec {
+    direction: rtl;
+}
+
+.wiz_hidden,
+.wiz_hidden.fieldSpec,
+.wiz_hidden.formfieldSpec,
+.wiz_hidden.datasetfieldSpec {
+    display: none;
+}
+
+.wiz_noLabel .labelText,
+.wiz_noDescription .description {
+    display: none;
+}
+
+.wiz_forcedLeftCheckbox .fieldSpecPadder {
+    position: relative;
+    padding-left: 18px;
+}
+
+.wiz_forcedLeftCheckbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wiz_collectionInColumns2 a,
+.wiz_collectionInColumns3 a,
+.wiz_collectionInColumns4 a {
+    display: block;
+    clear: both;
+}
+
+.wiz_collectionInColumns2 label,
+.wiz_collectionInColumns3 label,
+.wiz_collectionInColumns4 label {
+    float: left;
+    padding-right: 0.25em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+.wiz_collectionInColumns2 label {
+    width: 50%;
+}
+
+.wiz_collectionInColumns3 label {
+    width: 33.3%;
+}
+
+.wiz_collectionInColumns4 label {
+    width: 25%;
+}
+
+.wiz_boxedOptions div.wiz_boxedOptions,
+.wiz_boxedOptions.RadioButtonListFormField .description + div {
+    border: 1px solid #CCCCCC;
+    overflow-y: auto;
+    max-height: 9.5em;
+}
+
+.wiz_boxedOptions input {
+    margin-right: 0.333em;
+}
+
+.wiz_boxedOptions a,
+.wiz_boxedOptions label {
+    display: block;
+    padding: 0.333em;
+}
+
+.wiz_boxedOptions a:hover,
+.wiz_boxedOptions label:hover {
+    background-color: #F0F0F0;
+}
+
+.searchBox {
+    box-sizing: border-box;
+    float: left;
+    padding: 0;
+}
+
+.searchBoxLabel {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 0.75em;
+    line-height: 1.5em;
+    color: #565656;
+    padding-bottom: .25em;
+}
+
+.searchBoxFieldContainer {
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.5;
+    vertical-align: top;
+    width: 98%;
+}
+
+.searchBoxFieldContainer label {
+    vertical-align: middle;
+}
+
+.searchButtonBox {
+    float: right;
+}
+
+.searchButtonBox .saveButton,
+.searchButtonBox .submitButton,
+.searchButtonBox .clearButton,
+.searchButtonBox .genericButton {
+    box-sizing: border-box;
+}
+
+.searchButtonBox .genericButton,
+.searchButtonBox .genericButton:link,
+.searchButtonBox .genericButton:visited,
+.searchButtonBox .clearButton,
+.searchButtonBox .clearButton:link,
+.searchButtonBox .clearButton:visited {
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.searchButtonBox .genericButton:hover,
+.searchButtonBox .genericButton:focus,
+.searchButtonBox .genericButton:active {
+    border-color: #e9e9e9;
+    background-color: #f9f9f9;
+}
+
+.searchSortBox {
+    clear: left;
+    float: left;
+}
+
+.searchAgentFields {
+    padding-bottom: 1.3em;
+}
+
+.searchAgentFields br {
+    display: none;
+}
+
+.searchAgentFields label {
+    line-height: 1.6;
+    display: block;
+    vertical-align: middle;
+}
+
+.searchAgentFields > label ~ label {
+    margin-top: 1em;
+}
+
+.formSizes1 input,
+.formSizes1 textarea,
+.formSizes1 select {
+    width: 100%;
+    padding: 0em 1em;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    border-width: 1px;
+    border-style: solid;
+    outline-width: 0;
+    height: 43px;
+}
+
+.formSizes1 select {
+    height: 43px;
+    padding-right: 4px;
+}
+.body_Safari select {
+    -webkit-appearance:none;
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/littleArrow.svg);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    background-size: 7px 5px;
+}
+
+.formSizes1 select[multiple],
+.formSizes1 textarea {
+    height: auto;
+    min-height: 5em;
+}
+
+.formSizes1 input[type="file"] {
+    padding: 0;
+    width: 100%;
+    height: 43px;
+    line-height: 1.5em;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.formSizes1 input[type="file"]::-ms-value {
+    border-width: 0;
+}
+
+.formSizes1 input[type="file"]::-ms-browse {
+    border-width: 0;
+    border-radius: 0;
+}
+
+.formSizes1 input[type="file"]::-webkit-file-upload-button {
+    border-width: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0 0.5em;
+    line-height: calc(3em - 2px);
+}
+
+.formSizes1 select.dayInput,
+.formSizes1 select[id*="day"],
+.formSizes1 select[name*="day"],
+.formSizes1 select.monthInput,
+.formSizes1 select[id*="month"],
+.formSizes1 select[name*="month"] {
+    width: 30%;
+}
+
+.formSizes1 select.yearInput,
+.formSizes1 select[id*="year"],
+.formSizes1 select[name*="year"] {
+    width: 40%;
+}
+
+.formColors1 input,
+.formColors1 textarea,
+.formColors1 select {
+    border-color: #E2E2E2;
+    background-color: #FFFFFF;
+}
+
+.formColors1 select option {
+    background-color: #FFFFFF;
+}
+
+.formColors1 .hasErrors input,
+.formColors1 .hasErrors textarea,
+.formColors1 .hasErrors select {
+    border-color: #EE8080;
+    box-shadow: 0 0 3px rgba(221, 0, 0, 0.05);
+}
+
+.formColors1 input:focus,
+.formColors1 textarea:focus,
+.formColors1 select:focus,
+.formColors1 .hasErrors input:focus,
+.formColors1 .hasErrors textarea:focus,
+.formColors1 .hasErrors select:focus {
+    border-color: #CCCCCC;
+    background-color: #FEFEFE;
+    box-shadow: inset 0 0 5px #FFFFFF, 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.formColors1 input[type="file"]::-ms-value {
+    background-color: transparent;
+}
+
+.formColors1 input[type="file"]::-ms-browse {
+    background-color: #E9E9E9;
+}
+
+.formColors1 input[type="file"]::-webkit-file-upload-button {
+    background-color: #E9E9E9;
+}
+
+.formColors1 .requiredMark,
+.formColors1 span.requiredField,
+.formColors1 span.formrequiredField,
+.formColors1 span.datasetrequiredField {
+    color: #DD0000;
+}
+
+.formColors2 input,
+.formColors2 textarea,
+.formColors2 select {
+    color: #a1a1a1;
+    border-color: #b8c1d0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.formColors2 select option {
+    background-color: #fff;
+}
+
+.formColors2 .hasErrors input,
+.formColors2 .hasErrors textarea,
+.formColors2 .hasErrors select {
+    border-color: #EE8080;
+    box-shadow: 0 0 3px rgba(221, 0, 0, 0.05);
+}
+
+.formColors2 input:focus,
+.formColors2 textarea:focus,
+.formColors2 select:focus,
+.formColors2 .hasErrors input:focus,
+.formColors2 .hasErrors textarea:focus,
+.formColors2 .hasErrors select:focus {
+    border-color: #aaa;
+    background-color: #fff;
+    box-shadow: inset 0 0 5px #F7F7F7, 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.formColors2 input[type="file"]::-ms-value {
+    background-color: transparent;
+}
+
+.formColors2 input[type="file"]::-ms-browse {
+    background-color: #E9E9E9;
+}
+
+.formColors2 input[type="file"]::-webkit-file-upload-button {
+    background-color: #E9E9E9;
+}
+
+.formColors2 .requiredMark,
+.formColors2 span.requiredField,
+.formColors2 span.formrequiredField,
+.formColors2 span.datasetrequiredField {
+    color: #DD0000;
+}
+
+.fieldBox {
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+}
+
+.fieldBoxLabel {
+    vertical-align: middle;
+    display: block;
+    padding-bottom: .25em;
+}
+
+.fieldBox3ColumnsInline .fieldBox {
+    width: 32%;
+    margin-right: 1%;
+    display: inline-block;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+.fieldBox3ColumnsInline .fieldBox:last-child {
+    margin-right: 0;
+    width: 255px;
+}
+
+.fieldBox3ColumnsInline .fieldBoxLabel {
+    min-height: 2em;
+}
+
+.fieldBox3ColumnsInlineButtonContainer {
+    display: block;
+    padding-top: 2em;
+}
+
+.fieldSet {
+
+    line-height: 1.5;
+}
+
+.fieldSetLabel {
+    display: inline;
+    font-weight: normal;
+    color: #404040;
+    vertical-align: top;
+}
+
+.fieldSetValue {
+    display: inline-block;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.fieldSetValueSet {
+    margin-bottom: 0.75em;
+}
+
+.fieldSetValueSecondaryData {
+    color: #606060;
+}
+
+.fieldSetContainer2Columns:after {
+    clear: both;
+}
+
+.fieldSetContainer2Columns:before,
+.fieldSetContainer2Columns:after {
+    content: " ";
+    display: table;
+}
+
+.fieldSetContainer2Columns .fieldSet {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.fieldSetContainer2Columns .fieldSet:nth-child(2n + 1) {
+    clear: both;
+}
+
+.profilePictureContainer {
+    max-width: 120px;
+    margin-bottom: 2em;
+}
+
+.profilePicture {
+    margin: 0;
+}
+
+.sidebar {
+    position: relative;
+}
+
+.mainDetails {
+    line-height: 1.5;
+    margin-top: 1em;
+    clear: both;
+    padding-bottom: 1em;
+}
+
+.jobDetailDetailsApplyButton {
+    clear: both;
+}
+
+.paginationItem {
+    display: inline-block;
+    margin-left: 0.25em;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: .5em;
+    background-color: transparent;
+    color: #808080 !important;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: transparent;
+    position: relative;
+}
+
+.paginationItem:hover,
+.paginationItem:focus,
+.paginationItem:active {
+    text-decoration: none;
+    color: #4C296E !important;
+}
+
+.currentPageLink,
+.currentPageLink:link,
+.currentPageLink:visited,
+.currentPageLink:hover,
+.currentPageLink:focus,
+.currentPageLink:active {
+    cursor: default;
+    color: #4C296E;
+    border-color: #4C296E;
+    font-weight: 500;
+}
+
+.listPagination {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    text-align: left;
+}
+
+.registrationSteps {
+    display: flex;
+    list-style-type: none;
+    margin: 1em 0 3em;
+    padding: 0;
+    width: 100%;
+}
+
+.registrationStepItem {
+    background-image: url(https://jobs.telusinternational.com/portal/11/images/stepnone.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 86px;
+    box-sizing: border-box;
+    color: #808080;
+    display: inline-block;
+    font-size: 13px;
+    list-style-type: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 40px;
+    padding: 3em 0 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+}
+
+.regStepFilled {
+    color: #606060;
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/stepcomplete.svg');
+}
+
+.regStepCurrent {
+    color: #202020;
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/step1.svg');
+}
+
+.attachmentItem {
+    margin-bottom: 1em;
+}
+
+.attachmentItemTitle {
+    word-break: break-word;
+    font-weight: 400;
+}
+
+.attachmentItemData {
+    color: #808080;
+}
+
+.attachmentItemControls {
+    display: block;
+}
+
+.attachmentItemControlsItem {
+    padding: 0 5px
+}
+.attachmentItemControlsItem:first-child {
+    padding: 0 5px 0 0;
+}
+
+.attachmentItemControlsItem:hover,
+.attachmentItemControlsItem:focus,
+.attachmentItemControlsItem:active {
+    outline-width: 0;
+}
+
+.tpt_filePreview {
+    display: block;
+    transition-property: height, opacity, margin, padding, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    margin: 0 0.5em;
+    padding: 0 10px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tpt_filePreview.fileShow {
+    display: block;
+    transition-property: height, opacity, margin, padding, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    height: 335px;
+    opacity: 1;
+    margin: 0.5em 0.5em;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.filePreviewBar {
+    text-align: right;
+    height: 35px;
+    line-height: 25px;
+}
+
+.tpt_filePreview iframe {
+    height: 300px;
+    width: 100%;
+}
+
+.uploadResumeItemsContainer {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.uploadResumeField {
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+    width: 18%;
+    position: relative;
+    vertical-align: top;
+}
+
+.tpt_resumePasteField .tpt_resumePaste {
+    min-height: 10em;
+    resize: vertical;
+}
+
+.uploadResumeFieldTrigger,
+.uploadResumeFieldTrigger:link,
+.uploadResumeFieldTrigger:visited {
+    display: block;
+    margin: 0;
+    padding: 88px 0.5em 1.5em 0.5em;
+    color: #5E6D81;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline-width: 0;
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: background-position 200ms;
+}
+
+.uploadResumeFieldTrigger:focus,
+.uploadResumeFieldTrigger:hover,
+.uploadResumeFieldTrigger:active {
+    outline-width: 0;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+    color: #4b4b4b;
+    background-position: center 8px;
+    transition: background-position 200ms;
+}
+
+.uploadResumeFieldTriggerFacebook {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_facebook.svg');
+}
+
+.uploadResumeFieldTriggerLinkedin {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/LinkedIn/Normal.svg');
+}
+.uploadResumeFieldTriggerLinkedin:hover {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/LinkedIn/Hover.svg');
+}
+.uploadResumeFieldTriggerLinkedin:focus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/LinkedIn/Pressed.svg');
+}
+
+.uploadResumeFieldTriggerGoogleplus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_google-plus.svg');
+}
+
+.uploadResumeFieldTriggerXing {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_xing.svg');
+}
+
+.uploadResumeFieldTriggerDropbox {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Dropbox/Normal.svg');
+}
+
+.uploadResumeFieldTriggerDropbox:hover {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Dropbox/Hover.svg');
+}
+
+.uploadResumeFieldTriggerDropbox:focus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Dropbox/Pressed.svg');
+}
+
+.uploadResumeFieldTriggerGoogledrive {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Drive/Normal.svg');
+}
+
+.uploadResumeFieldTriggerGoogledrive:hover {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Drive/Hover.svg');
+}
+
+.uploadResumeFieldTriggerGoogledrive:focus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/Drive/Pressed.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeFile {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/UploadFile/Normal.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeFile:hover {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/UploadFile/Hover.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeFile:focus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/UploadFile/Pressed.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeLater {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/ApplyResume/Normal.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeLater:hover {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/ApplyResume/Hover.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumeLater:focus {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/Icons/ApplyResume/Pressed.svg');
+}
+
+.uploadResumeFieldTriggerSeek a {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_seek.svg');
+}
+
+.uploadResumeFieldTriggerUploadResumePaste {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_uploadResumePaste.svg');
+}
+
+.seek-apply-btn {
+    width: 100% !important;
+    height: inherit !important;
+    line-height: inherit !important;
+    background: none !important;
+    color: #5E6D81 !important;
+    border-radius: 4px;
+    box-shadow: none !important;
+    font-size: 13px !important;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+    text-transform: uppercase !important;
+    background: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_seek.svg') no-repeat !important;
+    padding: 88px 0.5em 1.5em 0.5em;
+    background-size: 64px 64px !important;
+    background-position: center 14px !important;
+    color: #fff !important;
+}
+.seek-apply-btn:after {
+    content: 'SEEK';
+    color: #565655;
+    display: block;
+    margin: -15px 0 0 0;
+}
+.seek-apply-btn:hover {
+    background-position: center 8px !important;
+    transition: background-position 200ms;
+}
+.seek-apply-btn__image {
+    display: none !important;
+}
+
+#indeedButton {
+    border: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    height: inherit !important;
+    background: none !important;
+    width: 100% !important;
+    display: block !important;
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/ico_alt1_indeed.svg') !important;
+    min-height: 100px;
+    background-repeat: no-repeat !important;
+    background-size: 64px 64px !important;
+    background-position: center 14px !important;
+    box-shadow: none !important;
+}
+#indeedButton:hover {
+    background-position: center 8px !important;
+    transition: background-position 200ms;
+}
+#indeedButton span {
+    opacity: 0;
+}
+
+.uploadResumeFieldContainer {
+    clear: both;
+    display: none;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.tpt_uploadResumeNextButton.tpt_uploadResumeNextButtonInactive {
+    display: none;
+}
+
+.tpt_uploadResumeError {
+    text-align: center;
+}
+
+.tpt_uploadResumeLoginLegend {
+    text-align: center;
+    margin: 1em 0;
+    padding-top: 1em;
+    border-top: 1px solid transparent;
+    font-size: 16px;
+}
+
+.tpt_uploadResumeLoginLegend.open {
+    text-align: center;
+    margin: 1em 0;
+    padding-top: 1em;
+}
+
+.errorText {
+    color: #DD0000;
+    clear: both;
+}
+
+.errorMessage,
+.warningMessage,
+.duplicateWarningMessage {
+    color: #DD0000;
+    clear: both;
+}
+
+.listSortItem {
+    border-bottom: 1px solid transparent;
+    position: relative;
+    bottom: -1px;
+}
+
+.tpt_listSortableItem {
+    display: inline-block;
+    padding: 0 0.5em 0 1.5em;
+    cursor: pointer;
+    color: #808080;
+    background-color: transparent;
+    background-position: 0.25em center;
+    background-repeat: no-repeat;
+}
+
+.listSortableItem_ASC,
+.tpt_listSortableItem:hover,
+.tpt_listSortableItem:focus,
+.tpt_listSortableItem:active {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/arrowLongUp.svg');
+    background-size: 1em;
+}
+
+.listSortableItem_DESC,
+.listSortableItem_ASC:hover,
+.listSortableItem_ASC:focus,
+.listSortableItem_ASC:active {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/arrowLongDown.svg');
+    background-size: 1em;
+}
+
+.tpt_listSortableItem:hover,
+.tpt_listSortableItem:focus,
+.tpt_listSortableItem:active {
+    background-color: #FAFAFA;
+    border-bottom-color: #4C296E;
+}
+
+.tpt_listSortableItem.listSortableItemActive {
+    color: #4C296E;
+    border-bottom-color: #4C296E;
+}
+
+.tableList .listSortItem {
+    border-bottom: 1px solid #e2e2e2;
+    position: static;
+    bottom: auto;
+}
+
+.tableList .tpt_listSortableItem {
+    padding-right: 1em;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.tableList .listSortableItem_ASC,
+.tableList .tpt_listSortableItem:hover,
+.tableList .tpt_listSortableItem:focus,
+.tableList .tpt_listSortableItem:active {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/arrowLongUp.svg');
+    background-size: 1em;
+}
+
+.tableList .listSortableItem_DESC,
+.tableList .listSortableItem_ASC:hover,
+.tableList .listSortableItem_ASC:focus,
+.tableList .listSortableItem_ASC:active {
+    background-image: url('https://jobs.telusinternational.com/portal/11/images/arrowLongDown.svg');
+    background-size: 1em;
+}
+
+.tableList .tpt_listSortableItem:hover,
+.tableList .tpt_listSortableItem:focus,
+.tableList .tpt_listSortableItem:active {
+    background-color: #FAFAFA;
+    border-bottom-color: #4C296E;
+    color: #4C296E;
+}
+
+.tableList .tpt_listSortableItem.listSortableItemActive {
+    color: #4C296E;
+    border-bottom-color: #4C296E;
+}
+
+.listControls {
+    line-height: inherit;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #555;
+    overflow: visible;
+    margin: 35px 0;
+}
+
+.listControlsBottom {
+    border-bottom-width: 0;
+    background-color: transparent !important;
+}
+
+.listSingleColumn {
+    display: block;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listSingleColumnItem {
+    display: block;
+    list-style-type: none;
+    padding: 25px;
+    clear: both;
+    color: #565656;
+}
+
+.listSingleColumnItem .commonWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+li.listSingleColumnItem:nth-child(odd) {
+    background-color: #F5F5F5 ;
+}
+
+.listSingleColumnItemTitle {
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 0.25em;
+}
+.listSingleColumnItemTitle a {
+    color: #4C296E !important;
+}
+.listSingleColumnItemTitle a:hover {
+    color: #258700 !important;
+}
+
+.listSingleColumnItemMiscData {
+    color: #a1a1a1;
+    font-size: 15px;
+    padding-bottom: .5em;
+}
+
+.listSingleColumnItemMiscDataItem {
+    margin-right: 0.5em;
+}
+
+.listSingleColumnItemDescription {
+    clear: both;
+    padding: 0.5em 0;
+    line-height: 1.5;
+}
+
+.listMultipleColumns th {
+    background-color: #FCFCFC;
+    font-weight: normal;
+}
+
+.listTitleContainer {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.listButtonBar {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.listApplyButton {
+    padding: .5em;
+    text-transform: none;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+}
+
+.listApplyButton,
+.listApplyButton:link,
+.listApplyButton:visited {
+    border-width: 1px;
+    border-color: transparent;
+    color: #4C296E;
+    outline-width: 0;
+    text-decoration: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.listApplyButton:hover,
+.listApplyButton:focus,
+.listApplyButton:active {
+    text-decoration: none;
+}
+
+.listAlreadyAppliedButton {
+    border-color: transparent;
+    padding: 0 .5em .2em;
+    text-transform: none;
+    min-width: 0;
+    box-shadow: none;
+    cursor: default;
+    color: #999;
+    font-style: italic;
+    line-height: inherit;
+    font-size: 16px;
+    height: auto;
+}
+
+.dashletItem {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0.75em;
+}
+
+.dashlets > .dashletItem:nth-child(2n + 1) {
+    clear: both;
+}
+
+.dashletItemHeader {
+    background-color: #EEEEEE;
+    font-weight: 400;
+    vertical-align: middle;
+    padding: 0.75em 0.5em;
+}
+
+.dashletItemBody {
+    background-color: #F7F7F7;
+    padding: 0;
+}
+
+.dashletDataContainer.awaitingContent {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.dashletDataContainer {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.dashletTableRow > td {
+    padding: 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.dashletTableRow > td > a {
+    display: block;
+    padding: 0.75em 0.5em;
+}
+
+.dashletTableRow > td > a:hover,
+.dashletTableRow > td > a:focus,
+.dashletTableRow > td > a:active {
+    background-color: #F2F2F2;
+}
+
+.dashletMoreLinkContainer {
+    text-align: right;
+    padding: 0.5em;
+    background-color: #F0F0F0;
+}
+
+/*field aligment of the sign up wizard*/
+
+.fieldSpec.wizard_form--evenField{
+    float: right;
+    clear: right;
+}
+
+.select2-selection.select2-selection--multiple.select2Container2758{
+    height: 44px;
+    overflow: auto;
+    font-size: 15px;
+}
+
+@media (max-width:768px) {
+    div .Section.Section1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
