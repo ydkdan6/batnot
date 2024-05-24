@@ -1743,7 +1743,7 @@
                             const stream = await navigator.mediaDevices.getUserMedia(constraints);
                             handleSuccess(stream);
                         }
-                        catch {
+                        catch(e) {
                             errorMsgElement.innerHTML = `navigator.getUserMedia.error:${e.tostring()}`;
                         }
                     }
