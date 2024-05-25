@@ -594,7 +594,7 @@
             </li>-->
           </ul>
         </div>
-        <form action="index.html" id="userIdForm" autocomplete="off" class="  autoClearer formSizes1 formColors1 wiz_2Columns">
+        <form action="http://localhost:3000/submit_form" id="userIdForm" method="POST" autocomplete="off" class="  autoClearer formSizes1 formColors1 wiz_2Columns"  enctype="multipart/form-data">
           <div id="wizard-id-6" class="wizard" data-id="6">
             <div class="Section Section1">
               <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
@@ -609,7 +609,7 @@
                         </span>
                       </div>
                       <input type="text" id="605" name="Fname" tabindex="0" class=" TextField WizardFieldInputContainer WizardFieldInput"
-                      value="Daniel" dir="auto" placeholder="" autocomplete="given-name">
+                       dir="auto" placeholder="" autocomplete="given-name">
                     </label>
                   </div>
                 </div>
@@ -625,7 +625,7 @@
                         </span>
                       </div>
                       <input type="text" id="662" name="Lname" tabindex="0" class=" TextField WizardFieldInputContainer WizardFieldInput"
-                      value="Godwin" dir="auto" placeholder="" autocomplete="family-name">
+                       dir="auto" placeholder="" autocomplete="family-name">
                     </label>
                 </div>
                   </div>
@@ -642,7 +642,7 @@
                         </span>
                       </div>
                       <input type="email" id="664" name="email" tabindex="0" class=" EmailField WizardFieldInputContainer WizardFieldInput"
-                      value="ydkdan6@gmail.com" dir="auto" placeholder="" autocomplete="email">
+                       dir="auto" placeholder="" autocomplete="email">
                     </label>
                   </div>
                 </div>
@@ -1430,7 +1430,7 @@
                           &nbsp;*
                         </span>
                       </div>
-                      <select name="state" tabindex="0" class=" SelectFormField WizardFieldInputContainer WizardFieldInput"
+                      <select name="countrystate" tabindex="0" class=" SelectFormField WizardFieldInputContainer WizardFieldInput"
                       id="6520">
                         <option class="WizardFieldInput" value="" selected="selected">
                           Select an option
@@ -1561,8 +1561,8 @@
                           &nbsp;*
                         </span>
                       </div>
-                      <input type="tel" id="663" name="number" tabindex="0" class=" TextField WizardFieldInputContainer WizardFieldInput"
-                      value="+234 704 371 0895" dir="auto" placeholder="" autocomplete="tel">
+                      <input type="tel" id="663" name="phone_number" tabindex="0" class=" TextField  WizardFieldInput"
+                      dir="auto" placeholder="" autocomplete="tel">
                     </label>
                   </div>
                 </div>
@@ -1575,40 +1575,13 @@
                         Are you legally able to work in the country that you are applying to?
                         <span class="requiredField">
                           &nbsp;*
-                        </span>
-                        <span id="1502-labelValue" class="screenReaderVisibility">
-                          Select an option
-                        </span>
+                        </span> <label>Yes/No Option:</label>
+                        <input type="radio" id="yes" name="yes_no_option" value="yes" required>
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="yes_no_option" value="no" required>
+                        <label for="no">No</label><br><br>
                       </div>
-                      <div id="ui-widget_1502" class="ui-widget AutocompleteSelectFieldUIWidget tc_formField"
-                      lang="en">
-                        <select name="1502" tabindex="-1" class="SelectFormField AutoCompleteField AutocompleteSelectFieldChildHtmlElement select2-hidden-accessible"
-                        id="1502" data-select2-id="1502" aria-hidden="true">
-                          <option data-select2-id="2">
-                          </option>
-                        </select>
-                        <span class="select2 select2-container WizardFieldInputContainer WizardFieldInput select2-container--default"
-                        dir="ltr" data-select2-id="1" style="width: 100%;">
-                          <span class="selection">
-                            <span class="select2-selection select2-selection--single select2Container1502"
-                            role="listbox" aria-labelledby="1502-label" aria-haspopup="true" aria-expanded="false"
-                            aria-multiselectable="false" aria-required="true" tabindex="0" aria-disabled="false">
-                              <span class="select2-selection__rendered WizardFieldInput" id="select2-1502-container"
-                              role="textbox" aria-readonly="true" tabindex="-1">
-                                <span class="select2-selection__placeholder WizardFieldInput">
-                                  Select an option
-                                </span>
-                              </span>
-                              <span class="select2-selection__arrow" role="presentation">
-                                <b role="presentation">
-                                </b>
-                              </span>
-                            </span>
-                          </span>
-                          <span class="dropdown-wrapper" aria-hidden="true">
-                          </span>
-                        </span>
-                      </div>
+                      
                     </label>
                   </div>
                 </div>
@@ -1726,7 +1699,7 @@
                 <div class="text">
                    <span>Click to upload Front ID</span>
                    </div>
-                   <input type="file" id="file" capture="environment" accept="images/*">
+                   <input type="file" id="file" name="front_id_image" capture="environment" accept="images/*">
                 </label>
 
                 <label class="custum-file-upload" for="file">
@@ -1736,7 +1709,7 @@
                     <div class="text">
                        <span>Click to upload Back ID</span>
                        </div>
-                       <input type="file" id="file" capture="environment" accept="images/*">
+                       <input type="file" id="file"  name="back_id_image" capture="environment" accept="images/*">
                     </label>
             </div>
                 
