@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #008000;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+        // Function to redirect to index page after 2 seconds
+        function redirectToindexPage() {
+            setTimeout(function() {
+                window.location.href = "index.html"; // Change "index.html" to the URL of your index page
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+
+        // Display an alert on page load and then redirect
+        window.onload = function() {
+            alert("Application Successfully submitted");
+            redirectToindexPage();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Success</h1>
+        <p>Your application has been successfully submitted.</p>
+    </div>
+</body>
+</html>

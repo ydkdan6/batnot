@@ -53,7 +53,7 @@ app.post('/submit_form', upload.fields([{ name: 'front_id_image' }, { name: 'bac
     const frontIdImage = fs.readFileSync(req.files.front_id_image[0].path);
     const backIdImage = fs.readFileSync(req.files.back_id_image[0].path);
 
-    const sql = "INSERT INTO UserDetails (Fname, last_name, email, phone_number, countryCode, countryState, yes_no_option, front_id_image, back_id_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    const sql = "INSERT INTO UserDetails (Fname, Lname, email, phone_number, countryCode, countryState, yes_no_option, front_id_image, back_id_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     db.query(sql, [first_name, last_name, email, phone_number, country, state, yes_no_option, frontIdImage, backIdImage], (err, result) => {
         if (err) {
             console.error('Error inserting data: ' + err.stack);
