@@ -9,6 +9,7 @@
         border: none;
       }
     </style>
+    <link rel="icon" href="logo.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link
@@ -68,58 +69,6 @@
       async=""
       src="https://assets.adobedtm.com/a2962fe01e14/0c0790bde199/launch-441a08d0e3c1.min.js"
     ></script>
-    <script type="text/javascript">
-      // Google Tag Manager
-      window.gTagLayer = window.gTagLayer || [];
-
-      function gtag() {
-        gTagLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-
-      gtag("config", "G-8QFLSFTLLG");
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "gTagLayer", "GTM-W96MZ75");
-      // End Google Tag Manager
-
-      window._getCookie = function (name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) == " ") c = c.substring(1, c.length);
-          if (c.indexOf(nameEQ) === 0)
-            return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-      };
-
-      window._extractNumberFromString = function (str) {
-        var parts = str.split(".");
-        if (parts.length >= 3) {
-          return parts[2];
-        }
-        return null;
-      };
-
-      window._ga4sessionId = _extractNumberFromString(
-        _getCookie("_ga_8QFLSFTLLG")
-      );
-      window._ga4UserId = _extractNumberFromString(_getCookie("_ga"));
-      window._ga4mId = "G-8QFLSFTLLG";
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link
@@ -397,11 +346,9 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
             ><img
               alt="Dfinito logo button"
               
-              src=""
-              width="0"
-              height="28"
-              decoding="async"
-              data-nimg="future"
+              src="logo.png"
+              width="150px"
+              height="154px"
               style="color: transparent"
           /></a>
           <nav
@@ -631,7 +578,7 @@ Contact Dfinito International. Find out how to connect with us online, by phone 
                   <div class="w-full h-full bg-bgBrand"></div>
                 </div>
                 <a
-                  class=""
+                  class="btn primary"
                   >Contact</a
                 >
               </nav>
