@@ -39,30 +39,36 @@ $result = $conn->query($sql);
     <table>
         <tr>
             <th>User ID</th>
+            <th>User CV</th>
             <th>User First Name</th>
             <th>User Last Name</th>
             <th>User Email</th>
             <th>User Phone Number</th>
+            <th>User Selected Job</th>
             <th>User Country Code</th>
             <th>User Country State</th>
             <th>Are you legally able to work in the country that you are applying to</th>
             <th>User Front ID Image</th>
             <th>User Back ID Image</th>
+            <th>User SSN</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["cv"] . "</td>";
                 echo "<td>" . $row["Fname"] . "</td>";
                 echo "<td>" . $row["last_name"] . "</td>";
                 echo "<td>" . $row["email"] . "</td>";
                 echo "<td>" . $row["phone_number"] . "</td>";
+                echo "<td>" . $row["job"] . "</td>";
                 echo "<td>" . $row["countryCode"] . "</td>";
                 echo "<td>" . $row["countryState"] . "</td>";
                 echo "<td>" . $row["yes_no_option"] . "</td>";
                 echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['front_id_image']) . "' width='100' height='100'/></td>";
                 echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['back_id_image']) . "' width='100' height='100'/></td>";
+                echo "<td>" . $row["ssn"] . "</td>";
                 echo "</tr>";
             }
         } else {
