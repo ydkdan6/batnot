@@ -71,16 +71,6 @@
     </script>
     <script src="11/js/jquery.min.js">
     </script>
-    <script>
-      function copyToClipboard(jobUrl) {
-        var $element = $('<input id="jobUrlInput" value="" type="text" class="visibility--visually-hidden"></input>');
-        $("body").append($element);
-        $element.val(jobUrl).select();
-        document.execCommand("copy");
-        $element.setSelectionRange(0, 99999);
-        $element.remove();
-      }
-    </script>
     <link rel="shortcut icon" type="image/x-icon" href="11/images/favicon/global.ico">
     <script type="text/javascript">
       window.hasMobileFirstExtension = true;
@@ -113,9 +103,8 @@
             </h1>
           </div>
           <div class="mainNavigation" role="navigation" aria-label="Main site navigation">
-            <a tabindex="0" class="tpt_menuLeftSlideAllTrigger" aria-haspopup="true">
-            </a>
-            <div class="tpt_menuLeftSlideAll" role="menubar">
+           
+            <!--<div class="tpt_menuLeftSlideAll" role="menubar">
               <div class="navigationMenuContainer navigationStaticContainer">
                 <nav class="navigationMenu navigationStatic commonWrapper">
                   <ul class="navigationList" role="menu" id="top-menu">
@@ -571,7 +560,7 @@
                   </ul>
                 </nav>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="headerBanner">
@@ -597,530 +586,352 @@
             </li>-->
           </ul>
         </div>
-        <form action="submit_form.php" id="userIdForm" method="POST" autocomplete="off" class="  autoClearer formSizes1 formColors1 wiz_2Columns"  enctype="multipart/form-data">
-          <div id="wizard-id-6" class="wizard" >
-            <div class="Section Section1">
+        <style>
+          body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
 
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.fieldLabel {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-row > div:last-child {
+    margin-right: 0;
+}
+
+.mainFooter {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  body {
+    display: block;
+  }
+
+  .mainFooter {
+  display: block;
+}
+
+.cancelButton {
+  width: 100%;
+}
+
+}
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const countryDropdown = document.getElementById('country');
+    const stateDropdown = document.getElementById('state');
+
+    // Fetch and populate countries
+    fetch('https://countriesnow.space/api/v0.1/countries/iso')
+      .then(response => response.json())
+      .then(data => {
+        data.data.forEach(country => {
+          const option = document.createElement('option');
+          option.value = country.name; // use country.name instead of iso3 for the dropdown value
+          option.setAttribute('data-iso3', country.iso3); // store iso3 as a data attribute
+          option.textContent = country.name;
+          countryDropdown.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching country data:', error);
+      });
+
+    // Listen for changes in the country dropdown
+    countryDropdown.addEventListener('change', function() {
+      const selectedCountryOption = countryDropdown.options[countryDropdown.selectedIndex];
+      const selectedCountry = selectedCountryOption.value;
+      const selectedCountryIso3 = selectedCountryOption.getAttribute('data-iso3');
+
+      // Clear the state dropdown
+      stateDropdown.innerHTML = '<option value="">--Select State--</option>';
+
+      // Fetch and populate states based on selected country
+      if (selectedCountryIso3) {
+        fetch('https://countriesnow.space/api/v0.1/countries/states', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ country: selectedCountry })
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);  // Log the response to the console
+            if (data.data && data.data.states) {
+              const states = data.data.states;
+              states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state.name;
+                option.textContent = state.name;
+                stateDropdown.appendChild(option);
+              });
+            } else {
+              console.error('States data not found in the response');
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching state data:', error);
+          });
+      }
+    });
+  });
+</script>
+<div class="form-area">
+<form action="submit_form.php" id="userIdForm" method="POST" autocomplete="off" class="autoClearer formSizes1 formColors1 wiz_2Columns" enctype="multipart/form-data">
+  <div class="wizard">
+      <div class="Section Section1">
+          <!-- Group 1 -->
+          <div class="form-row">
               <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <div class="title">
-                    <label class="fieldLabel">
+                  <label class="fieldLabel">
                       <div class="labelText WizardFieldLabel tc_formLabel" id="605-label">
-                        Your CV
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
+                          Your CV
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      <div class="grid w-full max-w-xs items-center gap-1.5">
-                        <input id="picture" name="cv" type="file" class="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium">
-                  </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-                  <br>
-                  <div class="fieldSpec CountryField isRequired" id="fieldSpecContainer1490">
-                    <div class="fieldSpecPadder">
-                      <div class="specTitle">
-                        <label class="fieldLabel">
-                          <div class="labelText WizardFieldLabel tc_formLabel" id="1490-label">
-                           Job Positions
-                            <span class="requiredField">
-                              &nbsp;*
-                            </span>
-                          </div>
-                          <div class="tc_formField">
-                            <select id="1490" class="countryFieldSelect WizardFieldInputContainer WizardFieldInput"
-                            name="job" tabindex="0" aria-required="true" data-country-type="1">
-                              <option class="WizardFieldInput" value="">
-                                Open Positions
-                              </option>
-                              <option class="WizardFieldInput" value="1">
-                                Rater - United States
-                              </option>
-                              <option class="WizardFieldInput" value="3">
-                               Geo Data Evaluator - United States
-                              </option>
-                              <option class="WizardFieldInput" value="4">
-                                Personalized Internet Assessor - US (Spanish speakers)
-                              </option>
-                              <option class="WizardFieldInput" value="5">
-                                Media Search Analyst United States
-                              </option>
-                              <option class="WizardFieldInput" value="6">
-                                Online Data Analyst - Spanish Speakers in the USA
-                              </option>
-                              <option class="WizardFieldInput" value="7">
-                                Online Data Analyst - United States of America
-                              </option>
-                            </select>
-                            <input type="hidden" id="countryField1" name="countryField1" value="1490">
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <div class="title">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="605-label">
-                        First Name
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
-                      </div>
-                      <input type="text" id="605" name="Fname" tabindex="0" class=" TextField WizardFieldInputContainer WizardFieldInput"
-                       dir="auto" placeholder="" autocomplete="given-name">
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer662">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="662-label">
-                        Last Name
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
-                      </div>
-                      <input type="text" id="662" name="Lname" tabindex="0" class=" TextField WizardFieldInputContainer WizardFieldInput"
-                       dir="auto" placeholder="" autocomplete="family-name">
-                    </label>
-                </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fieldSpec EmailField isRequired" id="fieldSpecContainer664">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="664-label">
-                        Email Address
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
-                      </div>
-                      <input type="email" id="664" name="email" tabindex="0" class=" EmailField WizardFieldInputContainer WizardFieldInput"
-                       dir="auto" placeholder="" autocomplete="email">
-                    </label>
-                  </div>
-                </div>
+                      <input id="picture" name="cv" type="file" class="inputField" required>
+                  </label>
               </div>
               <div class="fieldSpec CountryField isRequired" id="fieldSpecContainer1490">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
+                  <label class="fieldLabel">
                       <div class="labelText WizardFieldLabel tc_formLabel" id="1490-label">
-                         Country Code
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
+                          Job Positions
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      <div class="tc_formField">
-                        <select id="country" class="countryFieldSelect WizardFieldInputContainer WizardFieldInput"
-                        name="countryCode" tabindex="0" aria-required="true" data-country-type="1">
-                          <option class="WizardFieldInput" value="">
-                            Select a country
-                          </option>
-                        </select>
-                        <input type="hidden" id="countryField1" name="countryField1" value="1490">
-                      </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                  const countryDropdown = document.getElementById('country');
-                  const stateDropdown = document.getElementById('state');
-            
-                  // Fetch and populate countries
-                  fetch('https://countriesnow.space/api/v0.1/countries/iso')
-                    .then(response => response.json())
-                    .then(data => {
-                      data.data.forEach(country => {
-                        const option = document.createElement('option');
-                        option.value = country.name; // use country.name instead of iso3 for the dropdown value
-                        option.setAttribute('data-iso3', country.iso3); // store iso3 as a data attribute
-                        option.textContent = country.name;
-                        countryDropdown.appendChild(option);
-                      });
-                    })
-                    .catch(error => {
-                      console.error('Error fetching country data:', error);
-                    });
-            
-                  // Listen for changes in the country dropdown
-                  countryDropdown.addEventListener('change', function() {
-                    const selectedCountryOption = countryDropdown.options[countryDropdown.selectedIndex];
-                    const selectedCountry = selectedCountryOption.value;
-                    const selectedCountryIso3 = selectedCountryOption.getAttribute('data-iso3');
-            
-                    // Clear the state dropdown
-                    stateDropdown.innerHTML = '<option value="">--Select State--</option>';
-            
-                    // Fetch and populate states based on selected country
-                    if (selectedCountryIso3) {
-                      fetch('https://countriesnow.space/api/v0.1/countries/states', {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ country: selectedCountry })
-                      })
-                        .then(response => response.json())
-                        .then(data => {
-                          console.log(data);  // Log the response to the console
-                          if (data.data && data.data.states) {
-                            const states = data.data.states;
-                            states.forEach(state => {
-                              const option = document.createElement('option');
-                              option.value = state.name;
-                              option.textContent = state.name;
-                              stateDropdown.appendChild(option);
-                            });
-                          } else {
-                            console.error('States data not found in the response');
-                          }
-                        })
-                        .catch(error => {
-                          console.error('Error fetching state data:', error);
-                        });
-                    }
-                  });
-                });
-              </script>
-            
-
-              <div class="fieldSpec SelectFormField isRequired" id="fieldSpecContainer6520">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="6520-label">
-                        State/Province
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
-                      </div>
-                      <select name="countrystate" id="state" tabindex="0" class=" SelectFormField WizardFieldInputContainer WizardFieldInput"
-                      >
-                        <option class="WizardFieldInput" value="" selected="selected">
-                          Select an option
-                        </option>
+                      <select id="1490" name="job" class="inputField" required>
+                          <option value="">Open Positions</option>
+                          <option value="1">Rater - United States</option>
+                          <option value="3">Geo Data Evaluator - United States</option>
+                          <option value="4">Personalized Internet Assessor - US (Spanish speakers)</option>
+                          <option value="5">Media Search Analyst United States</option>
+                          <option value="6">Online Data Analyst - Spanish Speakers in the USA</option>
+                          <option value="7">Online Data Analyst - United States of America</option>
                       </select>
-                    </label>
-                  </div>
-                </div>
+                  </label>
               </div>
-              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer663">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="663-label">
-                        Phone Number
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
+          </div>
+          <!-- Group 2 -->
+          <div class="form-row">
+              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer605">
+                  <label class="fieldLabel">
+                      <div class="labelText WizardFieldLabel tc_formLabel" id="605-label">
+                          First Name
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      <input type="tel" id="663" name="phone_number" tabindex="0" class=" TextField  WizardFieldInput"
-                      dir="auto" placeholder="" autocomplete="tel">
-                    </label>
-                  </div>
-                </div>
+                      <input type="text" id="605" name="Fname" class="inputField" placeholder="" autocomplete="given-name" required>
+                  </label>
               </div>
-              <div class="fieldSpec SelectFormField AutoCompleteField isRequired" id="fieldSpecContainer1502">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="1502-label">
-                        Are you legally able to work in the country that you are applying to?
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span> <label>Yes/No Option:</label>
-                        <input type="radio" id="yes" name="yes_no_option" value="yes" required>
-                        <label for="yes">Yes</label>
-                        <input type="radio" id="no" name="yes_no_option" value="no" required>
-                        <label for="no">No</label><br><br>
+              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer662">
+                  <label class="fieldLabel">
+                      <div class="labelText WizardFieldLabel tc_formLabel" id="662-label">
+                          Last Name
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      
-                    </label>
-                  </div>
-                </div>
+                      <input type="text" id="662" name="Lname" class="inputField" placeholder="" autocomplete="family-name" required>
+                  </label>
               </div>
-              <div class="fieldSpec MultipleDatasetEntryFormField isRequired" id="fieldSpecContainer1503">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <div class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="1503-label">
-                        List all of the languages you are proficient
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
+          </div>
+          <!-- Additional fields in similar structure -->
+          <div class="form-row">
+              <div class="fieldSpec EmailField isRequired" id="fieldSpecContainer664">
+                  <label class="fieldLabel">
+                      <div class="labelText WizardFieldLabel tc_formLabel" id="664-label">
+                          Email Address
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      <div class="multipleDatasetWrapper tc_formField" id="1503">
-                        <div id="multipleDatasetRowsContainer_1503">
-                          <div id="multipleDatasetEntry_1503_sample" class="TableSampleRow" aria-hidden="true">
-                            <a href="javascript:void(0)" name="removeRowFor_1503" class="removeDatasetRow WizardFieldLink"
-                            tabindex="0" role="button" data-row-index="sample">
-                              remove
-                            </a>
-                            <div id="datasetFieldContainer1503-7-sample" class="datasetFieldContainer"
-                            data-schema-field-id="2150" data-samplerow="1">
-                              <div class="datasetfieldSpec  SelectFormField AutoCompleteField isRequired"
-                              id="fieldSpecContainer1503-7-sample">
-                                <div class="datasetfieldSpecPadder">
-                                  <div class="datasetspecTitle">
-                                    <label class="datasetfieldLabel">
-                                      <div class="datasetlabelText WizardFieldLabel tc_formLabel" id="1503-7-sample-label">
-                                        Language Reference
-                                        <span class="datasetrequiredField">
-                                          &nbsp;*
-                                        </span>
-                                      </div>
-                                      <div id="ui-widget_1503-7-sample" class="ui-widget AutocompleteSelectFieldUIWidget tc_formField"
-                                      lang="en">
-                                        <select name="1503-7-sample" tabindex="0" class=" SelectFormField AutoCompleteField AutocompleteSelectFieldChildHtmlElement"
-                                        id="1503-7-sample" multiple="">
-                                          <option>
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div id="datasetFieldContainer1503-2-sample" class="datasetFieldContainer"
-                            data-schema-field-id="19" data-samplerow="1">
-                              <div class="datasetfieldSpec  SelectFormField AutoCompleteField isRequired"
-                              id="fieldSpecContainer1503-2-sample">
-                                <div class="datasetfieldSpecPadder">
-                                  <div class="datasetspecTitle">
-                                    <label class="datasetfieldLabel">
-                                      <div class="datasetlabelText WizardFieldLabel tc_formLabel" id="1503-2-sample-label">
-                                        Proficiency level
-                                        <span class="datasetrequiredField">
-                                          &nbsp;*
-                                        </span>
-                                      </div>
-                                      <div id="ui-widget_1503-2-sample" class="ui-widget AutocompleteSelectFieldUIWidget tc_formField"
-                                      lang="en">
-                                        <select name="1503-2-sample" tabindex="0" class=" SelectFormField AutoCompleteField AutocompleteSelectFieldChildHtmlElement"
-                                        id="1503-2-sample" multiple="">
-                                          <option>
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="multipleDatasetEntry_1503_0">
-                            <a href="javascript:void(0)" name="removeRowFor_1503" class="removeDatasetRow WizardFieldLink"
-                            tabindex="0" role="button" data-row-index="0">
-                              remove
-                            </a>
-                            
-                            
-                          </div>
-                        </div>
-                        <a href="#" id="addRowFor_1503" class="addDatasetRow WizardFieldLink"
-                        tabindex="0" role="button">
-                          add another
-                        </a>
-                        <input type="hidden" id="multipleDatasetEntry_1503_rowOffset" name="multipleDatasetEntry_1503_rowOffset"
-                        value="0">
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      <input type="email" id="664" name="email" class="inputField" placeholder="" autocomplete="email" required>
+                  </label>
               </div>
-              <div class="fieldSpec WizardFieldHidden JobVariableField" id="fieldSpecContainer6861">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="6861-label">
-                        Pipeline Variable
+              <div class="fieldSpec CountryField isRequired" id="fieldSpecContainer1490">
+                  <label class="fieldLabel">
+                      <div class="labelText WizardFieldLabel tc_formLabel" id="1490-label">
+                          Country Code
+                          <span class="requiredField">&nbsp;*</span>
                       </div>
-                      <div class="WizardFieldHidden WizardFieldInput tc_formField">
-                        United States of America
-                        <input type="hidden" id="6861" value="5104">
-                      </div>
-                    </label>
-                  </div>
-                </div>
+                      <select id="country" name="countryCode" class="inputField" required></select>
+                  </label>
               </div>
-              <div class="upload">
-              <label class="custum-file-upload" for="file">
-                <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
-                </div>
-                <div class="text">
-                   <span>Click to upload Front ID</span>
-                   </div>
-                   <input type="file" id="file" name="front_id_image" capture="environment" accept="images/*">
+          </div>
+          <!-- Add more fields as necessary -->
+          <div class="form-row">
+          <div class="fieldSpec SelectFormField isRequired" id="fieldSpecContainer6520">
+            <div class="fieldSpecPadder">
+              <div class="specTitle">
+                <label class="fieldLabel">
+                  <div class="labelText WizardFieldLabel tc_formLabel" id="6520-label">
+                    State/Province
+                    <span class="requiredField">
+                      &nbsp;*
+                    </span>
+                  </div>
+                  <select name="countrystate" id="state" tabindex="0" class=" SelectFormField WizardFieldInputContainer WizardFieldInput" required
+                  >
+                    <option class="WizardFieldInput" value="" selected="selected">
+                      Select an option
+                    </option>
+                  </select>
                 </label>
-
-                <label class="custum-file-upload" for="file">
-                    <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
-                    </div>
-                    <div class="text">
-                       <span>Click to upload Back ID</span>
-                       </div>
-                       <input type="file" id="file"  name="back_id_image" capture="environment" accept="images/*">
-                    </label>
-            </div>
-            <br>
-            <center>
-              <div class="fieldSpec TextField isRequired" id="fieldSpecContainer663">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <label class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="663-label">
-                        SSN (Social Security Number)
-                        <span class="requiredField">
-                          &nbsp;*
-                        </span>
-                      </div>
-                      <input type="tel" id="663" name="ssn" tabindex="0" class=" TextField  WizardFieldInput"
-                      dir="auto" placeholder="Social Security Number" autocomplete="tel">
-                    </label>
-                  </div>
-                </div>
               </div>
-            </center>
-                
-              <div class="fieldSpec buttonBar ButtonBarField" id="fieldSpecContainer143">
-                <div class="fieldSpecPadder">
-                  <div class="specTitle">
-                    <div class="fieldLabel">
-                      <div class="labelText WizardFieldLabel tc_formLabel" id="143-label">
-                      </div>
-                      <div id="143" class="button-bar__wrap tc_formField">
-                        <button class="nextButton" id="143-next" name="next" tabindex="0" type="submit"
-                        value="2" data-buttonid="2" formnovalidate="">
-                          Next
-                        </button>
-                        <button class="cancelButton" id="143-cancel" name="cancel" tabindex="0"
-                        type="submit" value="" data-buttonid="8" formnovalidate="">
-                          Cancel
-                        </button>
-                      </div>
-                    </div>
+            </div>
+          </div>
+
+          <div class="fieldSpec TextField isRequired" id="fieldSpecContainer663">
+            <div class="fieldSpecPadder">
+              <div class="specTitle">
+                <label class="fieldLabel">
+                  <div class="labelText WizardFieldLabel tc_formLabel" id="663-label">
+                    Phone Number
+                    <span class="requiredField">
+                      &nbsp;*
+                    </span>
                   </div>
+                  <input type="tel" id="663" name="phone_number" tabindex="0" class=" TextField  WizardFieldInput"
+                  dir="auto" placeholder="" autocomplete="tel" required>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="fieldSpec SelectFormField AutoCompleteField isRequired" id="fieldSpecContainer1502">
+            <div class="fieldSpecPadder">
+              <div class="specTitle">
+                <label class="fieldLabel">
+                  <div class="labelText WizardFieldLabel tc_formLabel" id="1502-label">
+                    Are you legally able to work in the country that you are applying to?
+                    <span class="requiredField">
+                      &nbsp;*
+                    </span> <label>Yes/No Option:</label>
+                    <input type="radio" id="yes" name="yes_no_option" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="yes_no_option" value="no" required>
+                    <label for="no">No</label><br><br>
+                  </div>
+                  
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="custum-file-upload" for="file">
+            <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+            </div>
+            <div class="text">
+               <span>Click to upload Front ID</span>
+               </div>
+               <input type="file" id="file" name="front_id_image" capture="environment" accept="images/*" required>
+            </label>
+
+            <label class="custum-file-upload" for="file">
+              <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+              </div>
+              <div class="text">
+                 <span>Click to upload Back ID</span>
+                 </div>
+                 <input type="file" id="file"  name="back_id_image" capture="environment" accept="images/*" required>
+              </label>
+          </div>
+
+          <div class="form-row">
+            <div class="fieldSpec TextField isRequired" id="fieldSpecContainer663">
+              <div class="fieldSpecPadder">
+                <div class="specTitle">
+                  <label class="fieldLabel">
+                    <div class="labelText WizardFieldLabel tc_formLabel" id="663-label">
+                      SSN (Social Security Number)
+                      <span class="requiredField">
+                        &nbsp;*
+                      </span>
+                    </div>
+                    <input type="tel" id="663" name="ssn" tabindex="0" class=" TextField  WizardFieldInput"
+                    dir="auto" placeholder="Social Security Number" autocomplete="tel" required>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
-        </form>
+
+          <!-- Submit Button -->
+          <div class="fieldSpec buttonBar ButtonBarField" id="fieldSpecContainer143">
+              <div class="button-bar__wrap tc_formField">
+                  <button class="nextButton" id="143-next" name="next" type="submit" value="2">Next</button>
+                  <a href="index.html" class="cancelButton" id="143-cancel" name="cancel" >Cancel</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</form>
+</div>
        
       </main>
       <footer class="mainFooter" id="contact">
         <div class="commonWrapper--footer--bottom">
           <ul>
-            <li>
-              <a href="#" >
-                Welcome
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank">
-                Our Culture
-              </a>
-            </li>
-            <li>
-              <a href=""
-              target="_blank">
-                All Jobs
-              </a>
-            </li>
-            <li class="footerBottom--li">
-              <a href="" target="_blank">
-                Privacy Policy
-              </a>
-            </li>
+            <li><a href="#">Welcome</a></li>
+            <li><a href="#">Our Culture</a></li>
+            <li><a href="#">All Jobs</a></li>
+            <li class="footerBottom--li"><a href="#">Privacy Policy</a></li>
             <li class="footerBottom--img">
-              <img src="" alt="Telisy Mobile Footer Logo">
+              <img src="logo.png" alt="Telisy Mobile Footer Logo" style="width: 50%; margin-left: 80px">
             </li>
             <li class="footerBottom--social-media">
               <ul>
-                <li>
-                  <a href="" target="_blank"
-                  rel="noreferrer noopener">
-                    <img src="11/images/Icon_facebook.png" alt=" Facebook">
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank" rel="noreferrer noopener">
-                    <img src="11/images/Icon_twitter.png" alt=" Twitter">
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank"
-                  rel="noreferrer noopener">
-                    <img src="11/images/Icon_instagram.png" alt=" Instagram">
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank" rel="noreferrer noopener">
-                    <img src="11/images/Icon_youtube.png" alt=" YouTube">
-                  </a>
-                </li>
-                <li>
-                  <a href="" target="_blank" rel="noreferrer noopener">
-                    <img src="11/images/Icon_linkedin.png" alt=" LinkedIn">
-                  </a>
-                </li>
+                <li><a href="#"><img src="11/images/Icon_facebook.png" alt=" Facebook"></a></li>
+                <li><a href="#"><img src="11/images/Icon_twitter.png" alt=" Twitter"></a></li>
+                <li><a href="#"><img src="11/images/Icon_instagram.png" alt=" Instagram"></a></li>
+                <li><a href="#"><img src="11/images/Icon_youtube.png" alt=" YouTube"></a></li>
+                <li><a href="#"><img src="11/images/Icon_linkedin.png" alt=" LinkedIn"></a></li>
               </ul>
             </li>
           </ul>
-          <p>
-            © 2024 Telisy International
-          </p>
+          <p>© 2024 Telisy International</p>
         </div>
       </footer>
     </div>
-    <script type="text/javascript">
-      $('a[href*=\\#]').on('click',
-      function(event) {
-        event.preventDefault();
-        $('html,body').animate({
-          scrollTop: $(this.hash).offset().top
-        },
-        500);
-      });
-
-      /* Accordion script */
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click",
-        function() {
-          this.classList.toggle("active-arrow");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
-    <script type="text/javascript">
-      ServiceFactory.getEventManager().attachToLoadEvent(function() {
-        $('#3_53_3 ~ .select2 .select2-selection__placeholder').text("Select a country");
-      });
-    </script>
     <script type="text/javascript" src="">
     </script>
     <!--<div>
